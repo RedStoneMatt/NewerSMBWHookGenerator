@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.SSIGroupBox = new System.Windows.Forms.GroupBox();
+            this.SFIGroupBox = new System.Windows.Forms.GroupBox();
+            this.mainGroupBox = new System.Windows.Forms.GroupBox();
+            this.saveGroupBox = new System.Windows.Forms.GroupBox();
+            this.SSIDDX1 = new System.Windows.Forms.TextBox();
+            this.SSIDDX2 = new System.Windows.Forms.TextBox();
+            this.SSIDDY1 = new System.Windows.Forms.TextBox();
+            this.SSIDDY2 = new System.Windows.Forms.TextBox();
+            this.SSIXPos = new System.Windows.Forms.TextBox();
+            this.SSIYPos = new System.Windows.Forms.TextBox();
+            this.isSSI = new System.Windows.Forms.CheckBox();
             this.ActorNum = new System.Windows.Forms.NumericUpDown();
             this.Generate = new System.Windows.Forms.Button();
             this.Output = new System.Windows.Forms.TextBox();
@@ -51,18 +62,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.SpriteNum = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.SSIXPos = new System.Windows.Forms.TextBox();
-            this.isSSI = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.SSIYPos = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.SSIDDX2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.SSIDDX1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.SSIDDY2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.SSIDDY1 = new System.Windows.Forms.TextBox();
             this.saveAs = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.copyClipboard = new System.Windows.Forms.Button();
@@ -71,9 +75,129 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).BeginInit();
             this.SuspendLayout();
             // 
+            // SSIGroupBox
+            // 
+            this.SSIGroupBox.Location = new System.Drawing.Point(548, 79);
+            this.SSIGroupBox.Name = "SSIGroupBox";
+            this.SSIGroupBox.Size = new System.Drawing.Size(252, 192);
+            this.SSIGroupBox.TabIndex = 37;
+            this.SSIGroupBox.TabStop = false;
+            this.SSIGroupBox.Text = "Sprite Spawning Settings";
+            // 
+            // SFIGroupBox
+            // 
+            this.SFIGroupBox.Location = new System.Drawing.Point(511, 280);
+            this.SFIGroupBox.Name = "SFIGroupBox";
+            this.SFIGroupBox.Size = new System.Drawing.Size(326, 71);
+            this.SFIGroupBox.TabIndex = 38;
+            this.SFIGroupBox.TabStop = false;
+            this.SFIGroupBox.Text = "Sprite ARC File Loading Settings";
+            // 
+            // mainGroupBox
+            // 
+            this.mainGroupBox.Location = new System.Drawing.Point(192, 18);
+            this.mainGroupBox.Name = "mainGroupBox";
+            this.mainGroupBox.Size = new System.Drawing.Size(655, 347);
+            this.mainGroupBox.TabIndex = 39;
+            this.mainGroupBox.TabStop = false;
+            this.mainGroupBox.Text = "Sprite Settings";
+            // 
+            // saveGroupBox
+            // 
+            this.saveGroupBox.Location = new System.Drawing.Point(32, 299);
+            this.saveGroupBox.Name = "saveGroupBox";
+            this.saveGroupBox.Size = new System.Drawing.Size(126, 71);
+            this.saveGroupBox.TabIndex = 40;
+            this.saveGroupBox.TabStop = false;
+            this.saveGroupBox.Text = "Saving";
+            // 
+            // SSIDDX1
+            // 
+            this.SSIDDX1.Location = new System.Drawing.Point(654, 167);
+            this.SSIDDX1.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIDDX1.MaxLength = 8;
+            this.SSIDDX1.Name = "SSIDDX1";
+            this.SSIDDX1.ReadOnly = true;
+            this.SSIDDX1.Size = new System.Drawing.Size(134, 20);
+            this.SSIDDX1.TabIndex = 26;
+            this.SSIDDX1.TextChanged += new System.EventHandler(this.SSIDDX1_TextChanged);
+            this.SSIDDX1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // SSIDDX2
+            // 
+            this.SSIDDX2.Location = new System.Drawing.Point(654, 191);
+            this.SSIDDX2.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIDDX2.MaxLength = 8;
+            this.SSIDDX2.Name = "SSIDDX2";
+            this.SSIDDX2.ReadOnly = true;
+            this.SSIDDX2.Size = new System.Drawing.Size(134, 20);
+            this.SSIDDX2.TabIndex = 28;
+            this.SSIDDX2.TextChanged += new System.EventHandler(this.SSIDDX2_TextChanged);
+            this.SSIDDX2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // SSIDDY1
+            // 
+            this.SSIDDY1.Location = new System.Drawing.Point(654, 215);
+            this.SSIDDY1.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIDDY1.MaxLength = 8;
+            this.SSIDDY1.Name = "SSIDDY1";
+            this.SSIDDY1.ReadOnly = true;
+            this.SSIDDY1.Size = new System.Drawing.Size(134, 20);
+            this.SSIDDY1.TabIndex = 30;
+            this.SSIDDY1.TextChanged += new System.EventHandler(this.SSIDDY1_TextChanged);
+            this.SSIDDY1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // SSIDDY2
+            // 
+            this.SSIDDY2.Location = new System.Drawing.Point(654, 239);
+            this.SSIDDY2.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIDDY2.MaxLength = 8;
+            this.SSIDDY2.Name = "SSIDDY2";
+            this.SSIDDY2.ReadOnly = true;
+            this.SSIDDY2.Size = new System.Drawing.Size(134, 20);
+            this.SSIDDY2.TabIndex = 32;
+            this.SSIDDY2.TextChanged += new System.EventHandler(this.SSIDDY2_TextChanged);
+            this.SSIDDY2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // SSIXPos
+            // 
+            this.SSIXPos.Location = new System.Drawing.Point(654, 119);
+            this.SSIXPos.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIXPos.MaxLength = 8;
+            this.SSIXPos.Name = "SSIXPos";
+            this.SSIXPos.ReadOnly = true;
+            this.SSIXPos.Size = new System.Drawing.Size(134, 20);
+            this.SSIXPos.TabIndex = 22;
+            this.SSIXPos.TextChanged += new System.EventHandler(this.SSIXPos_TextChanged);
+            this.SSIXPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // SSIYPos
+            // 
+            this.SSIYPos.Location = new System.Drawing.Point(654, 143);
+            this.SSIYPos.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIYPos.MaxLength = 8;
+            this.SSIYPos.Name = "SSIYPos";
+            this.SSIYPos.ReadOnly = true;
+            this.SSIYPos.Size = new System.Drawing.Size(134, 20);
+            this.SSIYPos.TabIndex = 24;
+            this.SSIYPos.TextChanged += new System.EventHandler(this.SSIYPos_TextChanged);
+            this.SSIYPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // isSSI
+            // 
+            this.isSSI.AutoSize = true;
+            this.isSSI.Location = new System.Drawing.Point(654, 98);
+            this.isSSI.Margin = new System.Windows.Forms.Padding(2);
+            this.isSSI.Name = "isSSI";
+            this.isSSI.Size = new System.Drawing.Size(124, 17);
+            this.isSSI.TabIndex = 21;
+            this.isSSI.Text = "Sprite Spawning Info";
+            this.isSSI.UseVisualStyleBackColor = true;
+            this.isSSI.CheckedChanged += new System.EventHandler(this.isSSI_CheckedChanged);
+            // 
             // ActorNum
             // 
-            this.ActorNum.Location = new System.Drawing.Point(320, 55);
+            this.ActorNum.Location = new System.Drawing.Point(297, 48);
             this.ActorNum.Margin = new System.Windows.Forms.Padding(2);
             this.ActorNum.Maximum = new decimal(new int[] {
             749,
@@ -88,7 +212,7 @@
             // Generate
             // 
             this.Generate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Generate.Location = new System.Drawing.Point(415, 151);
+            this.Generate.Location = new System.Drawing.Point(392, 144);
             this.Generate.Margin = new System.Windows.Forms.Padding(2);
             this.Generate.Name = "Generate";
             this.Generate.Size = new System.Drawing.Size(113, 31);
@@ -106,12 +230,11 @@
             this.Output.ReadOnly = true;
             this.Output.Size = new System.Drawing.Size(892, 330);
             this.Output.TabIndex = 2;
-            this.Output.TextChanged += new System.EventHandler(this.Output_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(326, 40);
+            this.label1.Location = new System.Drawing.Point(303, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
@@ -120,7 +243,7 @@
             // 
             // cppfilename
             // 
-            this.cppfilename.Location = new System.Drawing.Point(415, 81);
+            this.cppfilename.Location = new System.Drawing.Point(392, 74);
             this.cppfilename.Margin = new System.Windows.Forms.Padding(2);
             this.cppfilename.Name = "cppfilename";
             this.cppfilename.Size = new System.Drawing.Size(113, 20);
@@ -130,7 +253,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(337, 84);
+            this.label2.Location = new System.Drawing.Point(314, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
@@ -139,7 +262,7 @@
             // 
             // customspritename
             // 
-            this.customspritename.Location = new System.Drawing.Point(415, 105);
+            this.customspritename.Location = new System.Drawing.Point(392, 98);
             this.customspritename.Margin = new System.Windows.Forms.Padding(2);
             this.customspritename.Name = "customspritename";
             this.customspritename.Size = new System.Drawing.Size(113, 20);
@@ -148,7 +271,7 @@
             // 
             // ingamespritename
             // 
-            this.ingamespritename.Location = new System.Drawing.Point(415, 128);
+            this.ingamespritename.Location = new System.Drawing.Point(392, 121);
             this.ingamespritename.Margin = new System.Windows.Forms.Padding(2);
             this.ingamespritename.Name = "ingamespritename";
             this.ingamespritename.Size = new System.Drawing.Size(113, 20);
@@ -158,7 +281,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(305, 107);
+            this.label3.Location = new System.Drawing.Point(282, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 13);
@@ -168,7 +291,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(261, 131);
+            this.label4.Location = new System.Drawing.Point(238, 124);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 13);
@@ -189,7 +312,7 @@
             // spritefileinfo
             // 
             this.spritefileinfo.AutoSize = true;
-            this.spritefileinfo.Location = new System.Drawing.Point(674, 301);
+            this.spritefileinfo.Location = new System.Drawing.Point(691, 299);
             this.spritefileinfo.Margin = new System.Windows.Forms.Padding(2);
             this.spritefileinfo.Name = "spritefileinfo";
             this.spritefileinfo.Size = new System.Drawing.Size(87, 17);
@@ -200,7 +323,7 @@
             // 
             // spritefileinfotarget
             // 
-            this.spritefileinfotarget.Location = new System.Drawing.Point(674, 322);
+            this.spritefileinfotarget.Location = new System.Drawing.Point(691, 320);
             this.spritefileinfotarget.Margin = new System.Windows.Forms.Padding(2);
             this.spritefileinfotarget.Name = "spritefileinfotarget";
             this.spritefileinfotarget.ReadOnly = true;
@@ -211,7 +334,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(520, 325);
+            this.label5.Location = new System.Drawing.Point(537, 323);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 13);
@@ -984,7 +1107,7 @@
             "DUMMY_ACTOR",
             "LASTACTOR_STAGE",
             "LASTACTOR"});
-            this.ActorIName.Location = new System.Drawing.Point(415, 55);
+            this.ActorIName.Location = new System.Drawing.Point(392, 48);
             this.ActorIName.Name = "ActorIName";
             this.ActorIName.Size = new System.Drawing.Size(113, 21);
             this.ActorIName.TabIndex = 15;
@@ -1747,7 +1870,7 @@
             "NO ASSIGNED FUNCTION",
             "LASTACTOR_STAGE",
             "LASTACTOR"});
-            this.SpriteName.Location = new System.Drawing.Point(534, 55);
+            this.SpriteName.Location = new System.Drawing.Point(511, 48);
             this.SpriteName.Name = "SpriteName";
             this.SpriteName.Size = new System.Drawing.Size(286, 21);
             this.SpriteName.TabIndex = 16;
@@ -1756,7 +1879,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(412, 39);
+            this.label7.Location = new System.Drawing.Point(389, 32);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 13);
@@ -1766,7 +1889,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(641, 39);
+            this.label8.Location = new System.Drawing.Point(618, 32);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 13);
@@ -1776,7 +1899,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(232, 40);
+            this.label9.Location = new System.Drawing.Point(209, 33);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 13);
@@ -1785,7 +1908,7 @@
             // 
             // SpriteNum
             // 
-            this.SpriteNum.Location = new System.Drawing.Point(226, 55);
+            this.SpriteNum.Location = new System.Drawing.Point(203, 48);
             this.SpriteNum.Margin = new System.Windows.Forms.Padding(2);
             this.SpriteNum.Maximum = new decimal(new int[] {
             749,
@@ -1800,150 +1923,67 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(613, 127);
+            this.label10.Location = new System.Drawing.Point(593, 122);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 13);
             this.label10.TabIndex = 23;
             this.label10.Text = "X Position:";
             // 
-            // SSIXPos
-            // 
-            this.SSIXPos.Location = new System.Drawing.Point(674, 124);
-            this.SSIXPos.Margin = new System.Windows.Forms.Padding(2);
-            this.SSIXPos.MaxLength = 8;
-            this.SSIXPos.Name = "SSIXPos";
-            this.SSIXPos.ReadOnly = true;
-            this.SSIXPos.Size = new System.Drawing.Size(134, 20);
-            this.SSIXPos.TabIndex = 22;
-            this.SSIXPos.TextChanged += new System.EventHandler(this.SSIXPos_TextChanged);
-            this.SSIXPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
-            // isSSI
-            // 
-            this.isSSI.AutoSize = true;
-            this.isSSI.Location = new System.Drawing.Point(674, 103);
-            this.isSSI.Margin = new System.Windows.Forms.Padding(2);
-            this.isSSI.Name = "isSSI";
-            this.isSSI.Size = new System.Drawing.Size(124, 17);
-            this.isSSI.TabIndex = 21;
-            this.isSSI.Text = "Sprite Spawning Info";
-            this.isSSI.UseVisualStyleBackColor = true;
-            this.isSSI.CheckedChanged += new System.EventHandler(this.isSSI_CheckedChanged);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(613, 151);
+            this.label11.Location = new System.Drawing.Point(593, 146);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 13);
             this.label11.TabIndex = 25;
             this.label11.Text = "Y Position:";
             // 
-            // SSIYPos
-            // 
-            this.SSIYPos.Location = new System.Drawing.Point(674, 148);
-            this.SSIYPos.Margin = new System.Windows.Forms.Padding(2);
-            this.SSIYPos.MaxLength = 8;
-            this.SSIYPos.Name = "SSIYPos";
-            this.SSIYPos.ReadOnly = true;
-            this.SSIYPos.Size = new System.Drawing.Size(134, 20);
-            this.SSIYPos.TabIndex = 24;
-            this.SSIYPos.TextChanged += new System.EventHandler(this.SSIYPos_TextChanged);
-            this.SSIYPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(574, 199);
+            this.label12.Location = new System.Drawing.Point(554, 194);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(96, 13);
             this.label12.TabIndex = 29;
             this.label12.Text = "Draw Distance X2:";
             // 
-            // SSIDDX2
-            // 
-            this.SSIDDX2.Location = new System.Drawing.Point(674, 196);
-            this.SSIDDX2.Margin = new System.Windows.Forms.Padding(2);
-            this.SSIDDX2.MaxLength = 8;
-            this.SSIDDX2.Name = "SSIDDX2";
-            this.SSIDDX2.ReadOnly = true;
-            this.SSIDDX2.Size = new System.Drawing.Size(134, 20);
-            this.SSIDDX2.TabIndex = 28;
-            this.SSIDDX2.TextChanged += new System.EventHandler(this.SSIDDX2_TextChanged);
-            this.SSIDDX2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(574, 175);
+            this.label13.Location = new System.Drawing.Point(554, 170);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 27;
             this.label13.Text = "Draw Distance X1:";
             // 
-            // SSIDDX1
-            // 
-            this.SSIDDX1.Location = new System.Drawing.Point(674, 172);
-            this.SSIDDX1.Margin = new System.Windows.Forms.Padding(2);
-            this.SSIDDX1.MaxLength = 8;
-            this.SSIDDX1.Name = "SSIDDX1";
-            this.SSIDDX1.ReadOnly = true;
-            this.SSIDDX1.Size = new System.Drawing.Size(134, 20);
-            this.SSIDDX1.TabIndex = 26;
-            this.SSIDDX1.TextChanged += new System.EventHandler(this.SSIDDX1_TextChanged);
-            this.SSIDDX1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(574, 247);
+            this.label14.Location = new System.Drawing.Point(554, 242);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(96, 13);
             this.label14.TabIndex = 33;
             this.label14.Text = "Draw Distance Y2:";
             // 
-            // SSIDDY2
-            // 
-            this.SSIDDY2.Location = new System.Drawing.Point(674, 244);
-            this.SSIDDY2.Margin = new System.Windows.Forms.Padding(2);
-            this.SSIDDY2.MaxLength = 8;
-            this.SSIDDY2.Name = "SSIDDY2";
-            this.SSIDDY2.ReadOnly = true;
-            this.SSIDDY2.Size = new System.Drawing.Size(134, 20);
-            this.SSIDDY2.TabIndex = 32;
-            this.SSIDDY2.TextChanged += new System.EventHandler(this.SSIDDY2_TextChanged);
-            this.SSIDDY2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(574, 223);
+            this.label15.Location = new System.Drawing.Point(554, 218);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(96, 13);
             this.label15.TabIndex = 31;
             this.label15.Text = "Draw Distance Y1:";
             // 
-            // SSIDDY1
-            // 
-            this.SSIDDY1.Location = new System.Drawing.Point(674, 220);
-            this.SSIDDY1.Margin = new System.Windows.Forms.Padding(2);
-            this.SSIDDY1.MaxLength = 8;
-            this.SSIDDY1.Name = "SSIDDY1";
-            this.SSIDDY1.ReadOnly = true;
-            this.SSIDDY1.Size = new System.Drawing.Size(134, 20);
-            this.SSIDDY1.TabIndex = 30;
-            this.SSIDDY1.TextChanged += new System.EventHandler(this.SSIDDY1_TextChanged);
-            this.SSIDDY1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
             // saveAs
             // 
-            this.saveAs.Location = new System.Drawing.Point(32, 349);
+            this.saveAs.Enabled = false;
+            this.saveAs.Location = new System.Drawing.Point(60, 342);
             this.saveAs.Name = "saveAs";
             this.saveAs.Size = new System.Drawing.Size(75, 23);
             this.saveAs.TabIndex = 34;
@@ -1953,7 +1993,8 @@
             // 
             // copyClipboard
             // 
-            this.copyClipboard.Location = new System.Drawing.Point(20, 320);
+            this.copyClipboard.Enabled = false;
+            this.copyClipboard.Location = new System.Drawing.Point(48, 313);
             this.copyClipboard.Name = "copyClipboard";
             this.copyClipboard.Size = new System.Drawing.Size(99, 23);
             this.copyClipboard.TabIndex = 35;
@@ -1964,7 +2005,7 @@
             // copiedLabel
             // 
             this.copiedLabel.AutoSize = true;
-            this.copiedLabel.Location = new System.Drawing.Point(125, 325);
+            this.copiedLabel.Location = new System.Drawing.Point(12, 716);
             this.copiedLabel.Name = "copiedLabel";
             this.copiedLabel.Size = new System.Drawing.Size(46, 13);
             this.copiedLabel.TabIndex = 36;
@@ -1975,7 +2016,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 721);
+            this.ClientSize = new System.Drawing.Size(912, 738);
             this.Controls.Add(this.copiedLabel);
             this.Controls.Add(this.copyClipboard);
             this.Controls.Add(this.saveAs);
@@ -2013,6 +2054,10 @@
             this.Controls.Add(this.Output);
             this.Controls.Add(this.Generate);
             this.Controls.Add(this.ActorNum);
+            this.Controls.Add(this.SSIGroupBox);
+            this.Controls.Add(this.SFIGroupBox);
+            this.Controls.Add(this.mainGroupBox);
+            this.Controls.Add(this.saveGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
@@ -2026,6 +2071,10 @@
 
         #endregion
 
+        private System.Windows.Forms.GroupBox saveGroupBox;
+        private System.Windows.Forms.GroupBox mainGroupBox;
+        private System.Windows.Forms.GroupBox SFIGroupBox;
+        private System.Windows.Forms.GroupBox SSIGroupBox;
         private System.Windows.Forms.NumericUpDown ActorNum;
         private System.Windows.Forms.Button Generate;
         private System.Windows.Forms.TextBox Output;

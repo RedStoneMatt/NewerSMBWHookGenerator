@@ -2568,7 +2568,9 @@ namespace NewerSMBWHookGenerator
             String FinalText = "";
             if (cppfile == null || customespritename == null || igspritename == null || cppfile == "" || customespritename == "" || igspritename == "")
             {
-                FinalText = "ERROR: You have to fill all the text boxes!";
+                Output.Text = "ERROR: You have to fill all the text boxes!";
+                copyClipboard.Enabled = false;
+                saveAs.Enabled = false;
                 return;
             }
             if (spritenumber[ActorNumber2] == 483)
@@ -2601,13 +2603,18 @@ namespace NewerSMBWHookGenerator
             {
                 if (spritefileinfotargetname == null || spritefileinfotargetname == "")
                 {
-                    FinalText = "ERROR: You have to fill all the text boxes!";
+                    Output.Text = "ERROR: You have to fill all the text boxes!";
+                    copyClipboard.Enabled = false;
+                    saveAs.Enabled = false;
+                    return;
                 }
                 else
                 {
                     if (spritenumber[ActorNumber2] == 483)
                     {
                         Output.Text = "ERROR: The sprite you want to replace don't exist as a level-placable sprite! ";
+                        copyClipboard.Enabled = false;
+                        saveAs.Enabled = false;
                         return;
                     }
                     FinalText += "\r\n" +
@@ -2628,13 +2635,18 @@ namespace NewerSMBWHookGenerator
                     || SSIDDX2.Text == null || SSIDDX2.Text == ""
                     || SSIDDY2.Text == null || SSIDDY2.Text == "")
                 {
-                    FinalText = "ERROR: You have to fill all the text boxes!";
+                    Output.Text = "ERROR: You have to fill all the text boxes!";
+                    copyClipboard.Enabled = false;
+                    saveAs.Enabled = false;
+                    return;
                 }
                 else
                 {
                     if (spritenumber[ActorNumber2] == 483)
                     {
                         Output.Text = "ERROR: The sprite you want to replace don't exist as a level-placable sprite! ";
+                        copyClipboard.Enabled = false;
+                        saveAs.Enabled = false;
                         return;
                     }
                     String ID = new String('0', 4 - ActorNumber2.ToString("X").Length) + ActorNumber2.ToString("X");
@@ -2656,18 +2668,21 @@ namespace NewerSMBWHookGenerator
             }
             if((customespritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (cppfile.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (igspritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0))
             {
-                FinalText = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
+                Output.Text = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
+                copyClipboard.Enabled = false;
+                saveAs.Enabled = false;
+                return;
             }
             if(!(cppfile.IndexOf(".cpp", StringComparison.OrdinalIgnoreCase) >= 0))
             {
-                FinalText = "ERROR: Invalid C++ Filename";
+                Output.Text = "ERROR: Invalid C++ Filename";
+                copyClipboard.Enabled = false;
+                saveAs.Enabled = false;
+                return;
             }
             Output.Text = FinalText;
-        }
-
-        private void Output_TextChanged(object sender, EventArgs e)
-        {
-
+            copyClipboard.Enabled = true;
+            saveAs.Enabled = true;
         }
 
         private void cppfilename_TextChanged(object sender, EventArgs e)
