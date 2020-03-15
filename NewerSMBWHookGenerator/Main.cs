@@ -2020,7 +2020,7 @@ namespace NewerSMBWHookGenerator
             426,
             483,
             483,
-            483,
+            193,
             194,
             195,
             483,
@@ -2526,9 +2526,18 @@ namespace NewerSMBWHookGenerator
         string igspritename;
         string spritefileinfotargetname;
         string spritefileinfotargetnamestore;
-        string actornumberhex;
-        int actornumberhexlength;
-        string editedactornumberhex;
+        string xpos;
+        string ypos;
+        string rectx1;
+        string rectx2;
+        string recty1;
+        string recty2;
+        string xposstore;
+        string yposstore;
+        string rectx1store;
+        string rectx2store;
+        string recty1store;
+        string recty2store;
         public Main()
         {
             InitializeComponent();
@@ -2540,52 +2549,110 @@ namespace NewerSMBWHookGenerator
         {
             ActorNumber = ActorNum.Value;
             ActorNumber2 = Decimal.ToInt32(ActorNumber);
+            ActorIName.SelectedIndex = (int)ActorNum.Value;
+            SpriteName.SelectedIndex = (int)ActorNum.Value;
+            if (spritenumber[(int)ActorNum.Value] != 483)
+            {
+                SpriteNum.Value = spritenumber[(int)ActorNum.Value];
+            }
+            else
+            {
+                SpriteNum.Value = 0;
+            }
         }
 
         private void Generate_Click(object sender, EventArgs e)
         {
-            if (spritefileinfo.Checked) {
-                if (cppfile == null || customespritename == null || igspritename == null || spritefileinfotargetname  == null || cppfile == "" || customespritename == "" || igspritename == "" || spritefileinfotargetname == "")
-                {
-                    Output.Text = "ERROR: You have to place text in all the text boxes!";
-                    return;
-                }
-                if (spritenumber[ActorNumber2] == 483)
-                {
-                    Output.Text = "ERROR: The sprite you want to replace don't exist as a level-placable sprite! ";
-                    return;
-                }
-                actornumberhex = ActorNumber2.ToString("X");
-                actornumberhexlength = actornumberhex.Length;
-                if(actornumberhexlength == 1) {
-                    editedactornumberhex = "000" + actornumberhex;
-                }
-                if (actornumberhexlength == 2)
-                {
-                    editedactornumberhex = "00" + actornumberhex;
-                }
-                if (actornumberhexlength == 3)
-                {
-                    editedactornumberhex = "0" + actornumberhex;
-                }
-
-                Output.Text = "---\r\n#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + " (Sprite " + spritenumber[ActorNumber2] + ")\r\n\r\n" + "\r\nsource_files: [../src/" + cppfile + "]\r\nhooks:\r\n  - name: " + customespritename + "Build\r\n    type: add_func_pointer\r\n    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n    target_func: '" + igspritename + "::build()'\r\n\r\n  - name: " + customespritename + "SpriteFileInfo\r\n    type: add_func_pointer\r\n    src_addr_pal: " + spritefileinfotargetvalue[spritenumber[ActorNumber2]] + "\r\n    target_func: '" + spritefileinfotargetname + "'" + "\r\n    # 0x8031AB4C + sprite num * 0x4 == offset" + "\r\n\r\n  - name: Update" + customespritename + "SpriteInfo\r\n    type: patch\r\n    # 0x8030A340 + sprite num * 0x28 == offset\r\n    addr_pal: " + updatespritefileinfotargetvalue[spritenumber[ActorNumber2]] + "\r\n    #      -ID- ----  -X Offs- -Y Offs-  -RectX1- -RectY1- -RectX2- -RectY2-  -1C- -1E- -20- -22-  Flag ----\r\n    # Orig 01FC 0000  00000008 00000000  00000000 FFFFFFC0 00000010 00000040  0030 0030 0000 0000  0008 0000\r\n    data: '" + editedactornumberhex + " 0000  00000008 00000010  00000000 FFFFFFF8 00000008 00000008  0000 0000 0000 0000  0000 0000'";
+            String FinalText = "";
+            if (cppfile == null || customespritename == null || igspritename == null || cppfile == "" || customespritename == "" || igspritename == "")
+            {
+                FinalText = "ERROR: You have to fill all the text boxes!";
+                return;
             }
-            else {
-                if (cppfile == null || customespritename == null || igspritename == null || cppfile == "" || customespritename == "" || igspritename == "")
+            if (spritenumber[ActorNumber2] == 483)
+            {
+                FinalText = "---\r\n" +
+                    "#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + "\r\n" +
+                    "\r\n" +
+                    "\r\n" +
+                    "source_files: [../src/" + cppfile + "]\r\n" +
+                    "hooks:\r\n" +
+                    "  - name: " + customespritename + "Build\r\n" +
+                    "    type: add_func_pointer\r\n" +
+                    "    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n" +
+                    "    target_func: '" + igspritename + "::build()'";
+            }
+            else
+            {
+                FinalText = "---\r\n" +
+                    "#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + " (Sprite " + spritenumber[ActorNumber2] + ")\r\n" +
+                    "\r\n" +
+                    "\r\n" +
+                    "source_files: [../src/" + cppfile + "]\r\n" +
+                    "hooks:\r\n" +
+                    "  - name: " + customespritename + "Build\r\n" +
+                    "    type: add_func_pointer\r\n" +
+                    "    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n" +
+                    "    target_func: '" + igspritename + "::build()'";
+            }
+            if (spritefileinfo.Checked)
+            {
+                if (spritefileinfotargetname == null || spritefileinfotargetname == "")
                 {
-                    Output.Text = "ERROR: You have to place text in all the text boxes!";
-                    return;
+                    FinalText = "ERROR: You have to fill all the text boxes!";
                 }
-                if (spritenumber[ActorNumber2] == 483)
+                else
                 {
-                    Output.Text = "---\r\n#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + "\r\n\r\n" + "\r\nsource_files: [../src/" + cppfile + "]\r\nhooks:\r\n  - name: " + customespritename + "Build\r\n    type: add_func_pointer\r\n    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n    target_func: '" + igspritename + "::build()'";
+                    if (spritenumber[ActorNumber2] == 483)
+                    {
+                        Output.Text = "ERROR: The sprite you want to replace don't exist as a level-placable sprite! ";
+                        return;
+                    }
+                    FinalText += "\r\n" +
+                    "\r\n" +
+                    "  - name: " + customespritename + "SpriteFileInfo\r\n" +
+                    "    type: add_func_pointer\r\n" +
+                    "    src_addr_pal: " + spritefileinfotargetvalue[spritenumber[ActorNumber2]] + "\r\n" +
+                    "    target_func: '" + spritefileinfotargetname + "'\r\n" +
+                    "    # 0x8031AB4C + sprite num * 0x4 == offset" + "\r\n";
                 }
-                else {
-                    Output.Text = "---\r\n#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + " (Sprite " + spritenumber[ActorNumber2] + ")\r\n\r\n" + "\r\nsource_files: [../src/" + cppfile + "]\r\nhooks:\r\n  - name: " + customespritename + "Build\r\n    type: add_func_pointer\r\n    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n    target_func: '" + igspritename + "::build()'";
+            }
+            if (isSSI.Checked)
+            {
+                if (SSIXPos.Text == null || SSIXPos.Text == ""
+                    || SSIYPos.Text == null || SSIYPos.Text == ""
+                    || SSIDDX1.Text == null || SSIDDX1.Text == ""
+                    || SSIDDY1.Text == null || SSIDDY1.Text == ""
+                    || SSIDDX2.Text == null || SSIDDX2.Text == ""
+                    || SSIDDY2.Text == null || SSIDDY2.Text == "")
+                {
+                    FinalText = "ERROR: You have to fill all the text boxes!";
                 }
-                
-            } 
+                else
+                {
+                    if (spritenumber[ActorNumber2] == 483)
+                    {
+                        Output.Text = "ERROR: The sprite you want to replace don't exist as a level-placable sprite! ";
+                        return;
+                    }
+                    String ID = new String('0', 4 - ActorNumber2.ToString("X").Length) + ActorNumber2.ToString("X");
+                    string XOffs = new String('0', 8 - SSIXPos.Text.Length) + SSIXPos.Text + " ";
+                    string YOffs = new String('0', 8 - SSIYPos.Text.Length) + SSIYPos.Text + "  ";
+                    string RectX1 = new String('0', 8 - SSIDDX1.Text.Length) + SSIDDX1.Text + " ";
+                    string RectY1 = new String('0', 8 - SSIDDY1.Text.Length) + SSIDDY1.Text + " ";
+                    string RectX2 = new String('0', 8 - SSIDDX2.Text.Length) + SSIDDX2.Text + " ";
+                    string RectY2 = new String('0', 8 - SSIDDY2.Text.Length) + SSIDDY2.Text + " ";
+                    FinalText += "\r\n" +
+                    "\r\n" +
+                    "  - name: Update" + customespritename + "SpriteInfo\r\n" +
+                    "    type: patch\r\n" +
+                    "    # 0x8030A340 + sprite num * 0x28 == offset\r\n" +
+                    "    addr_pal: " + updatespritefileinfotargetvalue[spritenumber[ActorNumber2]] + "\r\n" +
+                    "    #      -ID- ----  -X Offs- -Y Offs-  -RectX1- -RectY1- -RectX2- -RectY2-  -1C- -1E- -20- -22-  Flag ----\r\n" +
+                    "    data: '" + ID + " 0000  " + XOffs + YOffs + RectX1 + RectY1 + RectX2 + RectY2 + " 0000 0000 0000 0000  0000 0000'";
+                }
+            }
+            Output.Text = FinalText;
         }
 
         private void Output_TextChanged(object sender, EventArgs e)
@@ -2618,19 +2685,40 @@ namespace NewerSMBWHookGenerator
             {
                 spritefileinfotarget.Text = "CSarcNameList";
             }
-            else {
+            if (!spritefileinfo.Checked)
+            {
                 spritefileinfotarget.Text = "";
+            }
+            if (isSSI.Checked)
+            {
+                SSIXPos.Text = "00000008";
+                SSIYPos.Text = "FFFFFFF8";
+                SSIDDX1.Text = "00000000";
+                SSIDDY1.Text = "00000000";
+                SSIDDX2.Text = "00000010";
+                SSIDDY2.Text = "00000010";
+            }
+            if (!isSSI.Checked)
+            {
+                SSIXPos.Text = "";
+                SSIYPos.Text = "";
+                SSIDDX1.Text = "";
+                SSIDDY1.Text = "";
+                SSIDDX2.Text = "";
+                SSIDDY2.Text = "";
             }
         }
 
         private void spritefileinfo_CheckedChanged(object sender, EventArgs e)
         {
-            if(spritefileinfo.Checked) {
+            if (spritefileinfo.Checked)
+            {
                 spritefileinfotarget.ReadOnly = false;
                 spritefileinfotargetname = spritefileinfotargetnamestore;
                 spritefileinfotarget.Text = spritefileinfotargetname;
             }
-            else {
+            else
+            {
                 spritefileinfotarget.ReadOnly = true;
                 spritefileinfotargetnamestore = spritefileinfotargetname;
                 spritefileinfotarget.Text = "";
@@ -2640,6 +2728,129 @@ namespace NewerSMBWHookGenerator
         private void spritefileinfotarget_TextChanged(object sender, EventArgs e)
         {
             spritefileinfotargetname = spritefileinfotarget.Text;
+        }
+
+        private void ActorIName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActorNum.Value = ActorIName.SelectedIndex;
+        }
+
+        private void SpriteName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActorNum.Value = SpriteName.SelectedIndex;
+        }
+
+        private void SpriteNum_ValueChanged(object sender, EventArgs e)
+        {
+            if (SpriteNum.Value != 0)
+            {
+                int pos = Array.FindIndex(spritenumber, x => x == SpriteNum.Value);
+                if (pos > -1)
+                {
+                    ActorNum.Value = pos;
+                }
+                if (pos < 0)
+                {
+                    ActorNum.Value = 0;
+                }
+            }
+        }
+        public bool didIsawTheMessage = false;
+        private void isSSI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (isSSI.Checked)
+            {
+                if (!didIsawTheMessage)
+                {
+                    DialogResult result;
+                    result = MessageBox.Show("Values in this section has to be entered in Hexadecimal format.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                SSIDDX1.ReadOnly = false;
+                SSIDDX2.ReadOnly = false;
+                SSIDDY1.ReadOnly = false;
+                SSIDDY2.ReadOnly = false;
+                SSIXPos.ReadOnly = false;
+                SSIYPos.ReadOnly = false;
+                didIsawTheMessage = true;
+                xpos = xposstore;
+                ypos = yposstore;
+                rectx1 = rectx1store;
+                rectx2 = rectx2store;
+                recty1 = recty1store;
+                recty2 = recty2store;
+                SSIDDX1.Text = rectx1;
+                SSIDDX2.Text = rectx2;
+                SSIDDY1.Text = recty1;
+                SSIDDY2.Text = recty2;
+                SSIXPos.Text = xpos;
+                SSIYPos.Text = ypos;
+            }
+            else
+            {
+                SSIDDX1.ReadOnly = true;
+                SSIDDX2.ReadOnly = true;
+                SSIDDY1.ReadOnly = true;
+                SSIDDY2.ReadOnly = true;
+                SSIXPos.ReadOnly = true;
+                SSIYPos.ReadOnly = true;
+                xposstore = xpos;
+                yposstore = ypos;
+                rectx1store = rectx1;
+                rectx2store = rectx2;
+                recty1store = recty1;
+                recty2store = recty2;
+                SSIDDX1.Text = "";
+                SSIDDX2.Text = "";
+                SSIDDY1.Text = "";
+                SSIDDY2.Text = "";
+                SSIXPos.Text = "";
+                SSIYPos.Text = "";
+            }
+        }
+
+        private void HexBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) &&
+               (e.KeyChar != 'A') && (e.KeyChar != 'a') &&
+               (e.KeyChar != 'B') && (e.KeyChar != 'b') &&
+               (e.KeyChar != 'C') && (e.KeyChar != 'c') &&
+               (e.KeyChar != 'D') && (e.KeyChar != 'd') &&
+               (e.KeyChar != 'E') && (e.KeyChar != 'e') &&
+               (e.KeyChar != 'F') && (e.KeyChar != 'f'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Please enter Hexadecimal numbers only");
+            }
+        }
+
+        private void SSIXPos_TextChanged(object sender, EventArgs e)
+        {
+            xpos = SSIXPos.Text;
+        }
+
+        private void SSIYPos_TextChanged(object sender, EventArgs e)
+        {
+            ypos = SSIYPos.Text;
+        }
+
+        private void SSIDDX1_TextChanged(object sender, EventArgs e)
+        {
+            rectx1 = SSIDDX1.Text;
+        }
+
+        private void SSIDDX2_TextChanged(object sender, EventArgs e)
+        {
+            rectx2 = SSIDDX2.Text;
+        }
+
+        private void SSIDDY1_TextChanged(object sender, EventArgs e)
+        {
+            recty1 = SSIDDY1.Text;
+        }
+
+        private void SSIDDY2_TextChanged(object sender, EventArgs e)
+        {
+            recty2 = SSIDDY2.Text;
         }
     }
 }

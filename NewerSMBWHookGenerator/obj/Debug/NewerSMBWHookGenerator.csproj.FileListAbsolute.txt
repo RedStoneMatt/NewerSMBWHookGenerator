@@ -14,6 +14,5 @@ D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Debu
 D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.Main.resources
 D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.Properties.Resources.resources
 D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.csproj.GenerateResource.cache
-D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.csproj.CoreCompileInputs.cache
 D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.exe
 D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.pdb
