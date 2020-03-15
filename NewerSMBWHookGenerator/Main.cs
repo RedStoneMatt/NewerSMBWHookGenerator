@@ -2656,7 +2656,11 @@ namespace NewerSMBWHookGenerator
             }
             if((customespritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (cppfile.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (igspritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0))
             {
-                FinalText = "ERROR: Invalid Sprite Name, File or IG-Name";
+                FinalText = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
+            }
+            if(!(cppfile.IndexOf(".cpp", StringComparison.OrdinalIgnoreCase) >= 0))
+            {
+                FinalText = "ERROR: Invalid C++ Filename";
             }
             Output.Text = FinalText;
         }
