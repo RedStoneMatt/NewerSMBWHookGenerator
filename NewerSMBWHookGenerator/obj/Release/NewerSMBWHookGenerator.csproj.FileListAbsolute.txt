@@ -7,3 +7,14 @@ D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Rele
 D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.exe
 D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.pdb
 D:\NewerSMBWHookGenerator\NewerSMBWHookGenerator\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.csprojAssemblyReference.cache
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\NewerSMBWHookGenerator.exe.config
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\NewerSMBWHookGenerator.exe
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\NewerSMBWHookGenerator.pdb
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.csprojAssemblyReference.cache
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.AboutBox1.resources
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.Calculator.resources
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.Main.resources
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.Properties.Resources.resources
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.csproj.GenerateResource.cache
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.exe
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.pdb

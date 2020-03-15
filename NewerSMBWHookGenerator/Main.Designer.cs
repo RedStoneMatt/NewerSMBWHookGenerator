@@ -32,7 +32,7 @@
             this.SSIGroupBox = new System.Windows.Forms.GroupBox();
             this.SFIGroupBox = new System.Windows.Forms.GroupBox();
             this.mainGroupBox = new System.Windows.Forms.GroupBox();
-            this.saveGroupBox = new System.Windows.Forms.GroupBox();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.SSIDDX1 = new System.Windows.Forms.TextBox();
             this.SSIDDX2 = new System.Windows.Forms.TextBox();
             this.SSIDDY1 = new System.Windows.Forms.TextBox();
@@ -43,142 +43,159 @@
             this.ActorNum = new System.Windows.Forms.NumericUpDown();
             this.Generate = new System.Windows.Forms.Button();
             this.Output = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelActorNumber = new System.Windows.Forms.Label();
             this.cppfilename = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelCPPFilename = new System.Windows.Forms.Label();
             this.customspritename = new System.Windows.Forms.TextBox();
             this.ingamespritename = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.example = new System.Windows.Forms.Button();
+            this.labelCustomSpriteName = new System.Windows.Forms.Label();
+            this.labelIGCustomSpriteName = new System.Windows.Forms.Label();
             this.spritefileinfo = new System.Windows.Forms.CheckBox();
             this.spritefileinfotarget = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.ActorIName = new System.Windows.Forms.ComboBox();
             this.SpriteName = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelActorIName = new System.Windows.Forms.Label();
+            this.labelSpriteName = new System.Windows.Forms.Label();
+            this.labelSpriteNumber = new System.Windows.Forms.Label();
             this.SpriteNum = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.saveAs = new System.Windows.Forms.Button();
+            this.labelXPos = new System.Windows.Forms.Label();
+            this.labelYPos = new System.Windows.Forms.Label();
+            this.labelDDX2 = new System.Windows.Forms.Label();
+            this.labelDDX1 = new System.Windows.Forms.Label();
+            this.labelDDY2 = new System.Windows.Forms.Label();
+            this.labelDDY1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.copyClipboard = new System.Windows.Forms.Button();
             this.logs = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpToolstrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.getAnExampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hexCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActorNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SSIGroupBox
             // 
-            this.SSIGroupBox.Location = new System.Drawing.Point(547, 74);
+            this.SSIGroupBox.Location = new System.Drawing.Point(494, 107);
+            this.SSIGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.SSIGroupBox.Name = "SSIGroupBox";
-            this.SSIGroupBox.Size = new System.Drawing.Size(252, 192);
+            this.SSIGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.SSIGroupBox.Size = new System.Drawing.Size(336, 236);
             this.SSIGroupBox.TabIndex = 37;
             this.SSIGroupBox.TabStop = false;
             this.SSIGroupBox.Text = "Sprite Spawning Settings";
             // 
             // SFIGroupBox
             // 
-            this.SFIGroupBox.Location = new System.Drawing.Point(510, 275);
+            this.SFIGroupBox.Location = new System.Drawing.Point(445, 354);
+            this.SFIGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.SFIGroupBox.Name = "SFIGroupBox";
-            this.SFIGroupBox.Size = new System.Drawing.Size(326, 71);
+            this.SFIGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.SFIGroupBox.Size = new System.Drawing.Size(435, 87);
             this.SFIGroupBox.TabIndex = 38;
             this.SFIGroupBox.TabStop = false;
             this.SFIGroupBox.Text = "Sprite ARC File Loading Settings";
             // 
             // mainGroupBox
             // 
-            this.mainGroupBox.Location = new System.Drawing.Point(191, 13);
+            this.mainGroupBox.Controls.Add(this.labelTitle);
+            this.mainGroupBox.Location = new System.Drawing.Point(20, 32);
+            this.mainGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.mainGroupBox.Name = "mainGroupBox";
-            this.mainGroupBox.Size = new System.Drawing.Size(655, 352);
+            this.mainGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.mainGroupBox.Size = new System.Drawing.Size(873, 433);
             this.mainGroupBox.TabIndex = 39;
             this.mainGroupBox.TabStop = false;
             this.mainGroupBox.Text = "Sprite Settings";
             // 
-            // saveGroupBox
+            // labelTitle
             // 
-            this.saveGroupBox.Location = new System.Drawing.Point(30, 294);
-            this.saveGroupBox.Name = "saveGroupBox";
-            this.saveGroupBox.Size = new System.Drawing.Size(126, 71);
-            this.saveGroupBox.TabIndex = 40;
-            this.saveGroupBox.TabStop = false;
-            this.saveGroupBox.Text = "Saving";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(120, 277);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(196, 34);
+            this.labelTitle.TabIndex = 14;
+            this.labelTitle.Text = "NewerSMBW Hook Generator\r\nMade by RedStoneMatt";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTitle.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // SSIDDX1
             // 
-            this.SSIDDX1.Location = new System.Drawing.Point(653, 162);
-            this.SSIDDX1.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIDDX1.Location = new System.Drawing.Point(636, 215);
+            this.SSIDDX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SSIDDX1.MaxLength = 8;
             this.SSIDDX1.Name = "SSIDDX1";
             this.SSIDDX1.ReadOnly = true;
-            this.SSIDDX1.Size = new System.Drawing.Size(134, 20);
+            this.SSIDDX1.Size = new System.Drawing.Size(177, 22);
             this.SSIDDX1.TabIndex = 26;
             this.SSIDDX1.TextChanged += new System.EventHandler(this.SSIDDX1_TextChanged);
             this.SSIDDX1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
             // 
             // SSIDDX2
             // 
-            this.SSIDDX2.Location = new System.Drawing.Point(653, 186);
-            this.SSIDDX2.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIDDX2.Location = new System.Drawing.Point(636, 245);
+            this.SSIDDX2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SSIDDX2.MaxLength = 8;
             this.SSIDDX2.Name = "SSIDDX2";
             this.SSIDDX2.ReadOnly = true;
-            this.SSIDDX2.Size = new System.Drawing.Size(134, 20);
+            this.SSIDDX2.Size = new System.Drawing.Size(177, 22);
             this.SSIDDX2.TabIndex = 28;
             this.SSIDDX2.TextChanged += new System.EventHandler(this.SSIDDX2_TextChanged);
             this.SSIDDX2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
             // 
             // SSIDDY1
             // 
-            this.SSIDDY1.Location = new System.Drawing.Point(653, 210);
-            this.SSIDDY1.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIDDY1.Location = new System.Drawing.Point(636, 274);
+            this.SSIDDY1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SSIDDY1.MaxLength = 8;
             this.SSIDDY1.Name = "SSIDDY1";
             this.SSIDDY1.ReadOnly = true;
-            this.SSIDDY1.Size = new System.Drawing.Size(134, 20);
+            this.SSIDDY1.Size = new System.Drawing.Size(177, 22);
             this.SSIDDY1.TabIndex = 30;
             this.SSIDDY1.TextChanged += new System.EventHandler(this.SSIDDY1_TextChanged);
             this.SSIDDY1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
             // 
             // SSIDDY2
             // 
-            this.SSIDDY2.Location = new System.Drawing.Point(653, 234);
-            this.SSIDDY2.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIDDY2.Location = new System.Drawing.Point(636, 304);
+            this.SSIDDY2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SSIDDY2.MaxLength = 8;
             this.SSIDDY2.Name = "SSIDDY2";
             this.SSIDDY2.ReadOnly = true;
-            this.SSIDDY2.Size = new System.Drawing.Size(134, 20);
+            this.SSIDDY2.Size = new System.Drawing.Size(177, 22);
             this.SSIDDY2.TabIndex = 32;
             this.SSIDDY2.TextChanged += new System.EventHandler(this.SSIDDY2_TextChanged);
             this.SSIDDY2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
             // 
             // SSIXPos
             // 
-            this.SSIXPos.Location = new System.Drawing.Point(653, 114);
-            this.SSIXPos.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIXPos.Location = new System.Drawing.Point(636, 156);
+            this.SSIXPos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SSIXPos.MaxLength = 8;
             this.SSIXPos.Name = "SSIXPos";
             this.SSIXPos.ReadOnly = true;
-            this.SSIXPos.Size = new System.Drawing.Size(134, 20);
+            this.SSIXPos.Size = new System.Drawing.Size(177, 22);
             this.SSIXPos.TabIndex = 22;
             this.SSIXPos.TextChanged += new System.EventHandler(this.SSIXPos_TextChanged);
             this.SSIXPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
             // 
             // SSIYPos
             // 
-            this.SSIYPos.Location = new System.Drawing.Point(653, 138);
-            this.SSIYPos.Margin = new System.Windows.Forms.Padding(2);
+            this.SSIYPos.Location = new System.Drawing.Point(636, 185);
+            this.SSIYPos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SSIYPos.MaxLength = 8;
             this.SSIYPos.Name = "SSIYPos";
             this.SSIYPos.ReadOnly = true;
-            this.SSIYPos.Size = new System.Drawing.Size(134, 20);
+            this.SSIYPos.Size = new System.Drawing.Size(177, 22);
             this.SSIYPos.TabIndex = 24;
             this.SSIYPos.TextChanged += new System.EventHandler(this.SSIYPos_TextChanged);
             this.SSIYPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
@@ -186,10 +203,10 @@
             // isSSI
             // 
             this.isSSI.AutoSize = true;
-            this.isSSI.Location = new System.Drawing.Point(653, 93);
-            this.isSSI.Margin = new System.Windows.Forms.Padding(2);
+            this.isSSI.Location = new System.Drawing.Point(636, 130);
+            this.isSSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.isSSI.Name = "isSSI";
-            this.isSSI.Size = new System.Drawing.Size(124, 17);
+            this.isSSI.Size = new System.Drawing.Size(159, 21);
             this.isSSI.TabIndex = 21;
             this.isSSI.Text = "Sprite Spawning Info";
             this.isSSI.UseVisualStyleBackColor = true;
@@ -197,25 +214,25 @@
             // 
             // ActorNum
             // 
-            this.ActorNum.Location = new System.Drawing.Point(296, 43);
-            this.ActorNum.Margin = new System.Windows.Forms.Padding(2);
+            this.ActorNum.Location = new System.Drawing.Point(160, 69);
+            this.ActorNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ActorNum.Maximum = new decimal(new int[] {
             749,
             0,
             0,
             0});
             this.ActorNum.Name = "ActorNum";
-            this.ActorNum.Size = new System.Drawing.Size(90, 20);
+            this.ActorNum.Size = new System.Drawing.Size(120, 22);
             this.ActorNum.TabIndex = 0;
             this.ActorNum.ValueChanged += new System.EventHandler(this.ActorNum_ValueChanged);
             // 
             // Generate
             // 
             this.Generate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Generate.Location = new System.Drawing.Point(391, 139);
-            this.Generate.Margin = new System.Windows.Forms.Padding(2);
+            this.Generate.Location = new System.Drawing.Point(286, 187);
+            this.Generate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Generate.Name = "Generate";
-            this.Generate.Size = new System.Drawing.Size(113, 31);
+            this.Generate.Size = new System.Drawing.Size(151, 38);
             this.Generate.TabIndex = 1;
             this.Generate.Text = "Generate";
             this.Generate.UseVisualStyleBackColor = true;
@@ -223,99 +240,84 @@
             // 
             // Output
             // 
-            this.Output.Location = new System.Drawing.Point(11, 380);
-            this.Output.Margin = new System.Windows.Forms.Padding(2);
+            this.Output.Location = new System.Drawing.Point(20, 485);
+            this.Output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Output.Multiline = true;
             this.Output.Name = "Output";
             this.Output.ReadOnly = true;
-            this.Output.Size = new System.Drawing.Size(892, 330);
+            this.Output.Size = new System.Drawing.Size(873, 405);
             this.Output.TabIndex = 2;
             // 
-            // label1
+            // labelActorNumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(302, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Actor Number:";
+            this.labelActorNumber.AutoSize = true;
+            this.labelActorNumber.Location = new System.Drawing.Point(168, 50);
+            this.labelActorNumber.Name = "labelActorNumber";
+            this.labelActorNumber.Size = new System.Drawing.Size(99, 17);
+            this.labelActorNumber.TabIndex = 3;
+            this.labelActorNumber.Text = "Actor Number:";
             // 
             // cppfilename
             // 
-            this.cppfilename.Location = new System.Drawing.Point(391, 69);
-            this.cppfilename.Margin = new System.Windows.Forms.Padding(2);
+            this.cppfilename.Location = new System.Drawing.Point(286, 101);
+            this.cppfilename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cppfilename.Name = "cppfilename";
-            this.cppfilename.Size = new System.Drawing.Size(113, 20);
+            this.cppfilename.Size = new System.Drawing.Size(149, 22);
             this.cppfilename.TabIndex = 4;
             this.cppfilename.TextChanged += new System.EventHandler(this.cppfilename_TextChanged);
             // 
-            // label2
+            // labelCPPFilename
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(313, 72);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "C++ Filename:";
+            this.labelCPPFilename.AutoSize = true;
+            this.labelCPPFilename.Location = new System.Drawing.Point(182, 104);
+            this.labelCPPFilename.Name = "labelCPPFilename";
+            this.labelCPPFilename.Size = new System.Drawing.Size(98, 17);
+            this.labelCPPFilename.TabIndex = 5;
+            this.labelCPPFilename.Text = "C++ Filename:";
             // 
             // customspritename
             // 
-            this.customspritename.Location = new System.Drawing.Point(391, 93);
-            this.customspritename.Margin = new System.Windows.Forms.Padding(2);
+            this.customspritename.Location = new System.Drawing.Point(286, 130);
+            this.customspritename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customspritename.Name = "customspritename";
-            this.customspritename.Size = new System.Drawing.Size(113, 20);
+            this.customspritename.Size = new System.Drawing.Size(149, 22);
             this.customspritename.TabIndex = 6;
             this.customspritename.TextChanged += new System.EventHandler(this.customspritename_TextChanged);
             // 
             // ingamespritename
             // 
-            this.ingamespritename.Location = new System.Drawing.Point(391, 116);
-            this.ingamespritename.Margin = new System.Windows.Forms.Padding(2);
+            this.ingamespritename.Location = new System.Drawing.Point(286, 158);
+            this.ingamespritename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ingamespritename.Name = "ingamespritename";
-            this.ingamespritename.Size = new System.Drawing.Size(113, 20);
+            this.ingamespritename.Size = new System.Drawing.Size(149, 22);
             this.ingamespritename.TabIndex = 7;
             this.ingamespritename.TextChanged += new System.EventHandler(this.ingamespritename_TextChanged);
             // 
-            // label3
+            // labelCustomSpriteName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(281, 95);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Custom Sprite Name:";
+            this.labelCustomSpriteName.AutoSize = true;
+            this.labelCustomSpriteName.Location = new System.Drawing.Point(140, 133);
+            this.labelCustomSpriteName.Name = "labelCustomSpriteName";
+            this.labelCustomSpriteName.Size = new System.Drawing.Size(141, 17);
+            this.labelCustomSpriteName.TabIndex = 8;
+            this.labelCustomSpriteName.Text = "Custom Sprite Name:";
             // 
-            // label4
+            // labelIGCustomSpriteName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(237, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "In-Game Custom Sprite Name:";
-            // 
-            // example
-            // 
-            this.example.Location = new System.Drawing.Point(20, 33);
-            this.example.Margin = new System.Windows.Forms.Padding(2);
-            this.example.Name = "example";
-            this.example.Size = new System.Drawing.Size(137, 63);
-            this.example.TabIndex = 10;
-            this.example.Text = "You don\'t understand how does it work ?\r\nClick here to get an example!";
-            this.example.UseVisualStyleBackColor = true;
-            this.example.Click += new System.EventHandler(this.example_Click);
+            this.labelIGCustomSpriteName.AutoSize = true;
+            this.labelIGCustomSpriteName.Location = new System.Drawing.Point(81, 162);
+            this.labelIGCustomSpriteName.Name = "labelIGCustomSpriteName";
+            this.labelIGCustomSpriteName.Size = new System.Drawing.Size(199, 17);
+            this.labelIGCustomSpriteName.TabIndex = 9;
+            this.labelIGCustomSpriteName.Text = "In-Game Custom Sprite Name:";
             // 
             // spritefileinfo
             // 
             this.spritefileinfo.AutoSize = true;
-            this.spritefileinfo.Location = new System.Drawing.Point(690, 294);
-            this.spritefileinfo.Margin = new System.Windows.Forms.Padding(2);
+            this.spritefileinfo.Location = new System.Drawing.Point(685, 377);
+            this.spritefileinfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.spritefileinfo.Name = "spritefileinfo";
-            this.spritefileinfo.Size = new System.Drawing.Size(87, 17);
+            this.spritefileinfo.Size = new System.Drawing.Size(112, 21);
             this.spritefileinfo.TabIndex = 11;
             this.spritefileinfo.Text = "SpriteFileInfo";
             this.spritefileinfo.UseVisualStyleBackColor = true;
@@ -323,34 +325,22 @@
             // 
             // spritefileinfotarget
             // 
-            this.spritefileinfotarget.Location = new System.Drawing.Point(690, 315);
-            this.spritefileinfotarget.Margin = new System.Windows.Forms.Padding(2);
+            this.spritefileinfotarget.Location = new System.Drawing.Point(685, 403);
+            this.spritefileinfotarget.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.spritefileinfotarget.Name = "spritefileinfotarget";
             this.spritefileinfotarget.ReadOnly = true;
-            this.spritefileinfotarget.Size = new System.Drawing.Size(134, 20);
+            this.spritefileinfotarget.Size = new System.Drawing.Size(177, 22);
             this.spritefileinfotarget.TabIndex = 12;
             this.spritefileinfotarget.TextChanged += new System.EventHandler(this.spritefileinfotarget_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(536, 318);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(480, 407);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 13);
+            this.label5.Size = new System.Drawing.Size(198, 17);
             this.label5.TabIndex = 13;
             this.label5.Text = "SpriteFileInfo Target Function:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 109);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 26);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "NewerSMBW Hook Generator\r\nMade by RedStoneMatt";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ActorIName
             // 
@@ -1107,9 +1097,10 @@
             "DUMMY_ACTOR",
             "LASTACTOR_STAGE",
             "LASTACTOR"});
-            this.ActorIName.Location = new System.Drawing.Point(391, 43);
+            this.ActorIName.Location = new System.Drawing.Point(286, 69);
+            this.ActorIName.Margin = new System.Windows.Forms.Padding(4);
             this.ActorIName.Name = "ActorIName";
-            this.ActorIName.Size = new System.Drawing.Size(113, 21);
+            this.ActorIName.Size = new System.Drawing.Size(149, 24);
             this.ActorIName.TabIndex = 15;
             this.ActorIName.SelectedIndexChanged += new System.EventHandler(this.ActorIName_SelectedIndexChanged);
             // 
@@ -1870,248 +1861,316 @@
             "NO ASSIGNED FUNCTION",
             "LASTACTOR_STAGE",
             "LASTACTOR"});
-            this.SpriteName.Location = new System.Drawing.Point(510, 43);
+            this.SpriteName.Location = new System.Drawing.Point(445, 69);
+            this.SpriteName.Margin = new System.Windows.Forms.Padding(4);
             this.SpriteName.Name = "SpriteName";
-            this.SpriteName.Size = new System.Drawing.Size(286, 21);
+            this.SpriteName.Size = new System.Drawing.Size(380, 24);
             this.SpriteName.TabIndex = 16;
             this.SpriteName.SelectedIndexChanged += new System.EventHandler(this.SpriteName_SelectedIndexChanged);
             // 
-            // label7
+            // labelActorIName
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(388, 27);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Actor Intenal Name:";
+            this.labelActorIName.AutoSize = true;
+            this.labelActorIName.Location = new System.Drawing.Point(282, 49);
+            this.labelActorIName.Name = "labelActorIName";
+            this.labelActorIName.Size = new System.Drawing.Size(132, 17);
+            this.labelActorIName.TabIndex = 17;
+            this.labelActorIName.Text = "Actor Intenal Name:";
             // 
-            // label8
+            // labelSpriteName
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(617, 27);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Sprite Name:";
+            this.labelSpriteName.AutoSize = true;
+            this.labelSpriteName.Location = new System.Drawing.Point(588, 49);
+            this.labelSpriteName.Name = "labelSpriteName";
+            this.labelSpriteName.Size = new System.Drawing.Size(90, 17);
+            this.labelSpriteName.TabIndex = 18;
+            this.labelSpriteName.Text = "Sprite Name:";
             // 
-            // label9
+            // labelSpriteNumber
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(208, 28);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Sprite Number:";
+            this.labelSpriteNumber.AutoSize = true;
+            this.labelSpriteNumber.Location = new System.Drawing.Point(42, 50);
+            this.labelSpriteNumber.Name = "labelSpriteNumber";
+            this.labelSpriteNumber.Size = new System.Drawing.Size(103, 17);
+            this.labelSpriteNumber.TabIndex = 20;
+            this.labelSpriteNumber.Text = "Sprite Number:";
             // 
             // SpriteNum
             // 
-            this.SpriteNum.Location = new System.Drawing.Point(202, 43);
-            this.SpriteNum.Margin = new System.Windows.Forms.Padding(2);
+            this.SpriteNum.Location = new System.Drawing.Point(34, 69);
+            this.SpriteNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SpriteNum.Maximum = new decimal(new int[] {
             749,
             0,
             0,
             0});
             this.SpriteNum.Name = "SpriteNum";
-            this.SpriteNum.Size = new System.Drawing.Size(90, 20);
+            this.SpriteNum.Size = new System.Drawing.Size(120, 22);
             this.SpriteNum.TabIndex = 19;
             this.SpriteNum.ValueChanged += new System.EventHandler(this.SpriteNum_ValueChanged);
             // 
-            // label10
+            // labelXPos
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(592, 117);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 13);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "X Position:";
+            this.labelXPos.AutoSize = true;
+            this.labelXPos.Location = new System.Drawing.Point(554, 160);
+            this.labelXPos.Name = "labelXPos";
+            this.labelXPos.Size = new System.Drawing.Size(75, 17);
+            this.labelXPos.TabIndex = 23;
+            this.labelXPos.Text = "X Position:";
             // 
-            // label11
+            // labelYPos
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(592, 141);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 13);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Y Position:";
+            this.labelYPos.AutoSize = true;
+            this.labelYPos.Location = new System.Drawing.Point(554, 189);
+            this.labelYPos.Name = "labelYPos";
+            this.labelYPos.Size = new System.Drawing.Size(75, 17);
+            this.labelYPos.TabIndex = 25;
+            this.labelYPos.Text = "Y Position:";
             // 
-            // label12
+            // labelDDX2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(553, 189);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 13);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "Draw Distance X2:";
+            this.labelDDX2.AutoSize = true;
+            this.labelDDX2.Location = new System.Drawing.Point(502, 248);
+            this.labelDDX2.Name = "labelDDX2";
+            this.labelDDX2.Size = new System.Drawing.Size(124, 17);
+            this.labelDDX2.TabIndex = 29;
+            this.labelDDX2.Text = "Draw Distance X2:";
             // 
-            // label13
+            // labelDDX1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(553, 165);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(96, 13);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Draw Distance X1:";
+            this.labelDDX1.AutoSize = true;
+            this.labelDDX1.Location = new System.Drawing.Point(502, 219);
+            this.labelDDX1.Name = "labelDDX1";
+            this.labelDDX1.Size = new System.Drawing.Size(124, 17);
+            this.labelDDX1.TabIndex = 27;
+            this.labelDDX1.Text = "Draw Distance X1:";
             // 
-            // label14
+            // labelDDY2
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(553, 237);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 13);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Draw Distance Y2:";
+            this.labelDDY2.AutoSize = true;
+            this.labelDDY2.Location = new System.Drawing.Point(502, 307);
+            this.labelDDY2.Name = "labelDDY2";
+            this.labelDDY2.Size = new System.Drawing.Size(124, 17);
+            this.labelDDY2.TabIndex = 33;
+            this.labelDDY2.Text = "Draw Distance Y2:";
             // 
-            // label15
+            // labelDDY1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(553, 213);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 13);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Draw Distance Y1:";
-            // 
-            // saveAs
-            // 
-            this.saveAs.Enabled = false;
-            this.saveAs.Location = new System.Drawing.Point(58, 337);
-            this.saveAs.Name = "saveAs";
-            this.saveAs.Size = new System.Drawing.Size(75, 23);
-            this.saveAs.TabIndex = 34;
-            this.saveAs.Text = "Save As...";
-            this.saveAs.UseVisualStyleBackColor = true;
-            this.saveAs.Click += new System.EventHandler(this.saveAs_Click);
-            // 
-            // copyClipboard
-            // 
-            this.copyClipboard.Enabled = false;
-            this.copyClipboard.Location = new System.Drawing.Point(46, 308);
-            this.copyClipboard.Name = "copyClipboard";
-            this.copyClipboard.Size = new System.Drawing.Size(99, 23);
-            this.copyClipboard.TabIndex = 35;
-            this.copyClipboard.Text = "Copy to Clipboard";
-            this.copyClipboard.UseVisualStyleBackColor = true;
-            this.copyClipboard.Click += new System.EventHandler(this.copyClipboard_Click);
+            this.labelDDY1.AutoSize = true;
+            this.labelDDY1.Location = new System.Drawing.Point(502, 278);
+            this.labelDDY1.Name = "labelDDY1";
+            this.labelDDY1.Size = new System.Drawing.Size(124, 17);
+            this.labelDDY1.TabIndex = 31;
+            this.labelDDY1.Text = "Draw Distance Y1:";
             // 
             // logs
             // 
             this.logs.AutoSize = true;
-            this.logs.Location = new System.Drawing.Point(12, 716);
+            this.logs.Location = new System.Drawing.Point(21, 899);
+            this.logs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.logs.Name = "logs";
-            this.logs.Size = new System.Drawing.Size(100, 13);
+            this.logs.Size = new System.Drawing.Size(131, 17);
             this.logs.TabIndex = 36;
             this.logs.Text = "Waiting for Action...";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStrip,
+            this.toolsToolStripMenuItem,
+            this.HelpToolstrip,
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(916, 28);
+            this.menuStrip1.TabIndex = 41;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStrip
+            // 
+            this.fileToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.copyToolStripMenuItem,
+            this.saveAsToolStripMenuItem});
+            this.fileToolStrip.Name = "fileToolStrip";
+            this.fileToolStrip.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStrip.Text = "File";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Enabled = false;
+            this.copyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripMenuItem.Image")));
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.copyToolStripMenuItem.Text = "Copy to Clipboard";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToClipboardToolStripMenuItem_Click);
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Enabled = false;
+            this.saveAsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveAsToolStripMenuItem.Image")));
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.saveAsToolStripMenuItem.Text = "Save As...";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // HelpToolstrip
+            // 
+            this.HelpToolstrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.getAnExampleToolStripMenuItem});
+            this.HelpToolstrip.Name = "HelpToolstrip";
+            this.HelpToolstrip.Size = new System.Drawing.Size(55, 24);
+            this.HelpToolstrip.Text = "Help";
+            // 
+            // getAnExampleToolStripMenuItem
+            // 
+            this.getAnExampleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("getAnExampleToolStripMenuItem.Image")));
+            this.getAnExampleToolStripMenuItem.Name = "getAnExampleToolStripMenuItem";
+            this.getAnExampleToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.getAnExampleToolStripMenuItem.Text = "Get an example";
+            this.getAnExampleToolStripMenuItem.Click += new System.EventHandler(this.getAnExampleToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hexCalculatorToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // hexCalculatorToolStripMenuItem
+            // 
+            this.hexCalculatorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hexCalculatorToolStripMenuItem.Image")));
+            this.hexCalculatorToolStripMenuItem.Name = "hexCalculatorToolStripMenuItem";
+            this.hexCalculatorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.hexCalculatorToolStripMenuItem.Text = "Hex Calculator";
+            this.hexCalculatorToolStripMenuItem.Click += new System.EventHandler(this.hexCalculatorToolStripMenuItem_Click);
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 738);
+            this.ClientSize = new System.Drawing.Size(916, 923);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.logs);
-            this.Controls.Add(this.copyClipboard);
-            this.Controls.Add(this.saveAs);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.labelDDY2);
             this.Controls.Add(this.SSIDDY2);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.labelDDY1);
             this.Controls.Add(this.SSIDDY1);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.labelDDX2);
             this.Controls.Add(this.SSIDDX2);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.labelDDX1);
             this.Controls.Add(this.SSIDDX1);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.labelYPos);
             this.Controls.Add(this.SSIYPos);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.labelXPos);
             this.Controls.Add(this.SSIXPos);
             this.Controls.Add(this.isSSI);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.labelSpriteNumber);
             this.Controls.Add(this.SpriteNum);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelSpriteName);
+            this.Controls.Add(this.labelActorIName);
             this.Controls.Add(this.SpriteName);
             this.Controls.Add(this.ActorIName);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.spritefileinfotarget);
             this.Controls.Add(this.spritefileinfo);
-            this.Controls.Add(this.example);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelIGCustomSpriteName);
+            this.Controls.Add(this.labelCustomSpriteName);
             this.Controls.Add(this.ingamespritename);
             this.Controls.Add(this.customspritename);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelCPPFilename);
             this.Controls.Add(this.cppfilename);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelActorNumber);
             this.Controls.Add(this.Output);
             this.Controls.Add(this.Generate);
             this.Controls.Add(this.ActorNum);
             this.Controls.Add(this.SSIGroupBox);
             this.Controls.Add(this.SFIGroupBox);
             this.Controls.Add(this.mainGroupBox);
-            this.Controls.Add(this.saveGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.Text = "NewerSMBW Hook Generator";
+            this.mainGroupBox.ResumeLayout(false);
+            this.mainGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActorNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox saveGroupBox;
         private System.Windows.Forms.GroupBox mainGroupBox;
         private System.Windows.Forms.GroupBox SFIGroupBox;
         private System.Windows.Forms.GroupBox SSIGroupBox;
         private System.Windows.Forms.NumericUpDown ActorNum;
         private System.Windows.Forms.Button Generate;
         private System.Windows.Forms.TextBox Output;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelActorNumber;
         private System.Windows.Forms.TextBox cppfilename;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelCPPFilename;
         private System.Windows.Forms.TextBox customspritename;
         private System.Windows.Forms.TextBox ingamespritename;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button example;
+        private System.Windows.Forms.Label labelCustomSpriteName;
+        private System.Windows.Forms.Label labelIGCustomSpriteName;
         private System.Windows.Forms.CheckBox spritefileinfo;
         private System.Windows.Forms.TextBox spritefileinfotarget;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.ComboBox ActorIName;
         private System.Windows.Forms.ComboBox SpriteName;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelActorIName;
+        private System.Windows.Forms.Label labelSpriteName;
+        private System.Windows.Forms.Label labelSpriteNumber;
         private System.Windows.Forms.NumericUpDown SpriteNum;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelXPos;
         private System.Windows.Forms.TextBox SSIXPos;
         private System.Windows.Forms.CheckBox isSSI;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label labelYPos;
         private System.Windows.Forms.TextBox SSIYPos;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelDDX2;
         private System.Windows.Forms.TextBox SSIDDX2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelDDX1;
         private System.Windows.Forms.TextBox SSIDDX1;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelDDY2;
         private System.Windows.Forms.TextBox SSIDDY2;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label labelDDY1;
         private System.Windows.Forms.TextBox SSIDDY1;
-        private System.Windows.Forms.Button saveAs;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button copyClipboard;
         private System.Windows.Forms.Label logs;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem HelpToolstrip;
+        private System.Windows.Forms.ToolStripMenuItem getAnExampleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hexCalculatorToolStripMenuItem;
     }
 }
 

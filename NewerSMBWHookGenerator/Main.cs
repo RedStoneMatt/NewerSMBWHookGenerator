@@ -2570,8 +2570,8 @@ namespace NewerSMBWHookGenerator
             {
                 Output.Text = "";
                 logs.Text = "ERROR: You have to fill all the text boxes!";
-                copyClipboard.Enabled = false;
-                saveAs.Enabled = false;
+                copyToolStripMenuItem.Enabled = false;
+                saveAsToolStripMenuItem.Enabled = false;
                 return;
             }
             if (spritenumber[ActorNumber2] == 483)
@@ -2606,8 +2606,8 @@ namespace NewerSMBWHookGenerator
                 {
                     Output.Text = "";
                     logs.Text = "ERROR: You have to fill all the text boxes!";
-                    copyClipboard.Enabled = false;
-                    saveAs.Enabled = false;
+                    copyToolStripMenuItem.Enabled = false;
+                    saveAsToolStripMenuItem.Enabled = false;
                     return;
                 }
                 else
@@ -2616,8 +2616,8 @@ namespace NewerSMBWHookGenerator
                     {
                         Output.Text = "";
                         logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
-                        copyClipboard.Enabled = false;
-                        saveAs.Enabled = false;
+                        copyToolStripMenuItem.Enabled = false;
+                        saveAsToolStripMenuItem.Enabled = false;
                         return;
                     }
                     FinalText += "\r\n" +
@@ -2640,8 +2640,8 @@ namespace NewerSMBWHookGenerator
                 {
                     Output.Text = "";
                     logs.Text = "ERROR: You have to fill all the text boxes!";
-                    copyClipboard.Enabled = false;
-                    saveAs.Enabled = false;
+                    copyToolStripMenuItem.Enabled = false;
+                    saveAsToolStripMenuItem.Enabled = false;
                     return;
                 }
                 else
@@ -2650,8 +2650,8 @@ namespace NewerSMBWHookGenerator
                     {
                         Output.Text = "";
                         logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
-                        copyClipboard.Enabled = false;
-                        saveAs.Enabled = false;
+                        copyToolStripMenuItem.Enabled = false;
+                        saveAsToolStripMenuItem.Enabled = false;
                         return;
                     }
                     String ID = new String('0', 4 - ActorNumber2.ToString("X").Length) + ActorNumber2.ToString("X");
@@ -2675,21 +2675,21 @@ namespace NewerSMBWHookGenerator
             {
                 Output.Text = "";
                 logs.Text = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
-                copyClipboard.Enabled = false;
-                saveAs.Enabled = false;
+                copyToolStripMenuItem.Enabled = false;
+                saveAsToolStripMenuItem.Enabled = false;
                 return;
             }
             if(!(cppfile.IndexOf(".cpp", StringComparison.OrdinalIgnoreCase) >= 0))
             {
                 Output.Text = "";
                 logs.Text = "ERROR: Invalid C++ Filename";
-                copyClipboard.Enabled = false;
-                saveAs.Enabled = false;
+                copyToolStripMenuItem.Enabled = false;
+                saveAsToolStripMenuItem.Enabled = false;
                 return;
             }
             Output.Text = FinalText;
-            copyClipboard.Enabled = true;
-            saveAs.Enabled = true;
+            copyToolStripMenuItem.Enabled = true;
+            saveAsToolStripMenuItem.Enabled = true;
             logs.Text = "Generated YAML File successfully !";
         }
 
@@ -2886,7 +2886,7 @@ namespace NewerSMBWHookGenerator
             recty2 = SSIDDY2.Text;
         }
 
-        private void saveAs_Click(object sender, EventArgs e)
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog textDialog;
             textDialog = new SaveFileDialog();
@@ -2902,10 +2902,81 @@ namespace NewerSMBWHookGenerator
             }
         }
 
-        private void copyClipboard_Click(object sender, EventArgs e)
+        private void copyToClipboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(Output.Text);
             logs.Text = "Copied output to the Clipboard !";
+        }
+
+        private void getAnExampleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActorNum.Value = 51;
+            cppfilename.Text = "customsprite.cpp";
+            customspritename.Text = "MyCustomSprite";
+            ingamespritename.Text = "daCustomSprite_c";
+            if (spritefileinfo.Checked)
+            {
+                spritefileinfotarget.Text = "CSarcNameList";
+            }
+            if (!spritefileinfo.Checked)
+            {
+                spritefileinfotarget.Text = "";
+            }
+            if (isSSI.Checked)
+            {
+                SSIXPos.Text = "00000008";
+                SSIYPos.Text = "FFFFFFF8";
+                SSIDDX1.Text = "00000000";
+                SSIDDY1.Text = "00000000";
+                SSIDDX2.Text = "00000010";
+                SSIDDY2.Text = "00000010";
+            }
+            if (!isSSI.Checked)
+            {
+                SSIXPos.Text = "";
+                SSIYPos.Text = "";
+                SSIDDX1.Text = "";
+                SSIDDY1.Text = "";
+                SSIDDX2.Text = "";
+                SSIDDY2.Text = "";
+            }
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SSIXPos.Text = "";
+            SSIYPos.Text = "";
+            SSIDDX1.Text = "";
+            SSIDDY1.Text = "";
+            SSIDDX2.Text = "";
+            SSIDDY2.Text = "";
+            spritefileinfotarget.Text = "";
+            ActorNum.Value = 0;
+            cppfilename.Text = "";
+            customspritename.Text = "";
+            ingamespritename.Text = "";
+            isSSI.Checked = false;
+            spritefileinfo.Checked = false;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 a = new AboutBox1();
+            DialogResult dialogresult = a.ShowDialog();
+            if (dialogresult == DialogResult.OK)
+            {
+                a.Close();
+            }
+        }
+
+        private void hexCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Calculator a = new Calculator();
+            DialogResult dialogresult = a.ShowDialog();
+            if (dialogresult == DialogResult.OK)
+            {
+                a.Close();
+            }
         }
     }
 }
