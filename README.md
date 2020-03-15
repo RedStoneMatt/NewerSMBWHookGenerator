@@ -6,3 +6,5 @@ Basically, if you want to make a NewerSMBW custom sprite, put in the software th
 You can also put a function that load the arc files you need.
 
 Then after filling all the needed infos, the software will generate a hook for your sprite.
+
+Actual Version: 1.5
