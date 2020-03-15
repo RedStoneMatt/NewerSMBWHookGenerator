@@ -2568,7 +2568,8 @@ namespace NewerSMBWHookGenerator
             String FinalText = "";
             if (cppfile == null || customespritename == null || igspritename == null || cppfile == "" || customespritename == "" || igspritename == "")
             {
-                Output.Text = "ERROR: You have to fill all the text boxes!";
+                Output.Text = "";
+                logs.Text = "ERROR: You have to fill all the text boxes!";
                 copyClipboard.Enabled = false;
                 saveAs.Enabled = false;
                 return;
@@ -2603,7 +2604,8 @@ namespace NewerSMBWHookGenerator
             {
                 if (spritefileinfotargetname == null || spritefileinfotargetname == "")
                 {
-                    Output.Text = "ERROR: You have to fill all the text boxes!";
+                    Output.Text = "";
+                    logs.Text = "ERROR: You have to fill all the text boxes!";
                     copyClipboard.Enabled = false;
                     saveAs.Enabled = false;
                     return;
@@ -2612,7 +2614,8 @@ namespace NewerSMBWHookGenerator
                 {
                     if (spritenumber[ActorNumber2] == 483)
                     {
-                        Output.Text = "ERROR: The sprite you want to replace don't exist as a level-placable sprite! ";
+                        Output.Text = "";
+                        logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
                         copyClipboard.Enabled = false;
                         saveAs.Enabled = false;
                         return;
@@ -2635,7 +2638,8 @@ namespace NewerSMBWHookGenerator
                     || SSIDDX2.Text == null || SSIDDX2.Text == ""
                     || SSIDDY2.Text == null || SSIDDY2.Text == "")
                 {
-                    Output.Text = "ERROR: You have to fill all the text boxes!";
+                    Output.Text = "";
+                    logs.Text = "ERROR: You have to fill all the text boxes!";
                     copyClipboard.Enabled = false;
                     saveAs.Enabled = false;
                     return;
@@ -2644,7 +2648,8 @@ namespace NewerSMBWHookGenerator
                 {
                     if (spritenumber[ActorNumber2] == 483)
                     {
-                        Output.Text = "ERROR: The sprite you want to replace don't exist as a level-placable sprite! ";
+                        Output.Text = "";
+                        logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
                         copyClipboard.Enabled = false;
                         saveAs.Enabled = false;
                         return;
@@ -2668,14 +2673,16 @@ namespace NewerSMBWHookGenerator
             }
             if((customespritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (cppfile.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (igspritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0))
             {
-                Output.Text = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
+                Output.Text = "";
+                logs.Text = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
                 copyClipboard.Enabled = false;
                 saveAs.Enabled = false;
                 return;
             }
             if(!(cppfile.IndexOf(".cpp", StringComparison.OrdinalIgnoreCase) >= 0))
             {
-                Output.Text = "ERROR: Invalid C++ Filename";
+                Output.Text = "";
+                logs.Text = "ERROR: Invalid C++ Filename";
                 copyClipboard.Enabled = false;
                 saveAs.Enabled = false;
                 return;
@@ -2683,6 +2690,7 @@ namespace NewerSMBWHookGenerator
             Output.Text = FinalText;
             copyClipboard.Enabled = true;
             saveAs.Enabled = true;
+            logs.Text = "Generated YAML File successfully !";
         }
 
         private void cppfilename_TextChanged(object sender, EventArgs e)
@@ -2889,6 +2897,7 @@ namespace NewerSMBWHookGenerator
                 System.IO.Stream fileStream = textDialog.OpenFile();
                 System.IO.StreamWriter sw = new System.IO.StreamWriter(fileStream);
                 sw.Write(Output.Text);
+                logs.Text = "Saved file as " + ((FileStream)(sw.BaseStream)).Name;
                 sw.Close();
             }
         }
@@ -2896,7 +2905,7 @@ namespace NewerSMBWHookGenerator
         private void copyClipboard_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(Output.Text);
-            copiedLabel.Visible = true;
+            logs.Text = "Copied output to the Clipboard !";
         }
     }
 }

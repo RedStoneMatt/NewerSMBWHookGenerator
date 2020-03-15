@@ -70,7 +70,7 @@
             this.saveAs = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.copyClipboard = new System.Windows.Forms.Button();
-            this.copiedLabel = new System.Windows.Forms.Label();
+            this.logs = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ActorNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).BeginInit();
             this.SuspendLayout();
@@ -2002,22 +2002,21 @@
             this.copyClipboard.UseVisualStyleBackColor = true;
             this.copyClipboard.Click += new System.EventHandler(this.copyClipboard_Click);
             // 
-            // copiedLabel
+            // logs
             // 
-            this.copiedLabel.AutoSize = true;
-            this.copiedLabel.Location = new System.Drawing.Point(12, 716);
-            this.copiedLabel.Name = "copiedLabel";
-            this.copiedLabel.Size = new System.Drawing.Size(46, 13);
-            this.copiedLabel.TabIndex = 36;
-            this.copiedLabel.Text = "Copied !";
-            this.copiedLabel.Visible = false;
+            this.logs.AutoSize = true;
+            this.logs.Location = new System.Drawing.Point(12, 716);
+            this.logs.Name = "logs";
+            this.logs.Size = new System.Drawing.Size(100, 13);
+            this.logs.TabIndex = 36;
+            this.logs.Text = "Waiting for Action...";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 738);
-            this.Controls.Add(this.copiedLabel);
+            this.Controls.Add(this.logs);
             this.Controls.Add(this.copyClipboard);
             this.Controls.Add(this.saveAs);
             this.Controls.Add(this.label14);
@@ -2112,7 +2111,7 @@
         private System.Windows.Forms.Button saveAs;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button copyClipboard;
-        private System.Windows.Forms.Label copiedLabel;
+        private System.Windows.Forms.Label logs;
     }
 }
 
