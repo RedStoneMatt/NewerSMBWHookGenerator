@@ -77,7 +77,7 @@
             // 
             // SSIGroupBox
             // 
-            this.SSIGroupBox.Location = new System.Drawing.Point(548, 79);
+            this.SSIGroupBox.Location = new System.Drawing.Point(547, 74);
             this.SSIGroupBox.Name = "SSIGroupBox";
             this.SSIGroupBox.Size = new System.Drawing.Size(252, 192);
             this.SSIGroupBox.TabIndex = 37;
@@ -86,7 +86,7 @@
             // 
             // SFIGroupBox
             // 
-            this.SFIGroupBox.Location = new System.Drawing.Point(511, 280);
+            this.SFIGroupBox.Location = new System.Drawing.Point(510, 275);
             this.SFIGroupBox.Name = "SFIGroupBox";
             this.SFIGroupBox.Size = new System.Drawing.Size(326, 71);
             this.SFIGroupBox.TabIndex = 38;
@@ -95,16 +95,16 @@
             // 
             // mainGroupBox
             // 
-            this.mainGroupBox.Location = new System.Drawing.Point(192, 18);
+            this.mainGroupBox.Location = new System.Drawing.Point(191, 13);
             this.mainGroupBox.Name = "mainGroupBox";
-            this.mainGroupBox.Size = new System.Drawing.Size(655, 347);
+            this.mainGroupBox.Size = new System.Drawing.Size(655, 352);
             this.mainGroupBox.TabIndex = 39;
             this.mainGroupBox.TabStop = false;
             this.mainGroupBox.Text = "Sprite Settings";
             // 
             // saveGroupBox
             // 
-            this.saveGroupBox.Location = new System.Drawing.Point(32, 299);
+            this.saveGroupBox.Location = new System.Drawing.Point(30, 294);
             this.saveGroupBox.Name = "saveGroupBox";
             this.saveGroupBox.Size = new System.Drawing.Size(126, 71);
             this.saveGroupBox.TabIndex = 40;
@@ -113,7 +113,7 @@
             // 
             // SSIDDX1
             // 
-            this.SSIDDX1.Location = new System.Drawing.Point(654, 167);
+            this.SSIDDX1.Location = new System.Drawing.Point(653, 162);
             this.SSIDDX1.Margin = new System.Windows.Forms.Padding(2);
             this.SSIDDX1.MaxLength = 8;
             this.SSIDDX1.Name = "SSIDDX1";
@@ -125,7 +125,7 @@
             // 
             // SSIDDX2
             // 
-            this.SSIDDX2.Location = new System.Drawing.Point(654, 191);
+            this.SSIDDX2.Location = new System.Drawing.Point(653, 186);
             this.SSIDDX2.Margin = new System.Windows.Forms.Padding(2);
             this.SSIDDX2.MaxLength = 8;
             this.SSIDDX2.Name = "SSIDDX2";
@@ -137,7 +137,7 @@
             // 
             // SSIDDY1
             // 
-            this.SSIDDY1.Location = new System.Drawing.Point(654, 215);
+            this.SSIDDY1.Location = new System.Drawing.Point(653, 210);
             this.SSIDDY1.Margin = new System.Windows.Forms.Padding(2);
             this.SSIDDY1.MaxLength = 8;
             this.SSIDDY1.Name = "SSIDDY1";
@@ -149,7 +149,7 @@
             // 
             // SSIDDY2
             // 
-            this.SSIDDY2.Location = new System.Drawing.Point(654, 239);
+            this.SSIDDY2.Location = new System.Drawing.Point(653, 234);
             this.SSIDDY2.Margin = new System.Windows.Forms.Padding(2);
             this.SSIDDY2.MaxLength = 8;
             this.SSIDDY2.Name = "SSIDDY2";
@@ -161,7 +161,7 @@
             // 
             // SSIXPos
             // 
-            this.SSIXPos.Location = new System.Drawing.Point(654, 119);
+            this.SSIXPos.Location = new System.Drawing.Point(653, 114);
             this.SSIXPos.Margin = new System.Windows.Forms.Padding(2);
             this.SSIXPos.MaxLength = 8;
             this.SSIXPos.Name = "SSIXPos";
@@ -173,7 +173,7 @@
             // 
             // SSIYPos
             // 
-            this.SSIYPos.Location = new System.Drawing.Point(654, 143);
+            this.SSIYPos.Location = new System.Drawing.Point(653, 138);
             this.SSIYPos.Margin = new System.Windows.Forms.Padding(2);
             this.SSIYPos.MaxLength = 8;
             this.SSIYPos.Name = "SSIYPos";
@@ -186,7 +186,7 @@
             // isSSI
             // 
             this.isSSI.AutoSize = true;
-            this.isSSI.Location = new System.Drawing.Point(654, 98);
+            this.isSSI.Location = new System.Drawing.Point(653, 93);
             this.isSSI.Margin = new System.Windows.Forms.Padding(2);
             this.isSSI.Name = "isSSI";
             this.isSSI.Size = new System.Drawing.Size(124, 17);
@@ -197,7 +197,7 @@
             // 
             // ActorNum
             // 
-            this.ActorNum.Location = new System.Drawing.Point(297, 48);
+            this.ActorNum.Location = new System.Drawing.Point(296, 43);
             this.ActorNum.Margin = new System.Windows.Forms.Padding(2);
             this.ActorNum.Maximum = new decimal(new int[] {
             749,
@@ -212,7 +212,7 @@
             // Generate
             // 
             this.Generate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Generate.Location = new System.Drawing.Point(392, 144);
+            this.Generate.Location = new System.Drawing.Point(391, 139);
             this.Generate.Margin = new System.Windows.Forms.Padding(2);
             this.Generate.Name = "Generate";
             this.Generate.Size = new System.Drawing.Size(113, 31);
@@ -234,7 +234,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(303, 33);
+            this.label1.Location = new System.Drawing.Point(302, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
@@ -243,7 +243,7 @@
             // 
             // cppfilename
             // 
-            this.cppfilename.Location = new System.Drawing.Point(392, 74);
+            this.cppfilename.Location = new System.Drawing.Point(391, 69);
             this.cppfilename.Margin = new System.Windows.Forms.Padding(2);
             this.cppfilename.Name = "cppfilename";
             this.cppfilename.Size = new System.Drawing.Size(113, 20);
@@ -253,7 +253,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(314, 77);
+            this.label2.Location = new System.Drawing.Point(313, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
@@ -262,7 +262,7 @@
             // 
             // customspritename
             // 
-            this.customspritename.Location = new System.Drawing.Point(392, 98);
+            this.customspritename.Location = new System.Drawing.Point(391, 93);
             this.customspritename.Margin = new System.Windows.Forms.Padding(2);
             this.customspritename.Name = "customspritename";
             this.customspritename.Size = new System.Drawing.Size(113, 20);
@@ -271,7 +271,7 @@
             // 
             // ingamespritename
             // 
-            this.ingamespritename.Location = new System.Drawing.Point(392, 121);
+            this.ingamespritename.Location = new System.Drawing.Point(391, 116);
             this.ingamespritename.Margin = new System.Windows.Forms.Padding(2);
             this.ingamespritename.Name = "ingamespritename";
             this.ingamespritename.Size = new System.Drawing.Size(113, 20);
@@ -281,7 +281,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(282, 100);
+            this.label3.Location = new System.Drawing.Point(281, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 13);
@@ -291,7 +291,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(238, 124);
+            this.label4.Location = new System.Drawing.Point(237, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 13);
@@ -312,7 +312,7 @@
             // spritefileinfo
             // 
             this.spritefileinfo.AutoSize = true;
-            this.spritefileinfo.Location = new System.Drawing.Point(691, 299);
+            this.spritefileinfo.Location = new System.Drawing.Point(690, 294);
             this.spritefileinfo.Margin = new System.Windows.Forms.Padding(2);
             this.spritefileinfo.Name = "spritefileinfo";
             this.spritefileinfo.Size = new System.Drawing.Size(87, 17);
@@ -323,7 +323,7 @@
             // 
             // spritefileinfotarget
             // 
-            this.spritefileinfotarget.Location = new System.Drawing.Point(691, 320);
+            this.spritefileinfotarget.Location = new System.Drawing.Point(690, 315);
             this.spritefileinfotarget.Margin = new System.Windows.Forms.Padding(2);
             this.spritefileinfotarget.Name = "spritefileinfotarget";
             this.spritefileinfotarget.ReadOnly = true;
@@ -334,7 +334,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(537, 323);
+            this.label5.Location = new System.Drawing.Point(536, 318);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 13);
@@ -1107,7 +1107,7 @@
             "DUMMY_ACTOR",
             "LASTACTOR_STAGE",
             "LASTACTOR"});
-            this.ActorIName.Location = new System.Drawing.Point(392, 48);
+            this.ActorIName.Location = new System.Drawing.Point(391, 43);
             this.ActorIName.Name = "ActorIName";
             this.ActorIName.Size = new System.Drawing.Size(113, 21);
             this.ActorIName.TabIndex = 15;
@@ -1870,7 +1870,7 @@
             "NO ASSIGNED FUNCTION",
             "LASTACTOR_STAGE",
             "LASTACTOR"});
-            this.SpriteName.Location = new System.Drawing.Point(511, 48);
+            this.SpriteName.Location = new System.Drawing.Point(510, 43);
             this.SpriteName.Name = "SpriteName";
             this.SpriteName.Size = new System.Drawing.Size(286, 21);
             this.SpriteName.TabIndex = 16;
@@ -1879,7 +1879,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(389, 32);
+            this.label7.Location = new System.Drawing.Point(388, 27);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 13);
@@ -1889,7 +1889,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(618, 32);
+            this.label8.Location = new System.Drawing.Point(617, 27);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 13);
@@ -1899,7 +1899,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(209, 33);
+            this.label9.Location = new System.Drawing.Point(208, 28);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 13);
@@ -1908,7 +1908,7 @@
             // 
             // SpriteNum
             // 
-            this.SpriteNum.Location = new System.Drawing.Point(203, 48);
+            this.SpriteNum.Location = new System.Drawing.Point(202, 43);
             this.SpriteNum.Margin = new System.Windows.Forms.Padding(2);
             this.SpriteNum.Maximum = new decimal(new int[] {
             749,
@@ -1923,7 +1923,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(593, 122);
+            this.label10.Location = new System.Drawing.Point(592, 117);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 13);
@@ -1933,7 +1933,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(593, 146);
+            this.label11.Location = new System.Drawing.Point(592, 141);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 13);
@@ -1943,7 +1943,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(554, 194);
+            this.label12.Location = new System.Drawing.Point(553, 189);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(96, 13);
@@ -1953,7 +1953,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(554, 170);
+            this.label13.Location = new System.Drawing.Point(553, 165);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
@@ -1963,7 +1963,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(554, 242);
+            this.label14.Location = new System.Drawing.Point(553, 237);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(96, 13);
@@ -1973,7 +1973,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(554, 218);
+            this.label15.Location = new System.Drawing.Point(553, 213);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(96, 13);
@@ -1983,7 +1983,7 @@
             // saveAs
             // 
             this.saveAs.Enabled = false;
-            this.saveAs.Location = new System.Drawing.Point(60, 342);
+            this.saveAs.Location = new System.Drawing.Point(58, 337);
             this.saveAs.Name = "saveAs";
             this.saveAs.Size = new System.Drawing.Size(75, 23);
             this.saveAs.TabIndex = 34;
@@ -1994,7 +1994,7 @@
             // copyClipboard
             // 
             this.copyClipboard.Enabled = false;
-            this.copyClipboard.Location = new System.Drawing.Point(48, 313);
+            this.copyClipboard.Location = new System.Drawing.Point(46, 308);
             this.copyClipboard.Name = "copyClipboard";
             this.copyClipboard.Size = new System.Drawing.Size(99, 23);
             this.copyClipboard.TabIndex = 35;
