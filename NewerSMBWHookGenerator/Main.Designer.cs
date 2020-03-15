@@ -63,6 +63,10 @@
             this.SSIDDY2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.SSIDDY1 = new System.Windows.Forms.TextBox();
+            this.saveAs = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.copyClipboard = new System.Windows.Forms.Button();
+            this.copiedLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ActorNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).BeginInit();
             this.SuspendLayout();
@@ -1937,11 +1941,44 @@
             this.SSIDDY1.TextChanged += new System.EventHandler(this.SSIDDY1_TextChanged);
             this.SSIDDY1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
             // 
+            // saveAs
+            // 
+            this.saveAs.Location = new System.Drawing.Point(32, 349);
+            this.saveAs.Name = "saveAs";
+            this.saveAs.Size = new System.Drawing.Size(75, 23);
+            this.saveAs.TabIndex = 34;
+            this.saveAs.Text = "Save As...";
+            this.saveAs.UseVisualStyleBackColor = true;
+            this.saveAs.Click += new System.EventHandler(this.saveAs_Click);
+            // 
+            // copyClipboard
+            // 
+            this.copyClipboard.Location = new System.Drawing.Point(20, 320);
+            this.copyClipboard.Name = "copyClipboard";
+            this.copyClipboard.Size = new System.Drawing.Size(99, 23);
+            this.copyClipboard.TabIndex = 35;
+            this.copyClipboard.Text = "Copy to Clipboard";
+            this.copyClipboard.UseVisualStyleBackColor = true;
+            this.copyClipboard.Click += new System.EventHandler(this.copyClipboard_Click);
+            // 
+            // copiedLabel
+            // 
+            this.copiedLabel.AutoSize = true;
+            this.copiedLabel.Location = new System.Drawing.Point(125, 325);
+            this.copiedLabel.Name = "copiedLabel";
+            this.copiedLabel.Size = new System.Drawing.Size(46, 13);
+            this.copiedLabel.TabIndex = 36;
+            this.copiedLabel.Text = "Copied !";
+            this.copiedLabel.Visible = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 721);
+            this.Controls.Add(this.copiedLabel);
+            this.Controls.Add(this.copyClipboard);
+            this.Controls.Add(this.saveAs);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.SSIDDY2);
             this.Controls.Add(this.label15);
@@ -2023,6 +2060,10 @@
         private System.Windows.Forms.TextBox SSIDDY2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox SSIDDY1;
+        private System.Windows.Forms.Button saveAs;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button copyClipboard;
+        private System.Windows.Forms.Label copiedLabel;
     }
 }
 

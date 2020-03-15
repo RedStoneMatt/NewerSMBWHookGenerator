@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -2652,6 +2654,10 @@ namespace NewerSMBWHookGenerator
                     "    data: '" + ID + " 0000  " + XOffs + YOffs + RectX1 + RectY1 + RectX2 + RectY2 + " 0000 0000 0000 0000  0000 0000'";
                 }
             }
+            if((customespritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (cppfile.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (igspritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0))
+            {
+                FinalText = "ERROR: Invalid Sprite Name, File or IG-Name";
+            }
             Output.Text = FinalText;
         }
 
@@ -2851,6 +2857,27 @@ namespace NewerSMBWHookGenerator
         private void SSIDDY2_TextChanged(object sender, EventArgs e)
         {
             recty2 = SSIDDY2.Text;
+        }
+
+        private void saveAs_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog textDialog;
+            textDialog = new SaveFileDialog();
+            textDialog.Filter = "YAML Files | *.yaml|All files (*.*)|*.*";
+            textDialog.DefaultExt = "yaml";
+            if (textDialog.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.Stream fileStream = textDialog.OpenFile();
+                System.IO.StreamWriter sw = new System.IO.StreamWriter(fileStream);
+                sw.Write(Output.Text);
+                sw.Close();
+            }
+        }
+
+        private void copyClipboard_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Output.Text);
+            copiedLabel.Visible = true;
         }
     }
 }
