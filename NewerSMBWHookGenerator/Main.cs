@@ -2957,6 +2957,8 @@ namespace NewerSMBWHookGenerator
             ingamespritename.Text = "";
             isSSI.Checked = false;
             spritefileinfo.Checked = false;
+            Output.Text = "";
+            logs.Text = "Waiting for Action...";
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2977,6 +2979,47 @@ namespace NewerSMBWHookGenerator
             {
                 a.Close();
             }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            SpriteName.SelectedIndex = 0;
+            ActorIName.SelectedIndex = 0;
+        }
+
+        private void labelYPos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDDY2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelXPos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDDX2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDDY1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDDX1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

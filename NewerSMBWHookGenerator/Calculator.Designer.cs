@@ -41,37 +41,45 @@
             // 
             // decInput
             // 
-            this.decInput.Location = new System.Drawing.Point(117, 12);
+            this.decInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decInput.Location = new System.Drawing.Point(117, 11);
             this.decInput.MaxLength = 9;
             this.decInput.Name = "decInput";
-            this.decInput.Size = new System.Drawing.Size(225, 26);
+            this.decInput.Size = new System.Drawing.Size(225, 23);
             this.decInput.TabIndex = 0;
             this.decInput.TextChanged += new System.EventHandler(this.decInput_TextChanged);
             // 
             // labelDecimalInput
             // 
+            this.labelDecimalInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDecimalInput.AutoSize = true;
-            this.labelDecimalInput.Location = new System.Drawing.Point(66, 15);
+            this.labelDecimalInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDecimalInput.Location = new System.Drawing.Point(58, 14);
             this.labelDecimalInput.Name = "labelDecimalInput";
-            this.labelDecimalInput.Size = new System.Drawing.Size(60, 19);
+            this.labelDecimalInput.Size = new System.Drawing.Size(62, 17);
             this.labelDecimalInput.TabIndex = 1;
             this.labelDecimalInput.Text = "Decimal:";
+            this.labelDecimalInput.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelHEXOutput
             // 
+            this.labelHEXOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHEXOutput.AutoSize = true;
-            this.labelHEXOutput.Location = new System.Drawing.Point(38, 43);
+            this.labelHEXOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHEXOutput.Location = new System.Drawing.Point(28, 39);
             this.labelHEXOutput.Name = "labelHEXOutput";
-            this.labelHEXOutput.Size = new System.Drawing.Size(88, 19);
+            this.labelHEXOutput.Size = new System.Drawing.Size(92, 17);
             this.labelHEXOutput.TabIndex = 4;
             this.labelHEXOutput.Text = "Hexadecimal:";
+            this.labelHEXOutput.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // hexOutput
             // 
             this.hexOutput.BackColor = System.Drawing.Color.White;
-            this.hexOutput.Location = new System.Drawing.Point(117, 40);
+            this.hexOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hexOutput.Location = new System.Drawing.Point(117, 36);
             this.hexOutput.Name = "hexOutput";
-            this.hexOutput.Size = new System.Drawing.Size(225, 26);
+            this.hexOutput.Size = new System.Drawing.Size(225, 23);
             this.hexOutput.TabIndex = 3;
             this.hexOutput.TextChanged += new System.EventHandler(this.hexOutput_TextChanged);
             // 
@@ -81,9 +89,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelGray.BackColor = System.Drawing.SystemColors.Control;
             this.panelGray.Controls.Add(this.closeButton);
-            this.panelGray.Location = new System.Drawing.Point(-9, 104);
+            this.panelGray.Location = new System.Drawing.Point(-9, 93);
             this.panelGray.Name = "panelGray";
-            this.panelGray.Size = new System.Drawing.Size(375, 45);
+            this.panelGray.Size = new System.Drawing.Size(375, 40);
             this.panelGray.TabIndex = 5;
             // 
             // closeButton
@@ -91,9 +99,10 @@
             this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.closeButton.Location = new System.Drawing.Point(288, 11);
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.closeButton.Location = new System.Drawing.Point(288, 10);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(64, 23);
+            this.closeButton.Size = new System.Drawing.Size(64, 21);
             this.closeButton.TabIndex = 6;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -102,9 +111,10 @@
             // 
             this.prefixCheck.AutoSize = true;
             this.prefixCheck.Checked = true;
-            this.prefixCheck.Location = new System.Drawing.Point(117, 72);
+            this.prefixCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.prefixCheck.Location = new System.Drawing.Point(117, 64);
             this.prefixCheck.Name = "prefixCheck";
-            this.prefixCheck.Size = new System.Drawing.Size(44, 23);
+            this.prefixCheck.Size = new System.Drawing.Size(43, 21);
             this.prefixCheck.TabIndex = 6;
             this.prefixCheck.TabStop = true;
             this.prefixCheck.Text = "0x";
@@ -114,19 +124,20 @@
             // noPrefixCheck
             // 
             this.noPrefixCheck.AutoSize = true;
-            this.noPrefixCheck.Location = new System.Drawing.Point(159, 72);
+            this.noPrefixCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.noPrefixCheck.Location = new System.Drawing.Point(159, 64);
             this.noPrefixCheck.Name = "noPrefixCheck";
-            this.noPrefixCheck.Size = new System.Drawing.Size(61, 23);
+            this.noPrefixCheck.Size = new System.Drawing.Size(61, 21);
             this.noPrefixCheck.TabIndex = 7;
             this.noPrefixCheck.Text = "none";
             this.noPrefixCheck.UseVisualStyleBackColor = true;
             // 
             // Calculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(354, 147);
+            this.ClientSize = new System.Drawing.Size(354, 132);
             this.ControlBox = false;
             this.Controls.Add(this.noPrefixCheck);
             this.Controls.Add(this.prefixCheck);
@@ -135,8 +146,8 @@
             this.Controls.Add(this.hexOutput);
             this.Controls.Add(this.labelDecimalInput);
             this.Controls.Add(this.decInput);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Calculator";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

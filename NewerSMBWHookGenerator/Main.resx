@@ -192,11 +192,11 @@
   </data>
   <data name="hexCalculatorToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAADSSURBVEhL7ZZRCgIxDET75aFkPZ96LcWj6DU0I8wSloyxab/EBwM1vGZX2oW0DTvL2fKwPIu5
-        W04W9JJAiDZXgl4SvA2k/ftXjcWCHugl4dv0cLNw3xUFI+2TCgHe5zrtkwoB3uc67ZMKAd7nOu2TCgE4
-        F+67oGCkfSjg5lQ5WL5+0KxIInkkEgr+g+UHWKlLlDCrvkLBXwZ/uL11CYVZkUTySCQU/pdB1SUUZkUS
-        ySORUPidy8DhpPfQo/rH4WTmuHW0SDD04WH8Z5Vg72aAbO0F84Y40plCssQAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAANJJREFUSEvt
+        llEKAjEMRPvloWQ9n3otxaPoNTQjzBKWjLFpv8QHAzW8ZlfahbQNO8vZ8rA8i7lbThb0kkCINleCXhK8
+        DaT9+1eNxYIe6CXh2/Rws3DfFQUj7ZMKAd7nOu2TCgHe5zrtkwoB3uc67ZMKATgX7rugYKR9KODmVDlY
+        vn7QrEgieSQSCv6D5QdYqUuUMKu+QsFfBn+4vXUJhVmRRPJIJBT+l0HVJRRmRRLJI5FQ+J3LwOGk99Cj
+        +sfhZOa4dbRIMPThYfxnlWDvZoBs7QXzhjjSmUKyxAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="getAnExampleToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

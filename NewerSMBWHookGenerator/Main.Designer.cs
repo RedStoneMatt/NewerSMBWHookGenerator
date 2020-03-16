@@ -30,41 +30,40 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.SSIGroupBox = new System.Windows.Forms.GroupBox();
-            this.SFIGroupBox = new System.Windows.Forms.GroupBox();
-            this.mainGroupBox = new System.Windows.Forms.GroupBox();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.SSIDDX1 = new System.Windows.Forms.TextBox();
-            this.SSIDDX2 = new System.Windows.Forms.TextBox();
-            this.SSIDDY1 = new System.Windows.Forms.TextBox();
-            this.SSIDDY2 = new System.Windows.Forms.TextBox();
-            this.SSIXPos = new System.Windows.Forms.TextBox();
-            this.SSIYPos = new System.Windows.Forms.TextBox();
-            this.isSSI = new System.Windows.Forms.CheckBox();
-            this.ActorNum = new System.Windows.Forms.NumericUpDown();
-            this.Generate = new System.Windows.Forms.Button();
-            this.Output = new System.Windows.Forms.TextBox();
-            this.labelActorNumber = new System.Windows.Forms.Label();
-            this.cppfilename = new System.Windows.Forms.TextBox();
-            this.labelCPPFilename = new System.Windows.Forms.Label();
-            this.customspritename = new System.Windows.Forms.TextBox();
-            this.ingamespritename = new System.Windows.Forms.TextBox();
-            this.labelCustomSpriteName = new System.Windows.Forms.Label();
-            this.labelIGCustomSpriteName = new System.Windows.Forms.Label();
-            this.spritefileinfo = new System.Windows.Forms.CheckBox();
-            this.spritefileinfotarget = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ActorIName = new System.Windows.Forms.ComboBox();
+            this.labelDDX1 = new System.Windows.Forms.Label();
+            this.labelYPos = new System.Windows.Forms.Label();
+            this.spritefileinfo = new System.Windows.Forms.CheckBox();
+            this.SSIDDY1 = new System.Windows.Forms.TextBox();
+            this.spritefileinfotarget = new System.Windows.Forms.TextBox();
+            this.SSIDDY2 = new System.Windows.Forms.TextBox();
+            this.labelDDY2 = new System.Windows.Forms.Label();
+            this.SSIDDX2 = new System.Windows.Forms.TextBox();
+            this.labelXPos = new System.Windows.Forms.Label();
+            this.SSIDDX1 = new System.Windows.Forms.TextBox();
+            this.labelDDX2 = new System.Windows.Forms.Label();
+            this.SSIYPos = new System.Windows.Forms.TextBox();
+            this.labelDDY1 = new System.Windows.Forms.Label();
+            this.SSIXPos = new System.Windows.Forms.TextBox();
+            this.isSSI = new System.Windows.Forms.CheckBox();
+            this.mainGroupBox = new System.Windows.Forms.GroupBox();
+            this.mainSpriteSettingsGroupBox = new System.Windows.Forms.GroupBox();
             this.SpriteName = new System.Windows.Forms.ComboBox();
-            this.labelActorIName = new System.Windows.Forms.Label();
             this.labelSpriteName = new System.Windows.Forms.Label();
+            this.ActorNum = new System.Windows.Forms.NumericUpDown();
             this.labelSpriteNumber = new System.Windows.Forms.Label();
             this.SpriteNum = new System.Windows.Forms.NumericUpDown();
-            this.labelXPos = new System.Windows.Forms.Label();
-            this.labelYPos = new System.Windows.Forms.Label();
-            this.labelDDX2 = new System.Windows.Forms.Label();
-            this.labelDDX1 = new System.Windows.Forms.Label();
-            this.labelDDY2 = new System.Windows.Forms.Label();
-            this.labelDDY1 = new System.Windows.Forms.Label();
+            this.labelActorNumber = new System.Windows.Forms.Label();
+            this.labelActorIName = new System.Windows.Forms.Label();
+            this.ActorIName = new System.Windows.Forms.ComboBox();
+            this.cppfilename = new System.Windows.Forms.TextBox();
+            this.labelIGCustomSpriteName = new System.Windows.Forms.Label();
+            this.labelCustomSpriteName = new System.Windows.Forms.Label();
+            this.labelCPPFilename = new System.Windows.Forms.Label();
+            this.ingamespritename = new System.Windows.Forms.TextBox();
+            this.customspritename = new System.Windows.Forms.TextBox();
+            this.Generate = new System.Windows.Forms.Button();
+            this.Output = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.logs = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -72,12 +71,14 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hexCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolstrip = new System.Windows.Forms.ToolStripMenuItem();
             this.getAnExampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hexCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SSIGroupBox.SuspendLayout();
             this.mainGroupBox.SuspendLayout();
+            this.mainSpriteSettingsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActorNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -85,1028 +86,267 @@
             // 
             // SSIGroupBox
             // 
-            this.SSIGroupBox.Location = new System.Drawing.Point(494, 107);
+            this.SSIGroupBox.Controls.Add(this.label5);
+            this.SSIGroupBox.Controls.Add(this.labelDDX1);
+            this.SSIGroupBox.Controls.Add(this.labelYPos);
+            this.SSIGroupBox.Controls.Add(this.spritefileinfo);
+            this.SSIGroupBox.Controls.Add(this.SSIDDY1);
+            this.SSIGroupBox.Controls.Add(this.spritefileinfotarget);
+            this.SSIGroupBox.Controls.Add(this.SSIDDY2);
+            this.SSIGroupBox.Controls.Add(this.labelDDY2);
+            this.SSIGroupBox.Controls.Add(this.SSIDDX2);
+            this.SSIGroupBox.Controls.Add(this.labelXPos);
+            this.SSIGroupBox.Controls.Add(this.SSIDDX1);
+            this.SSIGroupBox.Controls.Add(this.labelDDX2);
+            this.SSIGroupBox.Controls.Add(this.SSIYPos);
+            this.SSIGroupBox.Controls.Add(this.labelDDY1);
+            this.SSIGroupBox.Controls.Add(this.SSIXPos);
+            this.SSIGroupBox.Controls.Add(this.isSSI);
+            this.SSIGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SSIGroupBox.Location = new System.Drawing.Point(461, 19);
             this.SSIGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.SSIGroupBox.Name = "SSIGroupBox";
             this.SSIGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.SSIGroupBox.Size = new System.Drawing.Size(336, 236);
+            this.SSIGroupBox.Size = new System.Drawing.Size(323, 295);
             this.SSIGroupBox.TabIndex = 37;
             this.SSIGroupBox.TabStop = false;
-            this.SSIGroupBox.Text = "Sprite Spawning Settings";
-            // 
-            // SFIGroupBox
-            // 
-            this.SFIGroupBox.Location = new System.Drawing.Point(445, 354);
-            this.SFIGroupBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SFIGroupBox.Name = "SFIGroupBox";
-            this.SFIGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.SFIGroupBox.Size = new System.Drawing.Size(435, 87);
-            this.SFIGroupBox.TabIndex = 38;
-            this.SFIGroupBox.TabStop = false;
-            this.SFIGroupBox.Text = "Sprite ARC File Loading Settings";
-            // 
-            // mainGroupBox
-            // 
-            this.mainGroupBox.Controls.Add(this.labelTitle);
-            this.mainGroupBox.Location = new System.Drawing.Point(20, 32);
-            this.mainGroupBox.Margin = new System.Windows.Forms.Padding(4);
-            this.mainGroupBox.Name = "mainGroupBox";
-            this.mainGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.mainGroupBox.Size = new System.Drawing.Size(873, 433);
-            this.mainGroupBox.TabIndex = 39;
-            this.mainGroupBox.TabStop = false;
-            this.mainGroupBox.Text = "Sprite Settings";
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(120, 277);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(196, 34);
-            this.labelTitle.TabIndex = 14;
-            this.labelTitle.Text = "NewerSMBW Hook Generator\r\nMade by RedStoneMatt";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelTitle.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // SSIDDX1
-            // 
-            this.SSIDDX1.Location = new System.Drawing.Point(636, 215);
-            this.SSIDDX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SSIDDX1.MaxLength = 8;
-            this.SSIDDX1.Name = "SSIDDX1";
-            this.SSIDDX1.ReadOnly = true;
-            this.SSIDDX1.Size = new System.Drawing.Size(177, 22);
-            this.SSIDDX1.TabIndex = 26;
-            this.SSIDDX1.TextChanged += new System.EventHandler(this.SSIDDX1_TextChanged);
-            this.SSIDDX1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
-            // SSIDDX2
-            // 
-            this.SSIDDX2.Location = new System.Drawing.Point(636, 245);
-            this.SSIDDX2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SSIDDX2.MaxLength = 8;
-            this.SSIDDX2.Name = "SSIDDX2";
-            this.SSIDDX2.ReadOnly = true;
-            this.SSIDDX2.Size = new System.Drawing.Size(177, 22);
-            this.SSIDDX2.TabIndex = 28;
-            this.SSIDDX2.TextChanged += new System.EventHandler(this.SSIDDX2_TextChanged);
-            this.SSIDDX2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
-            // SSIDDY1
-            // 
-            this.SSIDDY1.Location = new System.Drawing.Point(636, 274);
-            this.SSIDDY1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SSIDDY1.MaxLength = 8;
-            this.SSIDDY1.Name = "SSIDDY1";
-            this.SSIDDY1.ReadOnly = true;
-            this.SSIDDY1.Size = new System.Drawing.Size(177, 22);
-            this.SSIDDY1.TabIndex = 30;
-            this.SSIDDY1.TextChanged += new System.EventHandler(this.SSIDDY1_TextChanged);
-            this.SSIDDY1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
-            // SSIDDY2
-            // 
-            this.SSIDDY2.Location = new System.Drawing.Point(636, 304);
-            this.SSIDDY2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SSIDDY2.MaxLength = 8;
-            this.SSIDDY2.Name = "SSIDDY2";
-            this.SSIDDY2.ReadOnly = true;
-            this.SSIDDY2.Size = new System.Drawing.Size(177, 22);
-            this.SSIDDY2.TabIndex = 32;
-            this.SSIDDY2.TextChanged += new System.EventHandler(this.SSIDDY2_TextChanged);
-            this.SSIDDY2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
-            // SSIXPos
-            // 
-            this.SSIXPos.Location = new System.Drawing.Point(636, 156);
-            this.SSIXPos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SSIXPos.MaxLength = 8;
-            this.SSIXPos.Name = "SSIXPos";
-            this.SSIXPos.ReadOnly = true;
-            this.SSIXPos.Size = new System.Drawing.Size(177, 22);
-            this.SSIXPos.TabIndex = 22;
-            this.SSIXPos.TextChanged += new System.EventHandler(this.SSIXPos_TextChanged);
-            this.SSIXPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
-            // SSIYPos
-            // 
-            this.SSIYPos.Location = new System.Drawing.Point(636, 185);
-            this.SSIYPos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SSIYPos.MaxLength = 8;
-            this.SSIYPos.Name = "SSIYPos";
-            this.SSIYPos.ReadOnly = true;
-            this.SSIYPos.Size = new System.Drawing.Size(177, 22);
-            this.SSIYPos.TabIndex = 24;
-            this.SSIYPos.TextChanged += new System.EventHandler(this.SSIYPos_TextChanged);
-            this.SSIYPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
-            // 
-            // isSSI
-            // 
-            this.isSSI.AutoSize = true;
-            this.isSSI.Location = new System.Drawing.Point(636, 130);
-            this.isSSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.isSSI.Name = "isSSI";
-            this.isSSI.Size = new System.Drawing.Size(159, 21);
-            this.isSSI.TabIndex = 21;
-            this.isSSI.Text = "Sprite Spawning Info";
-            this.isSSI.UseVisualStyleBackColor = true;
-            this.isSSI.CheckedChanged += new System.EventHandler(this.isSSI_CheckedChanged);
-            // 
-            // ActorNum
-            // 
-            this.ActorNum.Location = new System.Drawing.Point(160, 69);
-            this.ActorNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ActorNum.Maximum = new decimal(new int[] {
-            749,
-            0,
-            0,
-            0});
-            this.ActorNum.Name = "ActorNum";
-            this.ActorNum.Size = new System.Drawing.Size(120, 22);
-            this.ActorNum.TabIndex = 0;
-            this.ActorNum.ValueChanged += new System.EventHandler(this.ActorNum_ValueChanged);
-            // 
-            // Generate
-            // 
-            this.Generate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Generate.Location = new System.Drawing.Point(286, 187);
-            this.Generate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Generate.Name = "Generate";
-            this.Generate.Size = new System.Drawing.Size(151, 38);
-            this.Generate.TabIndex = 1;
-            this.Generate.Text = "Generate";
-            this.Generate.UseVisualStyleBackColor = true;
-            this.Generate.Click += new System.EventHandler(this.Generate_Click);
-            // 
-            // Output
-            // 
-            this.Output.Location = new System.Drawing.Point(20, 485);
-            this.Output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Output.Multiline = true;
-            this.Output.Name = "Output";
-            this.Output.ReadOnly = true;
-            this.Output.Size = new System.Drawing.Size(873, 405);
-            this.Output.TabIndex = 2;
-            // 
-            // labelActorNumber
-            // 
-            this.labelActorNumber.AutoSize = true;
-            this.labelActorNumber.Location = new System.Drawing.Point(168, 50);
-            this.labelActorNumber.Name = "labelActorNumber";
-            this.labelActorNumber.Size = new System.Drawing.Size(99, 17);
-            this.labelActorNumber.TabIndex = 3;
-            this.labelActorNumber.Text = "Actor Number:";
-            // 
-            // cppfilename
-            // 
-            this.cppfilename.Location = new System.Drawing.Point(286, 101);
-            this.cppfilename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cppfilename.Name = "cppfilename";
-            this.cppfilename.Size = new System.Drawing.Size(149, 22);
-            this.cppfilename.TabIndex = 4;
-            this.cppfilename.TextChanged += new System.EventHandler(this.cppfilename_TextChanged);
-            // 
-            // labelCPPFilename
-            // 
-            this.labelCPPFilename.AutoSize = true;
-            this.labelCPPFilename.Location = new System.Drawing.Point(182, 104);
-            this.labelCPPFilename.Name = "labelCPPFilename";
-            this.labelCPPFilename.Size = new System.Drawing.Size(98, 17);
-            this.labelCPPFilename.TabIndex = 5;
-            this.labelCPPFilename.Text = "C++ Filename:";
-            // 
-            // customspritename
-            // 
-            this.customspritename.Location = new System.Drawing.Point(286, 130);
-            this.customspritename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customspritename.Name = "customspritename";
-            this.customspritename.Size = new System.Drawing.Size(149, 22);
-            this.customspritename.TabIndex = 6;
-            this.customspritename.TextChanged += new System.EventHandler(this.customspritename_TextChanged);
-            // 
-            // ingamespritename
-            // 
-            this.ingamespritename.Location = new System.Drawing.Point(286, 158);
-            this.ingamespritename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ingamespritename.Name = "ingamespritename";
-            this.ingamespritename.Size = new System.Drawing.Size(149, 22);
-            this.ingamespritename.TabIndex = 7;
-            this.ingamespritename.TextChanged += new System.EventHandler(this.ingamespritename_TextChanged);
-            // 
-            // labelCustomSpriteName
-            // 
-            this.labelCustomSpriteName.AutoSize = true;
-            this.labelCustomSpriteName.Location = new System.Drawing.Point(140, 133);
-            this.labelCustomSpriteName.Name = "labelCustomSpriteName";
-            this.labelCustomSpriteName.Size = new System.Drawing.Size(141, 17);
-            this.labelCustomSpriteName.TabIndex = 8;
-            this.labelCustomSpriteName.Text = "Custom Sprite Name:";
-            // 
-            // labelIGCustomSpriteName
-            // 
-            this.labelIGCustomSpriteName.AutoSize = true;
-            this.labelIGCustomSpriteName.Location = new System.Drawing.Point(81, 162);
-            this.labelIGCustomSpriteName.Name = "labelIGCustomSpriteName";
-            this.labelIGCustomSpriteName.Size = new System.Drawing.Size(199, 17);
-            this.labelIGCustomSpriteName.TabIndex = 9;
-            this.labelIGCustomSpriteName.Text = "In-Game Custom Sprite Name:";
-            // 
-            // spritefileinfo
-            // 
-            this.spritefileinfo.AutoSize = true;
-            this.spritefileinfo.Location = new System.Drawing.Point(685, 377);
-            this.spritefileinfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.spritefileinfo.Name = "spritefileinfo";
-            this.spritefileinfo.Size = new System.Drawing.Size(112, 21);
-            this.spritefileinfo.TabIndex = 11;
-            this.spritefileinfo.Text = "SpriteFileInfo";
-            this.spritefileinfo.UseVisualStyleBackColor = true;
-            this.spritefileinfo.CheckedChanged += new System.EventHandler(this.spritefileinfo_CheckedChanged);
-            // 
-            // spritefileinfotarget
-            // 
-            this.spritefileinfotarget.Location = new System.Drawing.Point(685, 403);
-            this.spritefileinfotarget.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.spritefileinfotarget.Name = "spritefileinfotarget";
-            this.spritefileinfotarget.ReadOnly = true;
-            this.spritefileinfotarget.Size = new System.Drawing.Size(177, 22);
-            this.spritefileinfotarget.TabIndex = 12;
-            this.spritefileinfotarget.TextChanged += new System.EventHandler(this.spritefileinfotarget_TextChanged);
+            this.SSIGroupBox.Text = "Sprite Settings";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(480, 407);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label5.Location = new System.Drawing.Point(19, 258);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 17);
+            this.label5.Size = new System.Drawing.Size(112, 17);
             this.label5.TabIndex = 13;
-            this.label5.Text = "SpriteFileInfo Target Function:";
+            this.label5.Text = "Target Function:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // ActorIName
+            // labelDDX1
             // 
-            this.ActorIName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ActorIName.FormattingEnabled = true;
-            this.ActorIName.Items.AddRange(new object[] {
-            "BOOT",
-            "AUTO_SELECT",
-            "SELECT",
-            "WORLD_MAP",
-            "WORLD__DEMO",
-            "STAGE",
-            "RESTART_CRSIN",
-            "CRSIN",
-            "MOVIE",
-            "GAMEOVER",
-            "GAME_SETUP",
-            "MULTI_PLAY_COURSE_SELECT",
-            "CURSOR",
-            "PLAYER",
-            "YOSHI",
-            "WM_TEST",
-            "WM_TEST",
-            "BG_GM",
-            "CAMERA",
-            "YOSHI_FIRE",
-            "SLOW_QUICK_TAG",
-            "TORIDE_KOKOOPA_DEMO",
-            "BOSS_KAMECK_DEMO",
-            "BOSS_KOOPA_DEMO",
-            "CASTLE_KOKOOPA_DEMO_ST",
-            "CASTLE_KOKOOPA_DEMO_ND",
-            "BOSS_KOOPA_JR_DEMO",
-            "KOOPA_SHIP_FOR_CASTLE_DEMO",
-            "KOOPA_JR_FOR_CASTLE_DEMO",
-            "PEACH_FOR_CASTLE_DEMO",
-            "KAMECK_FOR_CASTLE_DEMO",
-            "LEMMY_FOOTHOLD",
-            "LEMMY_FOOTHOLD_MAIN",
-            "CASTLE_BOSS_DOOR",
-            "CASTLE_BOSS_KEY",
-            "AC_BATTLE_GAME",
-            "AC_BATTLE_KINOPIO",
-            "AC_BATTLE_ITEM",
-            "AC_ENDING_MAIN",
-            "AC_BLOCK_WIND_TAG",
-            "AC_GROUPID",
-            "KAWANAGARE",
-            "RIVER_PAIPO",
-            "RIVER_ITEM",
-            "RIVER_COIN",
-            "RIVER_STARCOIN",
-            "RIVER_LIFT",
-            "RIVER_BARREL",
-            "RIVER_PUKU",
-            "RIVER_PAKKUN",
-            "RIVER_MGR",
-            "EN_KURIBO",
-            "EN_PATA_KURIBO",
-            "EN_MAME_KURIBO",
-            "EN_NOKONOKO",
-            "EN_PATAPATA",
-            "EN_MET",
-            "EN_TOGEZO",
-            "EN_SAKASA_TOGEZO",
-            "EN_BLOCK",
-            "EN_ITEM",
-            "EN_STAR_COIN",
-            "EN_STAR_COIN_LINE",
-            "EN_STAR_COIN_VOLT",
-            "AC_FLAGON",
-            "AC_SWICHAND",
-            "AC_SWICHOR",
-            "AC_RANDSWICH",
-            "AC_CHNGESWICH",
-            "AC_IFSWICH",
-            "AC_RNSWICH",
-            "EN_BKBLOCK",
-            "EN_HNSWICH",
-            "EN_PSWICH",
-            "EN_QSWICH",
-            "EN_BOSS_KOOPA_SWITCH",
-            "EN_BOSS_KOOPA_BIG_SWITCH",
-            "EN_BLSWICH",
-            "EN_BLPSWICH",
-            "EN_BLQSWICH",
-            "EN_BUBBLE",
-            "EN_DOSUN",
-            "EN_BIGDOSUN",
-            "EN_JUGEM",
-            "EN_JUGEM_COIN",
-            "EN_EATJUGEM",
-            "EN_JUGEM_BODY",
-            "EN_TOGEMET",
-            "EN_FIREBAR",
-            "EN_TOGETEKKYU",
-            "EN_BIG_TOGETEKKYU",
-            "EN_UP_DOKAN_PAKKUN",
-            "EN_DOWN_DOKAN_PAKKUN",
-            "EN_RIGHT_DOKAN_PAKKUN",
-            "EN_LEFT_DOKAN_PAKKUN",
-            "EN_UP_DOKAN_FPAKKUN",
-            "EN_DOWN_DOKAN_FPAKKUN",
-            "EN_RIGHT_DOKAN_FPAKKUN",
-            "EN_LEFT_DOKAN_FPAKKUN",
-            "EN_JIMEN_PAKKUN",
-            "EN_JIMEN_BIG_PAKKUN",
-            "EN_JIMEN_FPAKKUN",
-            "EN_JIMEN_BIG_FPAKKUN",
-            "EN_WALK_PAKKUN",
-            "ICEBALL",
-            "PL_FIREBALL",
-            "PAKKUN_FIREBALL",
-            "BROS_FIREBALL",
-            "BOOMERANG",
-            "EN_HELPOS",
-            "EN_FIREBROS",
-            "EN_BOOMERANGBROS",
-            "EN_HAMMERBROS",
-            "EN_ICEBROS",
-            "EN_LIFT_HAMMERBROS",
-            "HAMMER",
-            "EN_HIMANBROS",
-            "MEGA_HAMMER",
-            "BROS_ICEBALL",
-            "EN_BOYON",
-            "EN_REMOCON_TORIMOCHI",
-            "TAG_WIND",
-            "TAG_THUNDER",
-            "TAG_WATER",
-            "EN_AUTOSCR",
-            "OBJ_GRASS",
-            "EN_ENV",
-            "EN_KILLER",
-            "EN_SEARCH_KILLER",
-            "EN_MAGNUM_KILLER",
-            "EN_SEARCH_MAGNUM_KILLER",
-            "EN_BASABASA",
-            "WAKI_PARABOM",
-            "EN_BOMHEI",
-            "EN_PARA_BOMHEI",
-            "EN_MECHA_KOOPA",
-            "EN_MOUSE",
-            "EN_GHOST_JUGEM",
-            "DOKAN_WAKIDASHI",
-            "EN_CRASHER",
-            "AC_WAKILIFT",
-            "EN_BIRIKYU",
-            "EN_LINE_BIRIKYU",
-            "EN_BIRIKYU_MAKER",
-            "EN_CHOROBON",
-            "EN_SANBO",
-            "EN_SANBO_PARTS",
-            "EN_SANBO_EL",
-            "EN_GURUGURU",
-            "EN_GESSO",
-            "EN_BARAMAKI_GESSO",
-            "EN_GOALPOLE",
-            "EN_GESSO_CHILD",
-            "BARNAR_MGR",
-            "EN_SYNCRO_BARNAR",
-            "EN_BARNAR",
-            "EN_LARGE_BARNAR",
-            "EN_PUKUPUKU_PARENT",
-            "AC_TEAM_PUKUPUKU",
-            "EN_PUKUPUKU",
-            "EN_TOGEPUKU",
-            "EN_MIDDLE_PUKU",
-            "EN_PUKUCOIN",
-            "EN_KARON",
-            "EN_BIGKARON",
-            "EN_KARON_HEAD",
-            "EN_REVERSE",
-            "EN_WAKI_JUGEM",
-            "EN_WIRE_TURN",
-            "EN_BIG_WIRE_TURN",
-            "EN_NET_NOKONOKO_LR",
-            "EN_NET_NOKONOKO_UD",
-            "BIGHANA_MGR",
-            "HANA_MOUNTAIN",
-            "EN_HANACHAN",
-            "EN_BIG_HANACHAN",
-            "EN_TERESA",
-            "EN_BIG_TERESA",
-            "EN_CROW",
-            "EN_BIGPILE_UNDER",
-            "EN_BIGPILE_UPPER",
-            "EN_BIGPILE_RIGHT",
-            "EN_BIGPILE_LEFT",
-            "EN_SUPER_BIGPILE_RIGHT",
-            "EN_SUPER_BIGPILE_LEFT",
-            "EN_GOKUBUTO_BIGPILE_UNDER",
-            "EN_GOKUBUTO_BIGPILE_UPPER",
-            "EN_MORTON_BIGPILE",
-            "EN_YAJIRUSHI",
-            "EN_WANWAN",
-            "EN_WANWAN_PILE",
-            "EN_JUMPPUKU",
-            "EN_IGAPUKU",
-            "EN_WAKI_IGAPUKU",
-            "EN_FIRESNAKE",
-            "EN_BOSS_KAMECK",
-            "EN_SLIP_PENGUIN",
-            "WAKI_SLIP_PENGUIN",
-            "EN_SLIP_PENGUIN",
-            "SLIP_PENGUIN_GLASSES",
-            "EN_IGA_KURIBO",
-            "EN_WATERSTREAM",
-            "AWA",
-            "DUMMY_DOOR_PARENT",
-            "DUMMY_DOOR_CHILD",
-            "DUMMY_DOOR",
-            "NOBORIBOU_OBAKE",
-            "UNTEI_ROPE",
-            "REMO_DOOR",
-            "REMO_SLIDE_DOOR",
-            "BRANCH",
-            "BG_CENTER",
-            "KAMECK_MAGIC",
-            "SINKDOKAN_UP",
-            "SINKDOKAN_DOWN",
-            "SINKDOKAN_LEFT",
-            "SINKDOKAN_RIGHT",
-            "FLYDOKAN_UP",
-            "FLYDOKAN_DOWN",
-            "FLYDOKAN_LEFT",
-            "FLYDOKAN_RIGHT",
-            "EN_HATENA_BALLOON",
-            "EN_ONEWAY_GATE",
-            "EN_PATABLOCK",
-            "EN_KERONPA",
-            "KERONPA_FIRE",
-            "AC_NEXTGOTO_BLOCK",
-            "EN_BAKUBAKU",
-            "EN_DOOR",
-            "EN_SWITCHDOOR",
-            "EN_OBAKEDOOR",
-            "EN_TORIDEDOOR",
-            "EN_CASTLEDOOR",
-            "EN_KOOPADOOR",
-            "AC_REVERSEBLOCK",
-            "CHUKAN_POINT",
-            "EN_MAX_UE_LEFT",
-            "EN_MAX_UE_RIGHT",
-            "EN_MAX_UE_LEFT",
-            "EN_MAX_UE_RIGHT",
-            "EN_ZOOM",
-            "EN_BOSS_LARRY",
-            "EN_BOSS_WENDY",
-            "EN_BOSS_IGGY",
-            "EN_BOSS_LEMMY",
-            "EN_BOSS_MORTON",
-            "EN_BOSS_ROY",
-            "EN_BOSS_LUDWIG",
-            "EN_BOSS_CASTLE_LARRY",
-            "EN_BOSS_CASTLE_ROY",
-            "EN_BOSS_CASTLE_WENDY",
-            "EN_BOSS_CASTLE_IGGY",
-            "CASTLE_LEMMY_BALL",
-            "EN_BOSS_CASTLE_LEMMY",
-            "EN_BOSS_CASTLE_MORTON",
-            "OBJ_LUDWIG",
-            "EN_BOSS_CASTLE_LUDWIG",
-            "EN_BOSS_KOOPA",
-            "EN_BOSS_KOOPA_DEMO_KAMECK",
-            "EN_BOSS_KOOPA_DEMO_PEACH",
-            "AC_WAKI_KOOPA_FIRE",
-            "KOOPA_FIRE",
-            "LARRY_FIRE",
-            "KOKOOPA_RING",
-            "KOKOOPA_BALL",
-            "KOKOOPA_THREEWAY_BLITZ",
-            "LEMMY_BALL",
-            "CASTLE_LEMMY_THROW_BALL",
-            "OBJ_IGGY_SLED",
-            "OBJ_IGGY_WANWAN",
-            "OBJ_MORTON",
-            "OBJ_ROY",
-            "OBJ_LARRY",
-            "OBJ_WENDY",
-            "AC_BOSS_KOOPA_SCAFFOLD",
-            "AC_BOSS_KOOPA_RUBBLE",
-            "AC_BOSS_KOOPA_BG_EFFECT",
-            "CASTLE_LUDWIG_BLITZ",
-            "CASTLE_LUDWIG_BLITZ_MGR",
-            "WAKI_KOKOOPA_FIRE",
-            "FALL_FIRE",
-            "WAKI_FIRE",
-            "FIRE_BLITZ",
-            "KOKOOPA_SEARCH_FIRE",
-            "EN_UNIZOO",
-            "EN_UNIRA",
-            "EN_KANIBO",
-            "EN_KANITAMA",
-            "EN_KOPONE",
-            "EN_AKOYA",
-            "EN_MIDDLE_KURIBO",
-            "EN_LARGE_KURIBO",
-            "EN_BEANS_KURIBO",
-            "AC_STRONGBOX",
-            "EN_REMOCON_CANNON",
-            "WAKI_TOGETEKKYU",
-            "JR_CLOWN_A",
-            "JR_CLOWN_B",
-            "JR_CLOWN_C",
-            "JR_CLOWN_FOR_PLAYER",
-            "FLOOR_JR_A",
-            "FLOOR_JR_B",
-            "FLOOR_JR_C",
-            "FLOOR_JR_C_MGR",
-            "BOMB_JR_C",
-            "EN_BOSS_KOOPA_JR_A",
-            "EN_BOSS_KOOPA_JR_B",
-            "EN_BOSS_KOOPA_JR_C",
-            "JR_FIRE",
-            "JR_FLOOR_FIRE",
-            "JR_FLOOR_FIRE_MGR",
-            "JR_CLOWN_FOR_JR_C_DEMO",
-            "KAMECK_FOR_AIRSHIP_DEMO",
-            "PEACH_FOR_AIRSHIP_DEMO",
-            "KOOPA_SHIP_FOR_AIRSHIP_DEMO",
-            "EN_EATCOIN",
-            "AC_WAKI_KILLER",
-            "WAKI_KERONPA",
-            "AC_WAKI_PUKUPUKU",
-            "BELT_NEEDLE",
-            "INTERMITTENT",
-            "MIST_INTERMITTENT",
-            "YOGAN_INTERMITTENT",
-            "EN_IBARAMUSHI",
-            "WAKI_ANKOH",
-            "EN_CHOCHIN_ANKOH",
-            "EN_MISTMAN",
-            "EN_TESTMAN",
-            "EN_CLOUD",
-            "AC_ITEM_KEY",
-            "AC_YOSHI_EGG",
-            "EN_WATERPAIPO",
-            "EN_WATERPAKKUN",
-            "FOO_BALL",
-            "MT_HANACHAN",
-            "EN_LR_STOP_UP",
-            "EN_LR_STOP_DW",
-            "EN_ROT_PAKKUN",
-            "EN_POLTER",
-            "EN_ICICLE",
-            "WALLINSECT_MGR",
-            "EN_WALLINSECT",
-            "EN_LANDBARREL",
-            "EN_IWAO",
-            "IWAO_ROCK",
-            "KAZAN_MGR",
-            "KAZAN_ROCK",
-            "EN_CANNON_BULLET",
-            "EN_CHOROPU",
-            "EN_MANHOLE_CHOROPU",
-            "CHOROPOO_SHADOW",
-            "MINI_GAME_BALLOON",
-            "MINI_GAME_BALLOON_STICK",
-            "EN_JELLY_FISH",
-            "MINI_GAME_WIRE_MESH",
-            "MINI_GAME_GUN_BATTERY_MGR",
-            "MINI_GAME_GUN_BATTERY_MGR_OBJ",
-            "MINI_GAME_WIRE_MESH_MGR",
-            "MINI_GAME_WIRE_MESH_MGR_OBJ",
-            "PEACH_CASTLE_SEQUENCE_MGR",
-            "PEACH_CASTLE_SEQUENCE_MGR_OBJ",
-            "PEACH_CASTLE_BLOCK",
-            "MINI_GAME_KINOPIO",
-            "AC_KANBAN_ARROW",
-            "AC_WATER_BUBBLE",
-            "EN_BUBBLE_CONTROL",
-            "AC_WAKI_WOODBOX",
-            "AC_AUTOSCROOL_SWICH",
-            "AC_ROTATION_GHOST_PARENT",
-            "EN_ROTATION_GHOST",
-            "SHIP_WINDOW",
-            "EN_MADOPU",
-            "SPANA",
-            "EN_GABON",
-            "GABON_ROCK",
-            "MANHOLE",
-            "BGM_INTERLOCKING_DUMMY_BLOCK",
-            "BGM_INTERLOCKING_DUMMY_BLOCK_MGR",
-            "EN_KING_KILLER",
-            "EN_WATER_BUBBLE_BULLET",
-            "EN_FRUIT",
-            "OBJ_SPARKS",
-            "OBJ_SNOW",
-            "TAG_SCROLL",
-            "AC_BLOCK_GROUP",
-            "AC_BLOCK_ONEUP",
-            "AC_BLOCK_COIN",
-            "AC_WAKI_SEARCH_MAGKILLER",
-            "EN_TOBIPUKU",
-            "AC_WAKI_TOBIPUKU",
-            "NEEDLE_FOR_KOOPA_JR_B",
-            "TOP_BG_FOR_CASTLE_LUDWIG",
-            "MIDDLE_BG_FOR_CASTLE_LUDWIG",
-            "BOTTOM_BG_FOR_CASTLE_LUDWIG",
-            "MD_ACTOR",
-            "MD_CAMERA",
-            "EN_CLOUDLT",
-            "UNIT_RAIL",
-            "UNIT_CHIKUWA",
-            "OBJ_SEAWEED",
-            "TAG_ENVSOUND",
-            "EN_COIN",
-            "EN_COIN_JUGEM",
-            "EN_COIN_JUMP",
-            "EN_COIN_FLOOR",
-            "EN_COIN_VOLT",
-            "EN_COIN_WIND",
-            "EN_BLUE_COIN",
-            "EN_COIN_WATER",
-            "EN_REDCOIN",
-            "EN_GREENCOIN",
-            "ICE_ACTOR",
-            "AC_LIGHT_BLOCK",
-            "AC_PROP_BLOCK",
-            "ENEMY_ICE",
-            "PLAYER_ICE",
-            "SLIDE_BLOCK",
-            "POW_BLOCK",
-            "BLOCK_TARU",
-            "OBJ_CENTER",
-            "OBJ_CENTER",
-            "EN_LIFT_ROTATION_FULL",
-            "LIFT_ROTATION_FULL_CHIKA",
-            "LIFT_ROTATION_FULL_KINOKO",
-            "LIFT_ROTATION_FULL_COLOR",
-            "CAGE_BLOCK",
-            "LIFT_ZEN_HAMMER",
-            "LIFT_ZEN_SUISYA",
-            "LIFT_ZEN_KAITEN_KANAAMI",
-            "MOUSE_HOLE",
-            "KATAMUKIYUKA",
-            "LIFT_TORIDE_ROLL",
-            "AC_LIFT_RIDE_HMOVE",
-            "AC_LIFT_OBJBG_VMOVE",
-            "AC_LIFT_OBJBG_HMOVE",
-            "AC_LIFT_OBJBG_HMOVE_BIG",
-            "EN_OBJ_POL",
-            "EN_OBJ_POL_TORIDE",
-            "EN_OBJ_POL_NEEDLE_L",
-            "EN_OBJ_POL_NEEDLE_R",
-            "EN_OBJ_POL_NEEDLE_LR",
-            "EN_OBJ_POL_NEEDLE_U",
-            "EN_OBJ_POL_NEEDLE_D",
-            "EN_OBJ_POL_NEEDLE_UD",
-            "LIFT_ZEN_TOGE",
-            "LIFT_ZEN_SHIRO_YOGAN",
-            "LIFT_ZEN_KAIHEI",
-            "LIFT_DOKAN",
-            "EN_PAIR_OBJ_PARENT",
-            "EN_PAIR_OBJ_CHILD",
-            "LIFT_ZEN_SHIRO",
-            "EN_PAIR_OBJ_CHILD_TORIDE",
-            "WAKI_ICE_ASHIBA",
-            "WAKI_ICE_ASHIBA_WATER",
-            "ICE_ASHIBA",
-            "ICE_ASHIBA_WATER",
-            "ICE_ASHIBA_RAIL",
-            "AC_LIFT_RIDE_VMOVE",
-            "AC_LIFT_SEESAW",
-            "AC_LIFT_FALL",
-            "AC_LIFT_REMOCON_SEESAW",
-            "EN_LIFT_WHEEL",
-            "AC_LIFT_BALANCE",
-            "AC_LIFT_REMOCON_BALANCE_CLINCH",
-            "AC_LIFT_REMOCON_BALANCE",
-            "AC_LIFT_REMOCON_XLINE",
-            "EN_LIFT_REMOCON_TRPLN",
-            "EN_TRPLN_WALL",
-            "EN_CHIKUWA_BLOCK",
-            "EN_CLIFF_CHIKUWA_BLOCK",
-            "EN_KILLER_HOUDAI",
-            "EN_MAGNUM_KILLER_HOUDAI",
-            "AC_WAKILIFT_STEP",
-            "AC_LINE_LIFT",
-            "LINE_SPIN_LIFT",
-            "PALM_TREE",
-            "NICE_BOAT",
-            "LINE_KINOKO_BLOCK",
-            "LADDER",
-            "TARZAN_TSUTA",
-            "TARZAN_IVY",
-            "EN_LIFT_ROTATION_HALF",
-            "LIFT_HURIKO_CENTER",
-            "LIFT_HURIKO",
-            "AC_LIFT_RIDEMOVE",
-            "EN_LIFT_BURANKO",
-            "AC_LIFT_WATERWHEEL",
-            "EN_RAIL_POLYGON",
-            "EN_RAIL_POLY_ICE",
-            "EN_RAIL_POLY_PARENT",
-            "EN_RAIL_POLY_CHILD",
-            "FREEFALL",
-            "EN_GURA_ROCK",
-            "EN_GURA_YUKA",
-            "EN_KAITEN_HOUDAI",
-            "EN_REDRING",
-            "EN_BARREL",
-            "EN_JUMPDAI",
-            "EN_BIG_HNSWICH",
-            "EN_BIGBLOCK",
-            "EN_SNAKEBLOCK",
-            "EN_MARUTA",
-            "OBJ_KAMECK",
-            "AC_LIFT_SPINROTATION",
-            "AC_LIFT_SPINROTATION_SYNC",
-            "EN_RULETBLOCK",
-            "AC_LIFT_SCALES",
-            "AC_LIFT_SCALES_STEP",
-            "EN_TARZANROPE",
-            "AC_LIFT_BOSS_REMOCON_SEESAW",
-            "AC_CHENGE_BLOCK",
-            "EN_FIXATION_ICICLE",
-            "EN_OBJ_HATENA_BLOCK",
-            "EN_OBJ_HATENAB_BLOCK",
-            "EN_OBJ_RENGA_BLOCK",
-            "EN_OBJ_CLEAR_BLOCK",
-            "AC_OBJ_CLEAR_BLOCK",
-            "EN_HATENA_BLOCK_LINE",
-            "EN_RENGA_BLOCK_LINE",
-            "EN_BLOCK_HATENA_WATER",
-            "EN_BLOCK_SOROBAN",
-            "EN_BLOCK_STAFFROLL",
-            "ELASTIC_KINOKO_PARENT",
-            "ELASTIC_KINOKO",
-            "EN_WHITE_BLOCK",
-            "MANTA_MGR",
-            "MANTA_MGR",
-            "MANTA",
-            "AC_LIFT_SLIDE_KINOKO",
-            "EN_ROTATION_BLOCK",
-            "EN_COIN_ANGLE",
-            "ROT_DOKAN",
-            "EN_BLOCK_HATENA_ANGLE",
-            "EN_BLOCK_RENGA_ANGLE",
-            "AC_WIRE_CIRCLE",
-            "AC_WIRE_REMOCON",
-            "AC_LIFT_ICE_SPRING",
-            "ICELUMP",
-            "ICECUBE",
-            "EN_WOODBOX",
-            "EN_PATAMET",
-            "EN_BIG_PATAMET",
-            "NUT",
-            "EN_BIG_MET",
-            "EN_GAKE_NOKO",
-            "AC_DOKAN_CANNON",
-            "AC_SHIP_CANNON",
-            "AC_ROT_CANNON",
-            "AC_ROT_DOKAN_CANNON",
-            "ROT_BARNAR",
-            "CIRCLE_RIGHT",
-            "BLOCK_LIGHT",
-            "HAND_RIGHT",
-            "EN_BIG_ICICLE",
-            "AC_WATER_BUBBLE_PARENT",
-            "AC_WATER_BUBBLE_CANNON",
-            "EN_KILLER_HOUDAI_SLIDE",
-            "EN_BLACK_PAKKUN",
-            "TORCHILIGHT",
-            "EN_BLOCK_CLOUD",
-            "AC_WIRE_MOVE",
-            "OBJ_FRUITTREE",
-            "EN_BOUNCE_BALL",
-            "EN_BLOCK_HATENA_PLAYER",
-            "EN_BLOCK_RENGA_PLAYER",
-            "AC_FREEZER",
-            "AC_WIRE_FOOTHOLD",
-            "EN_ITEM_IVY",
-            "TARZAN_ROPE",
-            "CANNON_PIPE",
-            "KINOKO_LIFT_PARENT",
-            "KINOKO_LIFT",
-            "OBJ_SPIN_PARENT",
-            "OBJ_SPIN_CHILD",
-            "OBJ_SPIN_ASHIBA",
-            "SPIN_WIRE",
-            "WARP_CANNON",
-            "OBJ_KINOKO",
-            "ZOOM_PIPE",
-            "ZOOM_PIPE_DOWN",
-            "OBJ_PIPE_UP",
-            "OBJ_PIPE_UP_NG",
-            "OBJ_PIPE_DOWN",
-            "OBJ_PIPE_RIGHT",
-            "OBJ_PIPE_LEFT",
-            "LIFT_DOWN_ON",
-            "OBJ_MOVE_ON_GHOST",
-            "LIFT_DOWN_ON_NORMAL",
-            "LIFT_RIDE_OFF",
-            "LINE_TRAIN",
-            "REMO_LINE_LIFT",
-            "WATER_LIFT",
-            "AC_NICE_COIN",
-            "AC_NICE_COIN_REGULAR",
-            "EN_BLOCK_HELP",
-            "FAR_BG",
-            "AC_BG_WATER",
-            "AC_BG_LAVA",
-            "AC_BG_POISON",
-            "AC_BG_SAND",
-            "AC_BG_CLOUD",
-            "AC_BG_MOYA",
-            "AC_WATERALL_RAIL",
-            "EN_BLUR",
-            "MASK",
-            "DTEST",
-            "AC_WATER_MOVE",
-            "AC_WATER_MOVE_REGULAR",
-            "AC_WATER_XINFINITE_MOVE",
-            "AC_FLOOR_GYRATION",
-            "AC_FLOOR_HOLE_DOKAN",
-            "AC_FLOOR_DOKAN_EIGHT",
-            "AC_GEAR_GYRATION",
-            "AC_SHIP_GEAR",
-            "AC_BIGSHELL",
-            "EN_BOSS_KOOPA_DEMO_CAGE",
-            "AC_STAND",
-            "AC_HOUSE_LIGHT",
-            "AC_LIGHT_WATER",
-            "AC_COPYRIGHT",
-            "WII_STRAP",
-            "WM_CS_SEQ_MNG",
-            "WORLD_CAMERA",
-            "WM_MAP",
-            "WM_IBARA",
-            "WM_ANTLION_MNG",
-            "WM_CASTLE",
-            "WM_TOWER",
-            "WM_PEACH_CASTLE",
-            "WM_KILLER",
-            "WM_KILLERBULLET",
-            "WM_SINKSHIP",
-            "WM_SWITCH",
-            "WM_START",
-            "WM_KINOKO_BASE",
-            "WM_KINOKO_RED",
-            "WM_KINOKO_UP",
-            "WM_KINOKO_STAR",
-            "WM_COURSE",
-            "WM_STOP",
-            "WM_TORIDE",
-            "WM_GHOST",
-            "WM_DOKAN",
-            "WM_CANNON",
-            "WM_KOOPASHIP",
-            "WM_BOSS_BASE",
-            "WM_BOSS_LARRY",
-            "WM_BOSS_ROY",
-            "WM_BOSS_WENDY",
-            "WM_BOSS_IGGY",
-            "WM_BOSS_LEMMY",
-            "WM_BOSS_MORTON",
-            "WM_BOSS_LUDWIG",
-            "WM_BOSS_KAMECK",
-            "WM_ANTLION",
-            "WM_KURIBO",
-            "WM_PUKU",
-            "WM_PAKKUN",
-            "WM_BROS",
-            "WM_JUGEM",
-            "WM_PLAYER",
-            "WM_SUBPLAYER",
-            "WM_NOTE",
-            "WM_TREASURESHIP",
-            "WM_DIRECTOR",
-            "WM_GRID",
-            "WM_ISLAND",
-            "WM_ITEM",
-            "WM_CS_W_PALM",
-            "WM_SURRENDER",
-            "WM_KOOPA_CASTLE",
-            "WM_ANCHOR",
-            "WM_PAKKUNHEAD",
-            "WM_CLOUD",
-            "WM_SMALLCLOUD",
-            "WM_KOOPAJR",
-            "WM_PEACH",
-            "WM_BOARD",
-            "WM_BUBBLE",
-            "WM_KINOBALLOON",
-            "WM_SANDPILLAR",
-            "WM_YOGANPILLAR",
-            "WM_KINOPIO",
-            "WM_DANCE_PAKKUN",
-            "WM_DOKANROUTE",
-            "WM_HANACHAN",
-            "WM_TOGEZO",
-            "WM_MANTA",
-            "WM_TERESA",
-            "WORLD_SELECT",
-            "WORLD_SELECT_GUIDE",
-            "COLLECTION_COIN_BASE",
-            "COLLECTION_COIN",
-            "COURSE_SELECT_MENU",
-            "NUMBER_OF_PEOPLE_CHANGE",
-            "STOCK_ITEM",
-            "STOCK_ITEM_SHADOW",
-            "EASY_PAIRING",
-            "WM_D_PLAYER",
-            "EVENT_OPENING_TITLE",
-            "SELECT_PLAYER",
-            "MULTI_COURSE_SELECT",
-            "TIME_UP",
-            "COURSE_TIME_UP",
-            "YES_NO_WINDOW",
-            "COURSE_SELECT_MANAGER",
-            "FUKIDASHI_MANAGER",
-            "SMALL_SCORE_MANAGER",
-            "GAMEDISPLAY",
-            "OTASUKE_INFO",
-            "PAUSEWINDOW",
-            "RESULT",
-            "POINT_RESULT_MULTI",
-            "POINT_RESULT_DATE_FILE",
-            "POINT_RESULT_DATE_FILE_FREE",
-            "GOAL_MANAGER",
-            "COURSE_CLEAR",
-            "OTEHON_CLEAR",
-            "INFO_WINDOW",
-            "SELECT_CURSOR",
-            "WARNING_MANAGER",
-            "SEQUENCE_BG",
-            "GAME_OVER",
-            "MODE_SELECT",
-            "DATE_FILE",
-            "FILE_SELECT",
-            "CONTINUE",
-            "MINI_GAME_CANNON",
-            "MINI_GAME_WIRE",
-            "MODEL_PLAY_MANAGER",
-            "MODEL_PLAY_BASE",
-            "MODEL_PLAY_DATE",
-            "MODEL_PLAY_ARROW",
-            "MODEL_PLAY_GUIDE",
-            "MESSAGE_WINDOW",
-            "CHARACTER_CHANGE_SELECT_BASE",
-            "CHARACTER_CHANGE_SELECT_CONTENTS",
-            "CHARACTER_CHANGE_SELECT_ARROW",
-            "CHARACTER_CHANGE_INDICATOR",
-            "MULTI_COURSE_SELECT_CONTENTS",
-            "COLLECTION_COIN_DATE",
-            "CONTROLLER_INFORMATION",
-            "DRAW_GAME",
-            "STAFF_CREDIT_SCORE",
-            "THE_END",
-            "DEMO_MESSAGE",
-            "LETTER_WINDOW",
-            "DUMMY_ACTOR",
-            "LASTACTOR_STAGE",
-            "LASTACTOR"});
-            this.ActorIName.Location = new System.Drawing.Point(286, 69);
-            this.ActorIName.Margin = new System.Windows.Forms.Padding(4);
-            this.ActorIName.Name = "ActorIName";
-            this.ActorIName.Size = new System.Drawing.Size(149, 24);
-            this.ActorIName.TabIndex = 15;
-            this.ActorIName.SelectedIndexChanged += new System.EventHandler(this.ActorIName_SelectedIndexChanged);
+            this.labelDDX1.AutoSize = true;
+            this.labelDDX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelDDX1.Location = new System.Drawing.Point(7, 117);
+            this.labelDDX1.Name = "labelDDX1";
+            this.labelDDX1.Size = new System.Drawing.Size(124, 17);
+            this.labelDDX1.TabIndex = 27;
+            this.labelDDX1.Text = "Draw Distance X1:";
+            this.labelDDX1.Click += new System.EventHandler(this.labelDDX1_Click);
+            // 
+            // labelYPos
+            // 
+            this.labelYPos.AutoSize = true;
+            this.labelYPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelYPos.Location = new System.Drawing.Point(56, 87);
+            this.labelYPos.Name = "labelYPos";
+            this.labelYPos.Size = new System.Drawing.Size(75, 17);
+            this.labelYPos.TabIndex = 25;
+            this.labelYPos.Text = "Y Position:";
+            this.labelYPos.Click += new System.EventHandler(this.labelYPos_Click);
+            // 
+            // spritefileinfo
+            // 
+            this.spritefileinfo.AutoSize = true;
+            this.spritefileinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.spritefileinfo.Location = new System.Drawing.Point(75, 229);
+            this.spritefileinfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.spritefileinfo.Name = "spritefileinfo";
+            this.spritefileinfo.Size = new System.Drawing.Size(173, 21);
+            this.spritefileinfo.TabIndex = 11;
+            this.spritefileinfo.Text = "Sprite ARC File Setting";
+            this.spritefileinfo.UseVisualStyleBackColor = true;
+            this.spritefileinfo.CheckedChanged += new System.EventHandler(this.spritefileinfo_CheckedChanged);
+            // 
+            // SSIDDY1
+            // 
+            this.SSIDDY1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SSIDDY1.Location = new System.Drawing.Point(137, 173);
+            this.SSIDDY1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SSIDDY1.MaxLength = 8;
+            this.SSIDDY1.Name = "SSIDDY1";
+            this.SSIDDY1.ReadOnly = true;
+            this.SSIDDY1.Size = new System.Drawing.Size(177, 23);
+            this.SSIDDY1.TabIndex = 30;
+            this.SSIDDY1.TextChanged += new System.EventHandler(this.SSIDDY1_TextChanged);
+            this.SSIDDY1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // spritefileinfotarget
+            // 
+            this.spritefileinfotarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.spritefileinfotarget.Location = new System.Drawing.Point(137, 254);
+            this.spritefileinfotarget.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.spritefileinfotarget.Name = "spritefileinfotarget";
+            this.spritefileinfotarget.ReadOnly = true;
+            this.spritefileinfotarget.Size = new System.Drawing.Size(177, 23);
+            this.spritefileinfotarget.TabIndex = 12;
+            this.spritefileinfotarget.TextChanged += new System.EventHandler(this.spritefileinfotarget_TextChanged);
+            // 
+            // SSIDDY2
+            // 
+            this.SSIDDY2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SSIDDY2.Location = new System.Drawing.Point(137, 202);
+            this.SSIDDY2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SSIDDY2.MaxLength = 8;
+            this.SSIDDY2.Name = "SSIDDY2";
+            this.SSIDDY2.ReadOnly = true;
+            this.SSIDDY2.Size = new System.Drawing.Size(177, 23);
+            this.SSIDDY2.TabIndex = 32;
+            this.SSIDDY2.TextChanged += new System.EventHandler(this.SSIDDY2_TextChanged);
+            this.SSIDDY2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // labelDDY2
+            // 
+            this.labelDDY2.AutoSize = true;
+            this.labelDDY2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelDDY2.Location = new System.Drawing.Point(7, 206);
+            this.labelDDY2.Name = "labelDDY2";
+            this.labelDDY2.Size = new System.Drawing.Size(124, 17);
+            this.labelDDY2.TabIndex = 33;
+            this.labelDDY2.Text = "Draw Distance Y2:";
+            this.labelDDY2.Click += new System.EventHandler(this.labelDDY2_Click);
+            // 
+            // SSIDDX2
+            // 
+            this.SSIDDX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SSIDDX2.Location = new System.Drawing.Point(137, 143);
+            this.SSIDDX2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SSIDDX2.MaxLength = 8;
+            this.SSIDDX2.Name = "SSIDDX2";
+            this.SSIDDX2.ReadOnly = true;
+            this.SSIDDX2.Size = new System.Drawing.Size(177, 23);
+            this.SSIDDX2.TabIndex = 28;
+            this.SSIDDX2.TextChanged += new System.EventHandler(this.SSIDDX2_TextChanged);
+            this.SSIDDX2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // labelXPos
+            // 
+            this.labelXPos.AutoSize = true;
+            this.labelXPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelXPos.Location = new System.Drawing.Point(56, 58);
+            this.labelXPos.Name = "labelXPos";
+            this.labelXPos.Size = new System.Drawing.Size(75, 17);
+            this.labelXPos.TabIndex = 23;
+            this.labelXPos.Text = "X Position:";
+            this.labelXPos.Click += new System.EventHandler(this.labelXPos_Click);
+            // 
+            // SSIDDX1
+            // 
+            this.SSIDDX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SSIDDX1.Location = new System.Drawing.Point(137, 113);
+            this.SSIDDX1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SSIDDX1.MaxLength = 8;
+            this.SSIDDX1.Name = "SSIDDX1";
+            this.SSIDDX1.ReadOnly = true;
+            this.SSIDDX1.Size = new System.Drawing.Size(177, 23);
+            this.SSIDDX1.TabIndex = 26;
+            this.SSIDDX1.TextChanged += new System.EventHandler(this.SSIDDX1_TextChanged);
+            this.SSIDDX1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // labelDDX2
+            // 
+            this.labelDDX2.AutoSize = true;
+            this.labelDDX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelDDX2.Location = new System.Drawing.Point(7, 147);
+            this.labelDDX2.Name = "labelDDX2";
+            this.labelDDX2.Size = new System.Drawing.Size(124, 17);
+            this.labelDDX2.TabIndex = 29;
+            this.labelDDX2.Text = "Draw Distance X2:";
+            this.labelDDX2.Click += new System.EventHandler(this.labelDDX2_Click);
+            // 
+            // SSIYPos
+            // 
+            this.SSIYPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SSIYPos.Location = new System.Drawing.Point(137, 83);
+            this.SSIYPos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SSIYPos.MaxLength = 8;
+            this.SSIYPos.Name = "SSIYPos";
+            this.SSIYPos.ReadOnly = true;
+            this.SSIYPos.Size = new System.Drawing.Size(177, 23);
+            this.SSIYPos.TabIndex = 24;
+            this.SSIYPos.TextChanged += new System.EventHandler(this.SSIYPos_TextChanged);
+            this.SSIYPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // labelDDY1
+            // 
+            this.labelDDY1.AutoSize = true;
+            this.labelDDY1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelDDY1.Location = new System.Drawing.Point(7, 177);
+            this.labelDDY1.Name = "labelDDY1";
+            this.labelDDY1.Size = new System.Drawing.Size(124, 17);
+            this.labelDDY1.TabIndex = 31;
+            this.labelDDY1.Text = "Draw Distance Y1:";
+            this.labelDDY1.Click += new System.EventHandler(this.labelDDY1_Click);
+            // 
+            // SSIXPos
+            // 
+            this.SSIXPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SSIXPos.Location = new System.Drawing.Point(137, 54);
+            this.SSIXPos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SSIXPos.MaxLength = 8;
+            this.SSIXPos.Name = "SSIXPos";
+            this.SSIXPos.ReadOnly = true;
+            this.SSIXPos.Size = new System.Drawing.Size(177, 23);
+            this.SSIXPos.TabIndex = 22;
+            this.SSIXPos.TextChanged += new System.EventHandler(this.SSIXPos_TextChanged);
+            this.SSIXPos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexBox_KeyPress);
+            // 
+            // isSSI
+            // 
+            this.isSSI.AutoSize = true;
+            this.isSSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.isSSI.Location = new System.Drawing.Point(75, 28);
+            this.isSSI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.isSSI.Name = "isSSI";
+            this.isSSI.Size = new System.Drawing.Size(187, 21);
+            this.isSSI.TabIndex = 21;
+            this.isSSI.Text = "Sprite Spawning Settings";
+            this.isSSI.UseVisualStyleBackColor = true;
+            this.isSSI.CheckedChanged += new System.EventHandler(this.isSSI_CheckedChanged);
+            // 
+            // mainGroupBox
+            // 
+            this.mainGroupBox.Controls.Add(this.mainSpriteSettingsGroupBox);
+            this.mainGroupBox.Controls.Add(this.Generate);
+            this.mainGroupBox.Controls.Add(this.SSIGroupBox);
+            this.mainGroupBox.Font = new System.Drawing.Font("Segoe UI", 7.8F);
+            this.mainGroupBox.Location = new System.Drawing.Point(20, 32);
+            this.mainGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.mainGroupBox.Name = "mainGroupBox";
+            this.mainGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.mainGroupBox.Size = new System.Drawing.Size(795, 359);
+            this.mainGroupBox.TabIndex = 39;
+            this.mainGroupBox.TabStop = false;
+            this.mainGroupBox.Text = "Sprite Settings";
+            // 
+            // mainSpriteSettingsGroupBox
+            // 
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.SpriteName);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelSpriteName);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.ActorNum);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelSpriteNumber);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.SpriteNum);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelActorNumber);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelActorIName);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.ActorIName);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.cppfilename);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelIGCustomSpriteName);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelCustomSpriteName);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelCPPFilename);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.ingamespritename);
+            this.mainSpriteSettingsGroupBox.Controls.Add(this.customspritename);
+            this.mainSpriteSettingsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.mainSpriteSettingsGroupBox.Location = new System.Drawing.Point(7, 57);
+            this.mainSpriteSettingsGroupBox.Name = "mainSpriteSettingsGroupBox";
+            this.mainSpriteSettingsGroupBox.Size = new System.Drawing.Size(447, 225);
+            this.mainSpriteSettingsGroupBox.TabIndex = 39;
+            this.mainSpriteSettingsGroupBox.TabStop = false;
+            this.mainSpriteSettingsGroupBox.Text = "Sprite Infos";
             // 
             // SpriteName
             // 
             this.SpriteName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SpriteName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.SpriteName.FormattingEnabled = true;
             this.SpriteName.Items.AddRange(new object[] {
             "BOOT",
@@ -1861,35 +1101,43 @@
             "NO ASSIGNED FUNCTION",
             "LASTACTOR_STAGE",
             "LASTACTOR"});
-            this.SpriteName.Location = new System.Drawing.Point(445, 69);
+            this.SpriteName.Location = new System.Drawing.Point(26, 41);
             this.SpriteName.Margin = new System.Windows.Forms.Padding(4);
             this.SpriteName.Name = "SpriteName";
-            this.SpriteName.Size = new System.Drawing.Size(380, 24);
+            this.SpriteName.Size = new System.Drawing.Size(380, 25);
             this.SpriteName.TabIndex = 16;
             this.SpriteName.SelectedIndexChanged += new System.EventHandler(this.SpriteName_SelectedIndexChanged);
-            // 
-            // labelActorIName
-            // 
-            this.labelActorIName.AutoSize = true;
-            this.labelActorIName.Location = new System.Drawing.Point(282, 49);
-            this.labelActorIName.Name = "labelActorIName";
-            this.labelActorIName.Size = new System.Drawing.Size(132, 17);
-            this.labelActorIName.TabIndex = 17;
-            this.labelActorIName.Text = "Actor Intenal Name:";
             // 
             // labelSpriteName
             // 
             this.labelSpriteName.AutoSize = true;
-            this.labelSpriteName.Location = new System.Drawing.Point(588, 49);
+            this.labelSpriteName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelSpriteName.Location = new System.Drawing.Point(169, 21);
             this.labelSpriteName.Name = "labelSpriteName";
             this.labelSpriteName.Size = new System.Drawing.Size(90, 17);
             this.labelSpriteName.TabIndex = 18;
             this.labelSpriteName.Text = "Sprite Name:";
             // 
+            // ActorNum
+            // 
+            this.ActorNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ActorNum.Location = new System.Drawing.Point(140, 92);
+            this.ActorNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ActorNum.Maximum = new decimal(new int[] {
+            749,
+            0,
+            0,
+            0});
+            this.ActorNum.Name = "ActorNum";
+            this.ActorNum.Size = new System.Drawing.Size(120, 23);
+            this.ActorNum.TabIndex = 0;
+            this.ActorNum.ValueChanged += new System.EventHandler(this.ActorNum_ValueChanged);
+            // 
             // labelSpriteNumber
             // 
             this.labelSpriteNumber.AutoSize = true;
-            this.labelSpriteNumber.Location = new System.Drawing.Point(42, 50);
+            this.labelSpriteNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelSpriteNumber.Location = new System.Drawing.Point(22, 73);
             this.labelSpriteNumber.Name = "labelSpriteNumber";
             this.labelSpriteNumber.Size = new System.Drawing.Size(103, 17);
             this.labelSpriteNumber.TabIndex = 20;
@@ -1897,7 +1145,8 @@
             // 
             // SpriteNum
             // 
-            this.SpriteNum.Location = new System.Drawing.Point(34, 69);
+            this.SpriteNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SpriteNum.Location = new System.Drawing.Point(14, 92);
             this.SpriteNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SpriteNum.Maximum = new decimal(new int[] {
             749,
@@ -1905,68 +1154,883 @@
             0,
             0});
             this.SpriteNum.Name = "SpriteNum";
-            this.SpriteNum.Size = new System.Drawing.Size(120, 22);
+            this.SpriteNum.Size = new System.Drawing.Size(120, 23);
             this.SpriteNum.TabIndex = 19;
             this.SpriteNum.ValueChanged += new System.EventHandler(this.SpriteNum_ValueChanged);
             // 
-            // labelXPos
+            // labelActorNumber
             // 
-            this.labelXPos.AutoSize = true;
-            this.labelXPos.Location = new System.Drawing.Point(554, 160);
-            this.labelXPos.Name = "labelXPos";
-            this.labelXPos.Size = new System.Drawing.Size(75, 17);
-            this.labelXPos.TabIndex = 23;
-            this.labelXPos.Text = "X Position:";
+            this.labelActorNumber.AutoSize = true;
+            this.labelActorNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelActorNumber.Location = new System.Drawing.Point(148, 73);
+            this.labelActorNumber.Name = "labelActorNumber";
+            this.labelActorNumber.Size = new System.Drawing.Size(99, 17);
+            this.labelActorNumber.TabIndex = 3;
+            this.labelActorNumber.Text = "Actor Number:";
             // 
-            // labelYPos
+            // labelActorIName
             // 
-            this.labelYPos.AutoSize = true;
-            this.labelYPos.Location = new System.Drawing.Point(554, 189);
-            this.labelYPos.Name = "labelYPos";
-            this.labelYPos.Size = new System.Drawing.Size(75, 17);
-            this.labelYPos.TabIndex = 25;
-            this.labelYPos.Text = "Y Position:";
+            this.labelActorIName.AutoSize = true;
+            this.labelActorIName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelActorIName.Location = new System.Drawing.Point(274, 71);
+            this.labelActorIName.Name = "labelActorIName";
+            this.labelActorIName.Size = new System.Drawing.Size(132, 17);
+            this.labelActorIName.TabIndex = 17;
+            this.labelActorIName.Text = "Actor Intenal Name:";
             // 
-            // labelDDX2
+            // ActorIName
             // 
-            this.labelDDX2.AutoSize = true;
-            this.labelDDX2.Location = new System.Drawing.Point(502, 248);
-            this.labelDDX2.Name = "labelDDX2";
-            this.labelDDX2.Size = new System.Drawing.Size(124, 17);
-            this.labelDDX2.TabIndex = 29;
-            this.labelDDX2.Text = "Draw Distance X2:";
+            this.ActorIName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ActorIName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ActorIName.FormattingEnabled = true;
+            this.ActorIName.Items.AddRange(new object[] {
+            "BOOT",
+            "AUTO_SELECT",
+            "SELECT",
+            "WORLD_MAP",
+            "WORLD__DEMO",
+            "STAGE",
+            "RESTART_CRSIN",
+            "CRSIN",
+            "MOVIE",
+            "GAMEOVER",
+            "GAME_SETUP",
+            "MULTI_PLAY_COURSE_SELECT",
+            "CURSOR",
+            "PLAYER",
+            "YOSHI",
+            "WM_TEST",
+            "WM_TEST",
+            "BG_GM",
+            "CAMERA",
+            "YOSHI_FIRE",
+            "SLOW_QUICK_TAG",
+            "TORIDE_KOKOOPA_DEMO",
+            "BOSS_KAMECK_DEMO",
+            "BOSS_KOOPA_DEMO",
+            "CASTLE_KOKOOPA_DEMO_ST",
+            "CASTLE_KOKOOPA_DEMO_ND",
+            "BOSS_KOOPA_JR_DEMO",
+            "KOOPA_SHIP_FOR_CASTLE_DEMO",
+            "KOOPA_JR_FOR_CASTLE_DEMO",
+            "PEACH_FOR_CASTLE_DEMO",
+            "KAMECK_FOR_CASTLE_DEMO",
+            "LEMMY_FOOTHOLD",
+            "LEMMY_FOOTHOLD_MAIN",
+            "CASTLE_BOSS_DOOR",
+            "CASTLE_BOSS_KEY",
+            "AC_BATTLE_GAME",
+            "AC_BATTLE_KINOPIO",
+            "AC_BATTLE_ITEM",
+            "AC_ENDING_MAIN",
+            "AC_BLOCK_WIND_TAG",
+            "AC_GROUPID",
+            "KAWANAGARE",
+            "RIVER_PAIPO",
+            "RIVER_ITEM",
+            "RIVER_COIN",
+            "RIVER_STARCOIN",
+            "RIVER_LIFT",
+            "RIVER_BARREL",
+            "RIVER_PUKU",
+            "RIVER_PAKKUN",
+            "RIVER_MGR",
+            "EN_KURIBO",
+            "EN_PATA_KURIBO",
+            "EN_MAME_KURIBO",
+            "EN_NOKONOKO",
+            "EN_PATAPATA",
+            "EN_MET",
+            "EN_TOGEZO",
+            "EN_SAKASA_TOGEZO",
+            "EN_BLOCK",
+            "EN_ITEM",
+            "EN_STAR_COIN",
+            "EN_STAR_COIN_LINE",
+            "EN_STAR_COIN_VOLT",
+            "AC_FLAGON",
+            "AC_SWICHAND",
+            "AC_SWICHOR",
+            "AC_RANDSWICH",
+            "AC_CHNGESWICH",
+            "AC_IFSWICH",
+            "AC_RNSWICH",
+            "EN_BKBLOCK",
+            "EN_HNSWICH",
+            "EN_PSWICH",
+            "EN_QSWICH",
+            "EN_BOSS_KOOPA_SWITCH",
+            "EN_BOSS_KOOPA_BIG_SWITCH",
+            "EN_BLSWICH",
+            "EN_BLPSWICH",
+            "EN_BLQSWICH",
+            "EN_BUBBLE",
+            "EN_DOSUN",
+            "EN_BIGDOSUN",
+            "EN_JUGEM",
+            "EN_JUGEM_COIN",
+            "EN_EATJUGEM",
+            "EN_JUGEM_BODY",
+            "EN_TOGEMET",
+            "EN_FIREBAR",
+            "EN_TOGETEKKYU",
+            "EN_BIG_TOGETEKKYU",
+            "EN_UP_DOKAN_PAKKUN",
+            "EN_DOWN_DOKAN_PAKKUN",
+            "EN_RIGHT_DOKAN_PAKKUN",
+            "EN_LEFT_DOKAN_PAKKUN",
+            "EN_UP_DOKAN_FPAKKUN",
+            "EN_DOWN_DOKAN_FPAKKUN",
+            "EN_RIGHT_DOKAN_FPAKKUN",
+            "EN_LEFT_DOKAN_FPAKKUN",
+            "EN_JIMEN_PAKKUN",
+            "EN_JIMEN_BIG_PAKKUN",
+            "EN_JIMEN_FPAKKUN",
+            "EN_JIMEN_BIG_FPAKKUN",
+            "EN_WALK_PAKKUN",
+            "ICEBALL",
+            "PL_FIREBALL",
+            "PAKKUN_FIREBALL",
+            "BROS_FIREBALL",
+            "BOOMERANG",
+            "EN_HELPOS",
+            "EN_FIREBROS",
+            "EN_BOOMERANGBROS",
+            "EN_HAMMERBROS",
+            "EN_ICEBROS",
+            "EN_LIFT_HAMMERBROS",
+            "HAMMER",
+            "EN_HIMANBROS",
+            "MEGA_HAMMER",
+            "BROS_ICEBALL",
+            "EN_BOYON",
+            "EN_REMOCON_TORIMOCHI",
+            "TAG_WIND",
+            "TAG_THUNDER",
+            "TAG_WATER",
+            "EN_AUTOSCR",
+            "OBJ_GRASS",
+            "EN_ENV",
+            "EN_KILLER",
+            "EN_SEARCH_KILLER",
+            "EN_MAGNUM_KILLER",
+            "EN_SEARCH_MAGNUM_KILLER",
+            "EN_BASABASA",
+            "WAKI_PARABOM",
+            "EN_BOMHEI",
+            "EN_PARA_BOMHEI",
+            "EN_MECHA_KOOPA",
+            "EN_MOUSE",
+            "EN_GHOST_JUGEM",
+            "DOKAN_WAKIDASHI",
+            "EN_CRASHER",
+            "AC_WAKILIFT",
+            "EN_BIRIKYU",
+            "EN_LINE_BIRIKYU",
+            "EN_BIRIKYU_MAKER",
+            "EN_CHOROBON",
+            "EN_SANBO",
+            "EN_SANBO_PARTS",
+            "EN_SANBO_EL",
+            "EN_GURUGURU",
+            "EN_GESSO",
+            "EN_BARAMAKI_GESSO",
+            "EN_GOALPOLE",
+            "EN_GESSO_CHILD",
+            "BARNAR_MGR",
+            "EN_SYNCRO_BARNAR",
+            "EN_BARNAR",
+            "EN_LARGE_BARNAR",
+            "EN_PUKUPUKU_PARENT",
+            "AC_TEAM_PUKUPUKU",
+            "EN_PUKUPUKU",
+            "EN_TOGEPUKU",
+            "EN_MIDDLE_PUKU",
+            "EN_PUKUCOIN",
+            "EN_KARON",
+            "EN_BIGKARON",
+            "EN_KARON_HEAD",
+            "EN_REVERSE",
+            "EN_WAKI_JUGEM",
+            "EN_WIRE_TURN",
+            "EN_BIG_WIRE_TURN",
+            "EN_NET_NOKONOKO_LR",
+            "EN_NET_NOKONOKO_UD",
+            "BIGHANA_MGR",
+            "HANA_MOUNTAIN",
+            "EN_HANACHAN",
+            "EN_BIG_HANACHAN",
+            "EN_TERESA",
+            "EN_BIG_TERESA",
+            "EN_CROW",
+            "EN_BIGPILE_UNDER",
+            "EN_BIGPILE_UPPER",
+            "EN_BIGPILE_RIGHT",
+            "EN_BIGPILE_LEFT",
+            "EN_SUPER_BIGPILE_RIGHT",
+            "EN_SUPER_BIGPILE_LEFT",
+            "EN_GOKUBUTO_BIGPILE_UNDER",
+            "EN_GOKUBUTO_BIGPILE_UPPER",
+            "EN_MORTON_BIGPILE",
+            "EN_YAJIRUSHI",
+            "EN_WANWAN",
+            "EN_WANWAN_PILE",
+            "EN_JUMPPUKU",
+            "EN_IGAPUKU",
+            "EN_WAKI_IGAPUKU",
+            "EN_FIRESNAKE",
+            "EN_BOSS_KAMECK",
+            "EN_SLIP_PENGUIN",
+            "WAKI_SLIP_PENGUIN",
+            "EN_SLIP_PENGUIN",
+            "SLIP_PENGUIN_GLASSES",
+            "EN_IGA_KURIBO",
+            "EN_WATERSTREAM",
+            "AWA",
+            "DUMMY_DOOR_PARENT",
+            "DUMMY_DOOR_CHILD",
+            "DUMMY_DOOR",
+            "NOBORIBOU_OBAKE",
+            "UNTEI_ROPE",
+            "REMO_DOOR",
+            "REMO_SLIDE_DOOR",
+            "BRANCH",
+            "BG_CENTER",
+            "KAMECK_MAGIC",
+            "SINKDOKAN_UP",
+            "SINKDOKAN_DOWN",
+            "SINKDOKAN_LEFT",
+            "SINKDOKAN_RIGHT",
+            "FLYDOKAN_UP",
+            "FLYDOKAN_DOWN",
+            "FLYDOKAN_LEFT",
+            "FLYDOKAN_RIGHT",
+            "EN_HATENA_BALLOON",
+            "EN_ONEWAY_GATE",
+            "EN_PATABLOCK",
+            "EN_KERONPA",
+            "KERONPA_FIRE",
+            "AC_NEXTGOTO_BLOCK",
+            "EN_BAKUBAKU",
+            "EN_DOOR",
+            "EN_SWITCHDOOR",
+            "EN_OBAKEDOOR",
+            "EN_TORIDEDOOR",
+            "EN_CASTLEDOOR",
+            "EN_KOOPADOOR",
+            "AC_REVERSEBLOCK",
+            "CHUKAN_POINT",
+            "EN_MAX_UE_LEFT",
+            "EN_MAX_UE_RIGHT",
+            "EN_MAX_UE_LEFT",
+            "EN_MAX_UE_RIGHT",
+            "EN_ZOOM",
+            "EN_BOSS_LARRY",
+            "EN_BOSS_WENDY",
+            "EN_BOSS_IGGY",
+            "EN_BOSS_LEMMY",
+            "EN_BOSS_MORTON",
+            "EN_BOSS_ROY",
+            "EN_BOSS_LUDWIG",
+            "EN_BOSS_CASTLE_LARRY",
+            "EN_BOSS_CASTLE_ROY",
+            "EN_BOSS_CASTLE_WENDY",
+            "EN_BOSS_CASTLE_IGGY",
+            "CASTLE_LEMMY_BALL",
+            "EN_BOSS_CASTLE_LEMMY",
+            "EN_BOSS_CASTLE_MORTON",
+            "OBJ_LUDWIG",
+            "EN_BOSS_CASTLE_LUDWIG",
+            "EN_BOSS_KOOPA",
+            "EN_BOSS_KOOPA_DEMO_KAMECK",
+            "EN_BOSS_KOOPA_DEMO_PEACH",
+            "AC_WAKI_KOOPA_FIRE",
+            "KOOPA_FIRE",
+            "LARRY_FIRE",
+            "KOKOOPA_RING",
+            "KOKOOPA_BALL",
+            "KOKOOPA_THREEWAY_BLITZ",
+            "LEMMY_BALL",
+            "CASTLE_LEMMY_THROW_BALL",
+            "OBJ_IGGY_SLED",
+            "OBJ_IGGY_WANWAN",
+            "OBJ_MORTON",
+            "OBJ_ROY",
+            "OBJ_LARRY",
+            "OBJ_WENDY",
+            "AC_BOSS_KOOPA_SCAFFOLD",
+            "AC_BOSS_KOOPA_RUBBLE",
+            "AC_BOSS_KOOPA_BG_EFFECT",
+            "CASTLE_LUDWIG_BLITZ",
+            "CASTLE_LUDWIG_BLITZ_MGR",
+            "WAKI_KOKOOPA_FIRE",
+            "FALL_FIRE",
+            "WAKI_FIRE",
+            "FIRE_BLITZ",
+            "KOKOOPA_SEARCH_FIRE",
+            "EN_UNIZOO",
+            "EN_UNIRA",
+            "EN_KANIBO",
+            "EN_KANITAMA",
+            "EN_KOPONE",
+            "EN_AKOYA",
+            "EN_MIDDLE_KURIBO",
+            "EN_LARGE_KURIBO",
+            "EN_BEANS_KURIBO",
+            "AC_STRONGBOX",
+            "EN_REMOCON_CANNON",
+            "WAKI_TOGETEKKYU",
+            "JR_CLOWN_A",
+            "JR_CLOWN_B",
+            "JR_CLOWN_C",
+            "JR_CLOWN_FOR_PLAYER",
+            "FLOOR_JR_A",
+            "FLOOR_JR_B",
+            "FLOOR_JR_C",
+            "FLOOR_JR_C_MGR",
+            "BOMB_JR_C",
+            "EN_BOSS_KOOPA_JR_A",
+            "EN_BOSS_KOOPA_JR_B",
+            "EN_BOSS_KOOPA_JR_C",
+            "JR_FIRE",
+            "JR_FLOOR_FIRE",
+            "JR_FLOOR_FIRE_MGR",
+            "JR_CLOWN_FOR_JR_C_DEMO",
+            "KAMECK_FOR_AIRSHIP_DEMO",
+            "PEACH_FOR_AIRSHIP_DEMO",
+            "KOOPA_SHIP_FOR_AIRSHIP_DEMO",
+            "EN_EATCOIN",
+            "AC_WAKI_KILLER",
+            "WAKI_KERONPA",
+            "AC_WAKI_PUKUPUKU",
+            "BELT_NEEDLE",
+            "INTERMITTENT",
+            "MIST_INTERMITTENT",
+            "YOGAN_INTERMITTENT",
+            "EN_IBARAMUSHI",
+            "WAKI_ANKOH",
+            "EN_CHOCHIN_ANKOH",
+            "EN_MISTMAN",
+            "EN_TESTMAN",
+            "EN_CLOUD",
+            "AC_ITEM_KEY",
+            "AC_YOSHI_EGG",
+            "EN_WATERPAIPO",
+            "EN_WATERPAKKUN",
+            "FOO_BALL",
+            "MT_HANACHAN",
+            "EN_LR_STOP_UP",
+            "EN_LR_STOP_DW",
+            "EN_ROT_PAKKUN",
+            "EN_POLTER",
+            "EN_ICICLE",
+            "WALLINSECT_MGR",
+            "EN_WALLINSECT",
+            "EN_LANDBARREL",
+            "EN_IWAO",
+            "IWAO_ROCK",
+            "KAZAN_MGR",
+            "KAZAN_ROCK",
+            "EN_CANNON_BULLET",
+            "EN_CHOROPU",
+            "EN_MANHOLE_CHOROPU",
+            "CHOROPOO_SHADOW",
+            "MINI_GAME_BALLOON",
+            "MINI_GAME_BALLOON_STICK",
+            "EN_JELLY_FISH",
+            "MINI_GAME_WIRE_MESH",
+            "MINI_GAME_GUN_BATTERY_MGR",
+            "MINI_GAME_GUN_BATTERY_MGR_OBJ",
+            "MINI_GAME_WIRE_MESH_MGR",
+            "MINI_GAME_WIRE_MESH_MGR_OBJ",
+            "PEACH_CASTLE_SEQUENCE_MGR",
+            "PEACH_CASTLE_SEQUENCE_MGR_OBJ",
+            "PEACH_CASTLE_BLOCK",
+            "MINI_GAME_KINOPIO",
+            "AC_KANBAN_ARROW",
+            "AC_WATER_BUBBLE",
+            "EN_BUBBLE_CONTROL",
+            "AC_WAKI_WOODBOX",
+            "AC_AUTOSCROOL_SWICH",
+            "AC_ROTATION_GHOST_PARENT",
+            "EN_ROTATION_GHOST",
+            "SHIP_WINDOW",
+            "EN_MADOPU",
+            "SPANA",
+            "EN_GABON",
+            "GABON_ROCK",
+            "MANHOLE",
+            "BGM_INTERLOCKING_DUMMY_BLOCK",
+            "BGM_INTERLOCKING_DUMMY_BLOCK_MGR",
+            "EN_KING_KILLER",
+            "EN_WATER_BUBBLE_BULLET",
+            "EN_FRUIT",
+            "OBJ_SPARKS",
+            "OBJ_SNOW",
+            "TAG_SCROLL",
+            "AC_BLOCK_GROUP",
+            "AC_BLOCK_ONEUP",
+            "AC_BLOCK_COIN",
+            "AC_WAKI_SEARCH_MAGKILLER",
+            "EN_TOBIPUKU",
+            "AC_WAKI_TOBIPUKU",
+            "NEEDLE_FOR_KOOPA_JR_B",
+            "TOP_BG_FOR_CASTLE_LUDWIG",
+            "MIDDLE_BG_FOR_CASTLE_LUDWIG",
+            "BOTTOM_BG_FOR_CASTLE_LUDWIG",
+            "MD_ACTOR",
+            "MD_CAMERA",
+            "EN_CLOUDLT",
+            "UNIT_RAIL",
+            "UNIT_CHIKUWA",
+            "OBJ_SEAWEED",
+            "TAG_ENVSOUND",
+            "EN_COIN",
+            "EN_COIN_JUGEM",
+            "EN_COIN_JUMP",
+            "EN_COIN_FLOOR",
+            "EN_COIN_VOLT",
+            "EN_COIN_WIND",
+            "EN_BLUE_COIN",
+            "EN_COIN_WATER",
+            "EN_REDCOIN",
+            "EN_GREENCOIN",
+            "ICE_ACTOR",
+            "AC_LIGHT_BLOCK",
+            "AC_PROP_BLOCK",
+            "ENEMY_ICE",
+            "PLAYER_ICE",
+            "SLIDE_BLOCK",
+            "POW_BLOCK",
+            "BLOCK_TARU",
+            "OBJ_CENTER",
+            "OBJ_CENTER",
+            "EN_LIFT_ROTATION_FULL",
+            "LIFT_ROTATION_FULL_CHIKA",
+            "LIFT_ROTATION_FULL_KINOKO",
+            "LIFT_ROTATION_FULL_COLOR",
+            "CAGE_BLOCK",
+            "LIFT_ZEN_HAMMER",
+            "LIFT_ZEN_SUISYA",
+            "LIFT_ZEN_KAITEN_KANAAMI",
+            "MOUSE_HOLE",
+            "KATAMUKIYUKA",
+            "LIFT_TORIDE_ROLL",
+            "AC_LIFT_RIDE_HMOVE",
+            "AC_LIFT_OBJBG_VMOVE",
+            "AC_LIFT_OBJBG_HMOVE",
+            "AC_LIFT_OBJBG_HMOVE_BIG",
+            "EN_OBJ_POL",
+            "EN_OBJ_POL_TORIDE",
+            "EN_OBJ_POL_NEEDLE_L",
+            "EN_OBJ_POL_NEEDLE_R",
+            "EN_OBJ_POL_NEEDLE_LR",
+            "EN_OBJ_POL_NEEDLE_U",
+            "EN_OBJ_POL_NEEDLE_D",
+            "EN_OBJ_POL_NEEDLE_UD",
+            "LIFT_ZEN_TOGE",
+            "LIFT_ZEN_SHIRO_YOGAN",
+            "LIFT_ZEN_KAIHEI",
+            "LIFT_DOKAN",
+            "EN_PAIR_OBJ_PARENT",
+            "EN_PAIR_OBJ_CHILD",
+            "LIFT_ZEN_SHIRO",
+            "EN_PAIR_OBJ_CHILD_TORIDE",
+            "WAKI_ICE_ASHIBA",
+            "WAKI_ICE_ASHIBA_WATER",
+            "ICE_ASHIBA",
+            "ICE_ASHIBA_WATER",
+            "ICE_ASHIBA_RAIL",
+            "AC_LIFT_RIDE_VMOVE",
+            "AC_LIFT_SEESAW",
+            "AC_LIFT_FALL",
+            "AC_LIFT_REMOCON_SEESAW",
+            "EN_LIFT_WHEEL",
+            "AC_LIFT_BALANCE",
+            "AC_LIFT_REMOCON_BALANCE_CLINCH",
+            "AC_LIFT_REMOCON_BALANCE",
+            "AC_LIFT_REMOCON_XLINE",
+            "EN_LIFT_REMOCON_TRPLN",
+            "EN_TRPLN_WALL",
+            "EN_CHIKUWA_BLOCK",
+            "EN_CLIFF_CHIKUWA_BLOCK",
+            "EN_KILLER_HOUDAI",
+            "EN_MAGNUM_KILLER_HOUDAI",
+            "AC_WAKILIFT_STEP",
+            "AC_LINE_LIFT",
+            "LINE_SPIN_LIFT",
+            "PALM_TREE",
+            "NICE_BOAT",
+            "LINE_KINOKO_BLOCK",
+            "LADDER",
+            "TARZAN_TSUTA",
+            "TARZAN_IVY",
+            "EN_LIFT_ROTATION_HALF",
+            "LIFT_HURIKO_CENTER",
+            "LIFT_HURIKO",
+            "AC_LIFT_RIDEMOVE",
+            "EN_LIFT_BURANKO",
+            "AC_LIFT_WATERWHEEL",
+            "EN_RAIL_POLYGON",
+            "EN_RAIL_POLY_ICE",
+            "EN_RAIL_POLY_PARENT",
+            "EN_RAIL_POLY_CHILD",
+            "FREEFALL",
+            "EN_GURA_ROCK",
+            "EN_GURA_YUKA",
+            "EN_KAITEN_HOUDAI",
+            "EN_REDRING",
+            "EN_BARREL",
+            "EN_JUMPDAI",
+            "EN_BIG_HNSWICH",
+            "EN_BIGBLOCK",
+            "EN_SNAKEBLOCK",
+            "EN_MARUTA",
+            "OBJ_KAMECK",
+            "AC_LIFT_SPINROTATION",
+            "AC_LIFT_SPINROTATION_SYNC",
+            "EN_RULETBLOCK",
+            "AC_LIFT_SCALES",
+            "AC_LIFT_SCALES_STEP",
+            "EN_TARZANROPE",
+            "AC_LIFT_BOSS_REMOCON_SEESAW",
+            "AC_CHENGE_BLOCK",
+            "EN_FIXATION_ICICLE",
+            "EN_OBJ_HATENA_BLOCK",
+            "EN_OBJ_HATENAB_BLOCK",
+            "EN_OBJ_RENGA_BLOCK",
+            "EN_OBJ_CLEAR_BLOCK",
+            "AC_OBJ_CLEAR_BLOCK",
+            "EN_HATENA_BLOCK_LINE",
+            "EN_RENGA_BLOCK_LINE",
+            "EN_BLOCK_HATENA_WATER",
+            "EN_BLOCK_SOROBAN",
+            "EN_BLOCK_STAFFROLL",
+            "ELASTIC_KINOKO_PARENT",
+            "ELASTIC_KINOKO",
+            "EN_WHITE_BLOCK",
+            "MANTA_MGR",
+            "MANTA_MGR",
+            "MANTA",
+            "AC_LIFT_SLIDE_KINOKO",
+            "EN_ROTATION_BLOCK",
+            "EN_COIN_ANGLE",
+            "ROT_DOKAN",
+            "EN_BLOCK_HATENA_ANGLE",
+            "EN_BLOCK_RENGA_ANGLE",
+            "AC_WIRE_CIRCLE",
+            "AC_WIRE_REMOCON",
+            "AC_LIFT_ICE_SPRING",
+            "ICELUMP",
+            "ICECUBE",
+            "EN_WOODBOX",
+            "EN_PATAMET",
+            "EN_BIG_PATAMET",
+            "NUT",
+            "EN_BIG_MET",
+            "EN_GAKE_NOKO",
+            "AC_DOKAN_CANNON",
+            "AC_SHIP_CANNON",
+            "AC_ROT_CANNON",
+            "AC_ROT_DOKAN_CANNON",
+            "ROT_BARNAR",
+            "CIRCLE_RIGHT",
+            "BLOCK_LIGHT",
+            "HAND_RIGHT",
+            "EN_BIG_ICICLE",
+            "AC_WATER_BUBBLE_PARENT",
+            "AC_WATER_BUBBLE_CANNON",
+            "EN_KILLER_HOUDAI_SLIDE",
+            "EN_BLACK_PAKKUN",
+            "TORCHILIGHT",
+            "EN_BLOCK_CLOUD",
+            "AC_WIRE_MOVE",
+            "OBJ_FRUITTREE",
+            "EN_BOUNCE_BALL",
+            "EN_BLOCK_HATENA_PLAYER",
+            "EN_BLOCK_RENGA_PLAYER",
+            "AC_FREEZER",
+            "AC_WIRE_FOOTHOLD",
+            "EN_ITEM_IVY",
+            "TARZAN_ROPE",
+            "CANNON_PIPE",
+            "KINOKO_LIFT_PARENT",
+            "KINOKO_LIFT",
+            "OBJ_SPIN_PARENT",
+            "OBJ_SPIN_CHILD",
+            "OBJ_SPIN_ASHIBA",
+            "SPIN_WIRE",
+            "WARP_CANNON",
+            "OBJ_KINOKO",
+            "ZOOM_PIPE",
+            "ZOOM_PIPE_DOWN",
+            "OBJ_PIPE_UP",
+            "OBJ_PIPE_UP_NG",
+            "OBJ_PIPE_DOWN",
+            "OBJ_PIPE_RIGHT",
+            "OBJ_PIPE_LEFT",
+            "LIFT_DOWN_ON",
+            "OBJ_MOVE_ON_GHOST",
+            "LIFT_DOWN_ON_NORMAL",
+            "LIFT_RIDE_OFF",
+            "LINE_TRAIN",
+            "REMO_LINE_LIFT",
+            "WATER_LIFT",
+            "AC_NICE_COIN",
+            "AC_NICE_COIN_REGULAR",
+            "EN_BLOCK_HELP",
+            "FAR_BG",
+            "AC_BG_WATER",
+            "AC_BG_LAVA",
+            "AC_BG_POISON",
+            "AC_BG_SAND",
+            "AC_BG_CLOUD",
+            "AC_BG_MOYA",
+            "AC_WATERALL_RAIL",
+            "EN_BLUR",
+            "MASK",
+            "DTEST",
+            "AC_WATER_MOVE",
+            "AC_WATER_MOVE_REGULAR",
+            "AC_WATER_XINFINITE_MOVE",
+            "AC_FLOOR_GYRATION",
+            "AC_FLOOR_HOLE_DOKAN",
+            "AC_FLOOR_DOKAN_EIGHT",
+            "AC_GEAR_GYRATION",
+            "AC_SHIP_GEAR",
+            "AC_BIGSHELL",
+            "EN_BOSS_KOOPA_DEMO_CAGE",
+            "AC_STAND",
+            "AC_HOUSE_LIGHT",
+            "AC_LIGHT_WATER",
+            "AC_COPYRIGHT",
+            "WII_STRAP",
+            "WM_CS_SEQ_MNG",
+            "WORLD_CAMERA",
+            "WM_MAP",
+            "WM_IBARA",
+            "WM_ANTLION_MNG",
+            "WM_CASTLE",
+            "WM_TOWER",
+            "WM_PEACH_CASTLE",
+            "WM_KILLER",
+            "WM_KILLERBULLET",
+            "WM_SINKSHIP",
+            "WM_SWITCH",
+            "WM_START",
+            "WM_KINOKO_BASE",
+            "WM_KINOKO_RED",
+            "WM_KINOKO_UP",
+            "WM_KINOKO_STAR",
+            "WM_COURSE",
+            "WM_STOP",
+            "WM_TORIDE",
+            "WM_GHOST",
+            "WM_DOKAN",
+            "WM_CANNON",
+            "WM_KOOPASHIP",
+            "WM_BOSS_BASE",
+            "WM_BOSS_LARRY",
+            "WM_BOSS_ROY",
+            "WM_BOSS_WENDY",
+            "WM_BOSS_IGGY",
+            "WM_BOSS_LEMMY",
+            "WM_BOSS_MORTON",
+            "WM_BOSS_LUDWIG",
+            "WM_BOSS_KAMECK",
+            "WM_ANTLION",
+            "WM_KURIBO",
+            "WM_PUKU",
+            "WM_PAKKUN",
+            "WM_BROS",
+            "WM_JUGEM",
+            "WM_PLAYER",
+            "WM_SUBPLAYER",
+            "WM_NOTE",
+            "WM_TREASURESHIP",
+            "WM_DIRECTOR",
+            "WM_GRID",
+            "WM_ISLAND",
+            "WM_ITEM",
+            "WM_CS_W_PALM",
+            "WM_SURRENDER",
+            "WM_KOOPA_CASTLE",
+            "WM_ANCHOR",
+            "WM_PAKKUNHEAD",
+            "WM_CLOUD",
+            "WM_SMALLCLOUD",
+            "WM_KOOPAJR",
+            "WM_PEACH",
+            "WM_BOARD",
+            "WM_BUBBLE",
+            "WM_KINOBALLOON",
+            "WM_SANDPILLAR",
+            "WM_YOGANPILLAR",
+            "WM_KINOPIO",
+            "WM_DANCE_PAKKUN",
+            "WM_DOKANROUTE",
+            "WM_HANACHAN",
+            "WM_TOGEZO",
+            "WM_MANTA",
+            "WM_TERESA",
+            "WORLD_SELECT",
+            "WORLD_SELECT_GUIDE",
+            "COLLECTION_COIN_BASE",
+            "COLLECTION_COIN",
+            "COURSE_SELECT_MENU",
+            "NUMBER_OF_PEOPLE_CHANGE",
+            "STOCK_ITEM",
+            "STOCK_ITEM_SHADOW",
+            "EASY_PAIRING",
+            "WM_D_PLAYER",
+            "EVENT_OPENING_TITLE",
+            "SELECT_PLAYER",
+            "MULTI_COURSE_SELECT",
+            "TIME_UP",
+            "COURSE_TIME_UP",
+            "YES_NO_WINDOW",
+            "COURSE_SELECT_MANAGER",
+            "FUKIDASHI_MANAGER",
+            "SMALL_SCORE_MANAGER",
+            "GAMEDISPLAY",
+            "OTASUKE_INFO",
+            "PAUSEWINDOW",
+            "RESULT",
+            "POINT_RESULT_MULTI",
+            "POINT_RESULT_DATE_FILE",
+            "POINT_RESULT_DATE_FILE_FREE",
+            "GOAL_MANAGER",
+            "COURSE_CLEAR",
+            "OTEHON_CLEAR",
+            "INFO_WINDOW",
+            "SELECT_CURSOR",
+            "WARNING_MANAGER",
+            "SEQUENCE_BG",
+            "GAME_OVER",
+            "MODE_SELECT",
+            "DATE_FILE",
+            "FILE_SELECT",
+            "CONTINUE",
+            "MINI_GAME_CANNON",
+            "MINI_GAME_WIRE",
+            "MODEL_PLAY_MANAGER",
+            "MODEL_PLAY_BASE",
+            "MODEL_PLAY_DATE",
+            "MODEL_PLAY_ARROW",
+            "MODEL_PLAY_GUIDE",
+            "MESSAGE_WINDOW",
+            "CHARACTER_CHANGE_SELECT_BASE",
+            "CHARACTER_CHANGE_SELECT_CONTENTS",
+            "CHARACTER_CHANGE_SELECT_ARROW",
+            "CHARACTER_CHANGE_INDICATOR",
+            "MULTI_COURSE_SELECT_CONTENTS",
+            "COLLECTION_COIN_DATE",
+            "CONTROLLER_INFORMATION",
+            "DRAW_GAME",
+            "STAFF_CREDIT_SCORE",
+            "THE_END",
+            "DEMO_MESSAGE",
+            "LETTER_WINDOW",
+            "DUMMY_ACTOR",
+            "LASTACTOR_STAGE",
+            "LASTACTOR"});
+            this.ActorIName.Location = new System.Drawing.Point(266, 92);
+            this.ActorIName.Margin = new System.Windows.Forms.Padding(4);
+            this.ActorIName.Name = "ActorIName";
+            this.ActorIName.Size = new System.Drawing.Size(149, 25);
+            this.ActorIName.TabIndex = 15;
+            this.ActorIName.SelectedIndexChanged += new System.EventHandler(this.ActorIName_SelectedIndexChanged);
             // 
-            // labelDDX1
+            // cppfilename
             // 
-            this.labelDDX1.AutoSize = true;
-            this.labelDDX1.Location = new System.Drawing.Point(502, 219);
-            this.labelDDX1.Name = "labelDDX1";
-            this.labelDDX1.Size = new System.Drawing.Size(124, 17);
-            this.labelDDX1.TabIndex = 27;
-            this.labelDDX1.Text = "Draw Distance X1:";
+            this.cppfilename.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cppfilename.Location = new System.Drawing.Point(266, 124);
+            this.cppfilename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cppfilename.Name = "cppfilename";
+            this.cppfilename.Size = new System.Drawing.Size(149, 23);
+            this.cppfilename.TabIndex = 4;
+            this.cppfilename.TextChanged += new System.EventHandler(this.cppfilename_TextChanged);
             // 
-            // labelDDY2
+            // labelIGCustomSpriteName
             // 
-            this.labelDDY2.AutoSize = true;
-            this.labelDDY2.Location = new System.Drawing.Point(502, 307);
-            this.labelDDY2.Name = "labelDDY2";
-            this.labelDDY2.Size = new System.Drawing.Size(124, 17);
-            this.labelDDY2.TabIndex = 33;
-            this.labelDDY2.Text = "Draw Distance Y2:";
+            this.labelIGCustomSpriteName.AutoSize = true;
+            this.labelIGCustomSpriteName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelIGCustomSpriteName.Location = new System.Drawing.Point(61, 185);
+            this.labelIGCustomSpriteName.Name = "labelIGCustomSpriteName";
+            this.labelIGCustomSpriteName.Size = new System.Drawing.Size(199, 17);
+            this.labelIGCustomSpriteName.TabIndex = 9;
+            this.labelIGCustomSpriteName.Text = "In-Game Custom Sprite Name:";
+            this.labelIGCustomSpriteName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // labelDDY1
+            // labelCustomSpriteName
             // 
-            this.labelDDY1.AutoSize = true;
-            this.labelDDY1.Location = new System.Drawing.Point(502, 278);
-            this.labelDDY1.Name = "labelDDY1";
-            this.labelDDY1.Size = new System.Drawing.Size(124, 17);
-            this.labelDDY1.TabIndex = 31;
-            this.labelDDY1.Text = "Draw Distance Y1:";
+            this.labelCustomSpriteName.AutoSize = true;
+            this.labelCustomSpriteName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelCustomSpriteName.Location = new System.Drawing.Point(119, 157);
+            this.labelCustomSpriteName.Name = "labelCustomSpriteName";
+            this.labelCustomSpriteName.Size = new System.Drawing.Size(141, 17);
+            this.labelCustomSpriteName.TabIndex = 8;
+            this.labelCustomSpriteName.Text = "Custom Sprite Name:";
+            this.labelCustomSpriteName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // labelCPPFilename
+            // 
+            this.labelCPPFilename.AutoSize = true;
+            this.labelCPPFilename.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelCPPFilename.Location = new System.Drawing.Point(162, 129);
+            this.labelCPPFilename.Name = "labelCPPFilename";
+            this.labelCPPFilename.Size = new System.Drawing.Size(98, 17);
+            this.labelCPPFilename.TabIndex = 5;
+            this.labelCPPFilename.Text = "C++ Filename:";
+            this.labelCPPFilename.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // ingamespritename
+            // 
+            this.ingamespritename.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ingamespritename.Location = new System.Drawing.Point(266, 181);
+            this.ingamespritename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ingamespritename.Name = "ingamespritename";
+            this.ingamespritename.Size = new System.Drawing.Size(149, 23);
+            this.ingamespritename.TabIndex = 7;
+            this.ingamespritename.TextChanged += new System.EventHandler(this.ingamespritename_TextChanged);
+            // 
+            // customspritename
+            // 
+            this.customspritename.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.customspritename.Location = new System.Drawing.Point(266, 153);
+            this.customspritename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customspritename.Name = "customspritename";
+            this.customspritename.Size = new System.Drawing.Size(149, 23);
+            this.customspritename.TabIndex = 6;
+            this.customspritename.TextChanged += new System.EventHandler(this.customspritename_TextChanged);
+            // 
+            // Generate
+            // 
+            this.Generate.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Generate.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Generate.Location = new System.Drawing.Point(331, 315);
+            this.Generate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Generate.Name = "Generate";
+            this.Generate.Size = new System.Drawing.Size(151, 38);
+            this.Generate.TabIndex = 1;
+            this.Generate.Text = "Generate";
+            this.Generate.UseVisualStyleBackColor = true;
+            this.Generate.Click += new System.EventHandler(this.Generate_Click);
+            // 
+            // Output
+            // 
+            this.Output.Location = new System.Drawing.Point(20, 397);
+            this.Output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Output.Multiline = true;
+            this.Output.Name = "Output";
+            this.Output.ReadOnly = true;
+            this.Output.Size = new System.Drawing.Size(795, 405);
+            this.Output.TabIndex = 2;
             // 
             // logs
             // 
             this.logs.AutoSize = true;
-            this.logs.Location = new System.Drawing.Point(21, 899);
+            this.logs.Location = new System.Drawing.Point(21, 810);
             this.logs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.logs.Name = "logs";
             this.logs.Size = new System.Drawing.Size(131, 17);
@@ -1984,7 +2048,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(916, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(832, 28);
             this.menuStrip1.TabIndex = 41;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -2003,7 +2067,7 @@
             this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -2025,6 +2089,22 @@
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hexCalculatorToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // hexCalculatorToolStripMenuItem
+            // 
+            this.hexCalculatorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hexCalculatorToolStripMenuItem.Image")));
+            this.hexCalculatorToolStripMenuItem.Name = "hexCalculatorToolStripMenuItem";
+            this.hexCalculatorToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.hexCalculatorToolStripMenuItem.Text = "Hex Calculator";
+            this.hexCalculatorToolStripMenuItem.Click += new System.EventHandler(this.hexCalculatorToolStripMenuItem_Click);
             // 
             // HelpToolstrip
             // 
@@ -2049,70 +2129,27 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hexCalculatorToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // hexCalculatorToolStripMenuItem
-            // 
-            this.hexCalculatorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hexCalculatorToolStripMenuItem.Image")));
-            this.hexCalculatorToolStripMenuItem.Name = "hexCalculatorToolStripMenuItem";
-            this.hexCalculatorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.hexCalculatorToolStripMenuItem.Text = "Hex Calculator";
-            this.hexCalculatorToolStripMenuItem.Click += new System.EventHandler(this.hexCalculatorToolStripMenuItem_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 923);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(832, 834);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.logs);
-            this.Controls.Add(this.labelDDY2);
-            this.Controls.Add(this.SSIDDY2);
-            this.Controls.Add(this.labelDDY1);
-            this.Controls.Add(this.SSIDDY1);
-            this.Controls.Add(this.labelDDX2);
-            this.Controls.Add(this.SSIDDX2);
-            this.Controls.Add(this.labelDDX1);
-            this.Controls.Add(this.SSIDDX1);
-            this.Controls.Add(this.labelYPos);
-            this.Controls.Add(this.SSIYPos);
-            this.Controls.Add(this.labelXPos);
-            this.Controls.Add(this.SSIXPos);
-            this.Controls.Add(this.isSSI);
-            this.Controls.Add(this.labelSpriteNumber);
-            this.Controls.Add(this.SpriteNum);
-            this.Controls.Add(this.labelSpriteName);
-            this.Controls.Add(this.labelActorIName);
-            this.Controls.Add(this.SpriteName);
-            this.Controls.Add(this.ActorIName);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.spritefileinfotarget);
-            this.Controls.Add(this.spritefileinfo);
-            this.Controls.Add(this.labelIGCustomSpriteName);
-            this.Controls.Add(this.labelCustomSpriteName);
-            this.Controls.Add(this.ingamespritename);
-            this.Controls.Add(this.customspritename);
-            this.Controls.Add(this.labelCPPFilename);
-            this.Controls.Add(this.cppfilename);
-            this.Controls.Add(this.labelActorNumber);
             this.Controls.Add(this.Output);
-            this.Controls.Add(this.Generate);
-            this.Controls.Add(this.ActorNum);
-            this.Controls.Add(this.SSIGroupBox);
-            this.Controls.Add(this.SFIGroupBox);
             this.Controls.Add(this.mainGroupBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.Text = "NewerSMBW Hook Generator";
+            this.Load += new System.EventHandler(this.Main_Load);
+            this.SSIGroupBox.ResumeLayout(false);
+            this.SSIGroupBox.PerformLayout();
             this.mainGroupBox.ResumeLayout(false);
-            this.mainGroupBox.PerformLayout();
+            this.mainSpriteSettingsGroupBox.ResumeLayout(false);
+            this.mainSpriteSettingsGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActorNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -2124,7 +2161,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox mainGroupBox;
-        private System.Windows.Forms.GroupBox SFIGroupBox;
         private System.Windows.Forms.GroupBox SSIGroupBox;
         private System.Windows.Forms.NumericUpDown ActorNum;
         private System.Windows.Forms.Button Generate;
@@ -2139,7 +2175,6 @@
         private System.Windows.Forms.CheckBox spritefileinfo;
         private System.Windows.Forms.TextBox spritefileinfotarget;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.ComboBox ActorIName;
         private System.Windows.Forms.ComboBox SpriteName;
         private System.Windows.Forms.Label labelActorIName;
@@ -2171,6 +2206,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hexCalculatorToolStripMenuItem;
+        private System.Windows.Forms.GroupBox mainSpriteSettingsGroupBox;
     }
 }
 
