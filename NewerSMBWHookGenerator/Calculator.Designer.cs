@@ -137,8 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(354, 132);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(350, 128);
             this.Controls.Add(this.noPrefixCheck);
             this.Controls.Add(this.prefixCheck);
             this.Controls.Add(this.panelGray);
@@ -148,6 +147,8 @@
             this.Controls.Add(this.decInput);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Calculator";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

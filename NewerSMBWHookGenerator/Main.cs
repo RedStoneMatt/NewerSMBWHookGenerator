@@ -2566,130 +2566,233 @@ namespace NewerSMBWHookGenerator
         private void Generate_Click(object sender, EventArgs e)
         {
             String FinalText = "";
-            if (cppfile == null || customespritename == null || igspritename == null || cppfile == "" || customespritename == "" || igspritename == "")
+            if (isNormalHook.Checked)
             {
-                Output.Text = "";
-                logs.Text = "ERROR: You have to fill all the text boxes!";
-                copyToolStripMenuItem.Enabled = false;
-                saveAsToolStripMenuItem.Enabled = false;
-                return;
-            }
-            if (spritenumber[ActorNumber2] == 483)
-            {
-                FinalText = "---\r\n" +
-                    "#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + "\r\n" +
-                    "\r\n" +
-                    "\r\n" +
-                    "source_files: [../src/" + cppfile + "]\r\n" +
-                    "hooks:\r\n" +
-                    "  - name: " + customespritename + "Build\r\n" +
-                    "    type: add_func_pointer\r\n" +
-                    "    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n" +
-                    "    target_func: '" + igspritename + "::build()'";
-            }
-            else
-            {
-                FinalText = "---\r\n" +
-                    "#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + " (Sprite " + spritenumber[ActorNumber2] + ")\r\n" +
-                    "\r\n" +
-                    "\r\n" +
-                    "source_files: [../src/" + cppfile + "]\r\n" +
-                    "hooks:\r\n" +
-                    "  - name: " + customespritename + "Build\r\n" +
-                    "    type: add_func_pointer\r\n" +
-                    "    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n" +
-                    "    target_func: '" + igspritename + "::build()'";
-            }
-            if (spritefileinfo.Checked)
-            {
-                if (spritefileinfotargetname == null || spritefileinfotargetname == "")
+                if (cppfile == null || customespritename == null || igspritename == null || cppfile == "" || customespritename == "" || igspritename == "")
                 {
                     Output.Text = "";
                     logs.Text = "ERROR: You have to fill all the text boxes!";
-                    copyToolStripMenuItem.Enabled = false;
-                    saveAsToolStripMenuItem.Enabled = false;
+                    copyToolStripItem.Enabled = false;
+                    saveAsToolStripItem.Enabled = false;
                     return;
+                }
+                if (spritenumber[ActorNumber2] == 483)
+                {
+                    FinalText = "---\r\n" +
+                        "#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + "\r\n" +
+                        "\r\n" +
+                        "\r\n" +
+                        "source_files: [../src/" + cppfile + "]\r\n" +
+                        "hooks:\r\n" +
+                        "  - name: " + customespritename + "Build\r\n" +
+                        "    type: add_func_pointer\r\n" +
+                        "    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n" +
+                        "    target_func: '" + igspritename + "::build()'";
                 }
                 else
                 {
-                    if (spritenumber[ActorNumber2] == 483)
+                    FinalText = "---\r\n" +
+                        "#Replaces Actor " + ActorNumber2 + " " + ActorName[ActorNumber2] + " (Sprite " + spritenumber[ActorNumber2] + ")\r\n" +
+                        "\r\n" +
+                        "\r\n" +
+                        "source_files: [../src/" + cppfile + "]\r\n" +
+                        "hooks:\r\n" +
+                        "  - name: " + customespritename + "Build\r\n" +
+                        "    type: add_func_pointer\r\n" +
+                        "    src_addr_pal: " + ActorBuildPointer[ActorNumber2] + "\r\n" +
+                        "    target_func: '" + igspritename + "::build()'";
+                }
+                if (spritefileinfo.Checked)
+                {
+                    if (spritefileinfotargetname == null || spritefileinfotargetname == "")
                     {
                         Output.Text = "";
-                        logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
-                        copyToolStripMenuItem.Enabled = false;
-                        saveAsToolStripMenuItem.Enabled = false;
+                        logs.Text = "ERROR: You have to fill all the text boxes!";
+                        copyToolStripItem.Enabled = false;
+                        saveAsToolStripItem.Enabled = false;
                         return;
                     }
-                    FinalText += "\r\n" +
-                    "\r\n" +
-                    "  - name: " + customespritename + "SpriteFileInfo\r\n" +
-                    "    type: add_func_pointer\r\n" +
-                    "    src_addr_pal: " + spritefileinfotargetvalue[spritenumber[ActorNumber2]] + "\r\n" +
-                    "    target_func: '" + spritefileinfotargetname + "'\r\n" +
-                    "    # 0x8031AB4C + sprite num * 0x4 == offset" + "\r\n";
+                    else
+                    {
+                        if (spritenumber[ActorNumber2] == 483)
+                        {
+                            Output.Text = "";
+                            logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
+                            copyToolStripItem.Enabled = false;
+                            saveAsToolStripItem.Enabled = false;
+                            return;
+                        }
+                        FinalText += "\r\n" +
+                        "\r\n" +
+                        "  - name: " + customespritename + "SpriteFileInfo\r\n" +
+                        "    type: add_func_pointer\r\n" +
+                        "    src_addr_pal: " + spritefileinfotargetvalue[spritenumber[ActorNumber2]] + "\r\n" +
+                        "    target_func: '" + spritefileinfotargetname + "'\r\n" +
+                        "    # 0x8031AB4C + sprite num * 0x4 == offset" + "\r\n";
+                    }
+                }
+                if (isSSI.Checked)
+                {
+                    if (SSIXPos.Text == null || SSIXPos.Text == ""
+                        || SSIYPos.Text == null || SSIYPos.Text == ""
+                        || SSIDDX1.Text == null || SSIDDX1.Text == ""
+                        || SSIDDY1.Text == null || SSIDDY1.Text == ""
+                        || SSIDDX2.Text == null || SSIDDX2.Text == ""
+                        || SSIDDY2.Text == null || SSIDDY2.Text == "")
+                    {
+                        Output.Text = "";
+                        logs.Text = "ERROR: You have to fill all the text boxes!";
+                        copyToolStripItem.Enabled = false;
+                        saveAsToolStripItem.Enabled = false;
+                        return;
+                    }
+                    else
+                    {
+                        if (spritenumber[ActorNumber2] == 483)
+                        {
+                            Output.Text = "";
+                            logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
+                            copyToolStripItem.Enabled = false;
+                            saveAsToolStripItem.Enabled = false;
+                            return;
+                        }
+                        String ID = new String('0', 4 - ActorNumber2.ToString("X").Length) + ActorNumber2.ToString("X");
+                        string XOffs = new String('0', 8 - SSIXPos.Text.Length) + SSIXPos.Text + " ";
+                        string YOffs = new String('0', 8 - SSIYPos.Text.Length) + SSIYPos.Text + "  ";
+                        string RectX1 = new String('0', 8 - SSIDDX1.Text.Length) + SSIDDX1.Text + " ";
+                        string RectY1 = new String('0', 8 - SSIDDY1.Text.Length) + SSIDDY1.Text + " ";
+                        string RectX2 = new String('0', 8 - SSIDDX2.Text.Length) + SSIDDX2.Text + " ";
+                        string RectY2 = new String('0', 8 - SSIDDY2.Text.Length) + SSIDDY2.Text + " ";
+                        FinalText += "\r\n" +
+                        "\r\n" +
+                        "  - name: Update" + customespritename + "SpriteInfo\r\n" +
+                        "    type: patch\r\n" +
+                        "    # 0x8030A340 + sprite num * 0x28 == offset\r\n" +
+                        "    addr_pal: " + updatespritefileinfotargetvalue[spritenumber[ActorNumber2]] + "\r\n" +
+                        "    #      -ID- ----  -X Offs- -Y Offs-  -RectX1- -RectY1- -RectX2- -RectY2-  -1C- -1E- -20- -22-  Flag ----\r\n" +
+                        "    data: '" + ID + " 0000  " + XOffs + YOffs + RectX1 + RectY1 + RectX2 + RectY2 + " 0000 0000 0000 0000  0000 0000'";
+                    }
+                }
+                if ((customespritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (cppfile.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (igspritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0))
+                {
+                    Output.Text = "";
+                    logs.Text = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
+                    copyToolStripItem.Enabled = false;
+                    saveAsToolStripItem.Enabled = false;
+                    return;
+                }
+                if (!(cppfile.IndexOf(".cpp", StringComparison.OrdinalIgnoreCase) >= 0))
+                {
+                    Output.Text = "";
+                    logs.Text = "ERROR: Invalid C++ Filename";
+                    copyToolStripItem.Enabled = false;
+                    saveAsToolStripItem.Enabled = false;
+                    return;
                 }
             }
-            if (isSSI.Checked)
+            if(isUniversalHook.Checked)
             {
-                if (SSIXPos.Text == null || SSIXPos.Text == ""
-                    || SSIYPos.Text == null || SSIYPos.Text == ""
-                    || SSIDDX1.Text == null || SSIDDX1.Text == ""
-                    || SSIDDY1.Text == null || SSIDDY1.Text == ""
-                    || SSIDDX2.Text == null || SSIDDX2.Text == ""
-                    || SSIDDY2.Text == null || SSIDDY2.Text == "")
+                if (cppfile == null || customespritename == null || igspritename == null || cppfile == "" || customespritename == "" || igspritename == "")
                 {
                     Output.Text = "";
                     logs.Text = "ERROR: You have to fill all the text boxes!";
-                    copyToolStripMenuItem.Enabled = false;
-                    saveAsToolStripMenuItem.Enabled = false;
+                    copyToolStripItem.Enabled = false;
+                    saveAsToolStripItem.Enabled = false;
                     return;
                 }
-                else
+                long input = Convert.ToInt64(ActorBuildPointer[ActorNumber2].Replace("0x", ""), 16);
+                MapfileTool instance = new MapfileTool();
+                FinalText = "hooks:\r\n" +
+                "- {name: " + customespritename + "Build, src_addr_jpn: " + instance.EU1ToJP1(input, false) + ", src_addr_jpn2: " + instance.EU1ToJP2(input, false) + ", src_addr_ntsc: " + instance.EU1ToUS1(input, false) + ",\r\n" +
+                "  src_addr_ntsc2: " + instance.EU1ToUS2(input, false) + ", src_addr_pal: " + input + ", src_addr_pal2: " + instance.EU1ToEU2(input, false) + ",\r\n" +
+                "  target_func: '" + igspritename + "::build()', type: add_func_pointer}\r\n";
+                if (isSSI.Checked)
                 {
-                    if (spritenumber[ActorNumber2] == 483)
+                    if (SSIXPos.Text == null || SSIXPos.Text == ""
+                        || SSIYPos.Text == null || SSIYPos.Text == ""
+                        || SSIDDX1.Text == null || SSIDDX1.Text == ""
+                        || SSIDDY1.Text == null || SSIDDY1.Text == ""
+                        || SSIDDX2.Text == null || SSIDDX2.Text == ""
+                        || SSIDDY2.Text == null || SSIDDY2.Text == "")
                     {
                         Output.Text = "";
-                        logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
-                        copyToolStripMenuItem.Enabled = false;
-                        saveAsToolStripMenuItem.Enabled = false;
+                        logs.Text = "ERROR: You have to fill all the text boxes!";
+                        copyToolStripItem.Enabled = false;
+                        saveAsToolStripItem.Enabled = false;
                         return;
                     }
-                    String ID = new String('0', 4 - ActorNumber2.ToString("X").Length) + ActorNumber2.ToString("X");
-                    string XOffs = new String('0', 8 - SSIXPos.Text.Length) + SSIXPos.Text + " ";
-                    string YOffs = new String('0', 8 - SSIYPos.Text.Length) + SSIYPos.Text + "  ";
-                    string RectX1 = new String('0', 8 - SSIDDX1.Text.Length) + SSIDDX1.Text + " ";
-                    string RectY1 = new String('0', 8 - SSIDDY1.Text.Length) + SSIDDY1.Text + " ";
-                    string RectX2 = new String('0', 8 - SSIDDX2.Text.Length) + SSIDDX2.Text + " ";
-                    string RectY2 = new String('0', 8 - SSIDDY2.Text.Length) + SSIDDY2.Text + " ";
-                    FinalText += "\r\n" +
-                    "\r\n" +
-                    "  - name: Update" + customespritename + "SpriteInfo\r\n" +
-                    "    type: patch\r\n" +
-                    "    # 0x8030A340 + sprite num * 0x28 == offset\r\n" +
-                    "    addr_pal: " + updatespritefileinfotargetvalue[spritenumber[ActorNumber2]] + "\r\n" +
-                    "    #      -ID- ----  -X Offs- -Y Offs-  -RectX1- -RectY1- -RectX2- -RectY2-  -1C- -1E- -20- -22-  Flag ----\r\n" +
-                    "    data: '" + ID + " 0000  " + XOffs + YOffs + RectX1 + RectY1 + RectX2 + RectY2 + " 0000 0000 0000 0000  0000 0000'";
+                    else
+                    {
+                        if (spritenumber[ActorNumber2] == 483)
+                        {
+                            Output.Text = "";
+                            logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
+                            copyToolStripItem.Enabled = false;
+                            saveAsToolStripItem.Enabled = false;
+                            return;
+                        }
+                        String ID = new String('0', 4 - ActorNumber2.ToString("X").Length) + ActorNumber2.ToString("X");
+                        string XOffs = new String('0', 8 - SSIXPos.Text.Length) + SSIXPos.Text + " ";
+                        string YOffs = new String('0', 8 - SSIYPos.Text.Length) + SSIYPos.Text + "  ";
+                        string RectX1 = new String('0', 8 - SSIDDX1.Text.Length) + SSIDDX1.Text + " ";
+                        string RectY1 = new String('0', 8 - SSIDDY1.Text.Length) + SSIDDY1.Text + " ";
+                        string RectX2 = new String('0', 8 - SSIDDX2.Text.Length) + SSIDDX2.Text + " ";
+                        string RectY2 = new String('0', 8 - SSIDDY2.Text.Length) + SSIDDY2.Text + " ";
+                        long inputssi = Convert.ToInt64(updatespritefileinfotargetvalue[spritenumber[ActorNumber2]].Replace("0x", ""), 16);
+
+                        FinalText += "- {addr_jpn: " + instance.EU1ToJP1(inputssi, false) + ", addr_jpn2: " + instance.EU1ToJP2(inputssi, false) + ", addr_ntsc: " + instance.EU1ToUS1(inputssi, false) + ", addr_ntsc2: " + instance.EU1ToUS2(inputssi, false) + ",\r\n" +
+                        "  addr_pal: " + inputssi + ", addr_pal2: " + instance.EU1ToEU2(inputssi, false) + ", data: " + ID + " 0000  " + XOffs + YOffs + RectX1 + "\r\n" +
+                        "    " + RectY1 + RectX2 + RectY2 + " 0000 0000 0000 0000  0000 0000, name: Update" + customespritename + "SpriteInfo,\r\n" +
+                        "  type: patch}\r\n";
+                    }
                 }
-            }
-            if((customespritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (cppfile.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (igspritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0))
-            {
-                Output.Text = "";
-                logs.Text = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
-                copyToolStripMenuItem.Enabled = false;
-                saveAsToolStripMenuItem.Enabled = false;
-                return;
-            }
-            if(!(cppfile.IndexOf(".cpp", StringComparison.OrdinalIgnoreCase) >= 0))
-            {
-                Output.Text = "";
-                logs.Text = "ERROR: Invalid C++ Filename";
-                copyToolStripMenuItem.Enabled = false;
-                saveAsToolStripMenuItem.Enabled = false;
-                return;
+                if (spritefileinfo.Checked)
+                {
+                    if (spritefileinfotargetname == null || spritefileinfotargetname == "")
+                    {
+                        Output.Text = "";
+                        logs.Text = "ERROR: You have to fill all the text boxes!";
+                        copyToolStripItem.Enabled = false;
+                        saveAsToolStripItem.Enabled = false;
+                        return;
+                    }
+                    else
+                    {
+                        if (spritenumber[ActorNumber2] == 483)
+                        {
+                            Output.Text = "";
+                            logs.Text = "ERROR: The sprite you want to replace don't exist as a level-placeable sprite!";
+                            copyToolStripItem.Enabled = false;
+                            saveAsToolStripItem.Enabled = false;
+                            return;
+                        }
+                        long inputsfi = Convert.ToInt64(spritefileinfotargetvalue[spritenumber[ActorNumber2]].Replace("0x", ""), 16);
+                        FinalText += "- {name: " + customespritename + "SpriteFileInfo, src_addr_jpn: " + instance.EU1ToJP1(inputsfi, false) + ", src_addr_jpn2: " + instance.EU1ToJP2(inputsfi, false) + ",\r\n" +
+                        "  src_addr_ntsc: " + instance.EU1ToUS1(inputsfi, false) + ", src_addr_ntsc2: " + instance.EU1ToUS2(inputsfi, false) + ", src_addr_pal: " + inputsfi + ",\r\n" +
+                        "  src_addr_pal2: " + instance.EU1ToEU2(inputsfi, false) + ", target_func: '" + spritefileinfotargetname + "', type: add_func_pointer}\r\n";
+                    }
+                }
+                if ((customespritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (cppfile.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0) || (igspritename.IndexOf("matt", StringComparison.OrdinalIgnoreCase) >= 0))
+                {
+                    Output.Text = "";
+                    logs.Text = "ERROR: Invalid Sprite Name, C++ Filename or IG-Name";
+                    copyToolStripItem.Enabled = false;
+                    saveAsToolStripItem.Enabled = false;
+                    return;
+                }
+                if (!(cppfile.IndexOf(".cpp", StringComparison.OrdinalIgnoreCase) >= 0))
+                {
+                    Output.Text = "";
+                    logs.Text = "ERROR: Invalid C++ Filename";
+                    copyToolStripItem.Enabled = false;
+                    saveAsToolStripItem.Enabled = false;
+                    return;
+                }
+                FinalText += "source_files: [../src/" + cppfile + "]";
             }
             Output.Text = FinalText;
-            copyToolStripMenuItem.Enabled = true;
-            saveAsToolStripMenuItem.Enabled = true;
+            copyToolStripItem.Enabled = true;
+            saveAsToolStripItem.Enabled = true;
             logs.Text = "Generated YAML File successfully !";
         }
 
@@ -2987,39 +3090,22 @@ namespace NewerSMBWHookGenerator
             ActorIName.SelectedIndex = 0;
         }
 
-        private void labelYPos_Click(object sender, EventArgs e)
+        private void mapfileToolToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MapfileTool a = new MapfileTool();
+            DialogResult dialogresult = a.ShowDialog();
+            if (dialogresult == DialogResult.OK)
+            {
+                a.Close();
+            }
         }
 
-        private void labelDDY2_Click(object sender, EventArgs e)
+        private void isNormalHook_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void labelXPos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelDDX2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelDDY1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelDDX1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            if(Output.Text != "" && Output.Text != null)
+            {
+                Generate_Click(sender, e);
+            }
         }
     }
 }

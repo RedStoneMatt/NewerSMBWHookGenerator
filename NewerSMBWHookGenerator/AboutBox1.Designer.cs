@@ -31,11 +31,11 @@ namespace NewerSMBWHookGenerator
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox1));
             this.panelGray = new System.Windows.Forms.Panel();
+            this.closeButton = new System.Windows.Forms.Button();
             this.githubLink = new System.Windows.Forms.LinkLabel();
             this.githubIcon = new System.Windows.Forms.PictureBox();
             this.youtubeIcon = new System.Windows.Forms.PictureBox();
             this.youtubeLink = new System.Windows.Forms.LinkLabel();
-            this.closeButton = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
@@ -61,6 +61,18 @@ namespace NewerSMBWHookGenerator
             this.panelGray.Name = "panelGray";
             this.panelGray.Size = new System.Drawing.Size(517, 59);
             this.panelGray.TabIndex = 1;
+            // 
+            // closeButton
+            // 
+            this.closeButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.closeButton.Location = new System.Drawing.Point(420, 7);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(63, 25);
+            this.closeButton.TabIndex = 5;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
             // 
             // githubLink
             // 
@@ -113,18 +125,6 @@ namespace NewerSMBWHookGenerator
             this.youtubeLink.Text = "YouTube";
             this.youtubeLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.youtubeLink_LinkClicked);
             // 
-            // closeButton
-            // 
-            this.closeButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.closeButton.Location = new System.Drawing.Point(420, 7);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(63, 25);
-            this.closeButton.TabIndex = 5;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
-            // 
             // logo
             // 
             this.logo.BackColor = System.Drawing.SystemColors.Window;
@@ -155,7 +155,7 @@ namespace NewerSMBWHookGenerator
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(72, 16);
             this.labelVersion.TabIndex = 2;
-            this.labelVersion.Text = "version 1.6";
+            this.labelVersion.Text = "version 1.7";
             // 
             // labelDetails
             // 
@@ -172,8 +172,7 @@ namespace NewerSMBWHookGenerator
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(492, 354);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(488, 350);
             this.Controls.Add(this.labelDetails);
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelTitle);

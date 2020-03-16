@@ -27,3 +27,4 @@ C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Debug\NewerSMBWHook
 C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Debug\NewerSMBWHookGenerator.pdb
 C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.AboutBox1.resources
 C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.Calculator.resources
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Debug\NewerSMBWHookGenerator.MapfileTool.resources

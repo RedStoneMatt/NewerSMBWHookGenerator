@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.SSIGroupBox = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.SSGroupBox = new System.Windows.Forms.GroupBox();
+            this.labelTargetFunction = new System.Windows.Forms.Label();
             this.labelDDX1 = new System.Windows.Forms.Label();
             this.labelYPos = new System.Windows.Forms.Label();
             this.spritefileinfo = new System.Windows.Forms.CheckBox();
@@ -47,7 +47,7 @@
             this.SSIXPos = new System.Windows.Forms.TextBox();
             this.isSSI = new System.Windows.Forms.CheckBox();
             this.mainGroupBox = new System.Windows.Forms.GroupBox();
-            this.mainSpriteSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            this.SIGroupBox = new System.Windows.Forms.GroupBox();
             this.SpriteName = new System.Windows.Forms.ComboBox();
             this.labelSpriteName = new System.Windows.Forms.Label();
             this.ActorNum = new System.Windows.Forms.NumericUpDown();
@@ -66,62 +66,64 @@
             this.Output = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.logs = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hexCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.hexCalculatorToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolstrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.getAnExampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SSIGroupBox.SuspendLayout();
+            this.getAnExampleToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.mapfileToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.isNormalHook = new System.Windows.Forms.RadioButton();
+            this.isUniversalHook = new System.Windows.Forms.RadioButton();
+            this.SSGroupBox.SuspendLayout();
             this.mainGroupBox.SuspendLayout();
-            this.mainSpriteSettingsGroupBox.SuspendLayout();
+            this.SIGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActorNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // SSIGroupBox
+            // SSGroupBox
             // 
-            this.SSIGroupBox.Controls.Add(this.label5);
-            this.SSIGroupBox.Controls.Add(this.labelDDX1);
-            this.SSIGroupBox.Controls.Add(this.labelYPos);
-            this.SSIGroupBox.Controls.Add(this.spritefileinfo);
-            this.SSIGroupBox.Controls.Add(this.SSIDDY1);
-            this.SSIGroupBox.Controls.Add(this.spritefileinfotarget);
-            this.SSIGroupBox.Controls.Add(this.SSIDDY2);
-            this.SSIGroupBox.Controls.Add(this.labelDDY2);
-            this.SSIGroupBox.Controls.Add(this.SSIDDX2);
-            this.SSIGroupBox.Controls.Add(this.labelXPos);
-            this.SSIGroupBox.Controls.Add(this.SSIDDX1);
-            this.SSIGroupBox.Controls.Add(this.labelDDX2);
-            this.SSIGroupBox.Controls.Add(this.SSIYPos);
-            this.SSIGroupBox.Controls.Add(this.labelDDY1);
-            this.SSIGroupBox.Controls.Add(this.SSIXPos);
-            this.SSIGroupBox.Controls.Add(this.isSSI);
-            this.SSIGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.SSIGroupBox.Location = new System.Drawing.Point(461, 19);
-            this.SSIGroupBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SSIGroupBox.Name = "SSIGroupBox";
-            this.SSIGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.SSIGroupBox.Size = new System.Drawing.Size(323, 295);
-            this.SSIGroupBox.TabIndex = 37;
-            this.SSIGroupBox.TabStop = false;
-            this.SSIGroupBox.Text = "Sprite Settings";
+            this.SSGroupBox.Controls.Add(this.labelTargetFunction);
+            this.SSGroupBox.Controls.Add(this.labelDDX1);
+            this.SSGroupBox.Controls.Add(this.labelYPos);
+            this.SSGroupBox.Controls.Add(this.spritefileinfo);
+            this.SSGroupBox.Controls.Add(this.SSIDDY1);
+            this.SSGroupBox.Controls.Add(this.spritefileinfotarget);
+            this.SSGroupBox.Controls.Add(this.SSIDDY2);
+            this.SSGroupBox.Controls.Add(this.labelDDY2);
+            this.SSGroupBox.Controls.Add(this.SSIDDX2);
+            this.SSGroupBox.Controls.Add(this.labelXPos);
+            this.SSGroupBox.Controls.Add(this.SSIDDX1);
+            this.SSGroupBox.Controls.Add(this.labelDDX2);
+            this.SSGroupBox.Controls.Add(this.SSIYPos);
+            this.SSGroupBox.Controls.Add(this.labelDDY1);
+            this.SSGroupBox.Controls.Add(this.SSIXPos);
+            this.SSGroupBox.Controls.Add(this.isSSI);
+            this.SSGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SSGroupBox.Location = new System.Drawing.Point(461, 19);
+            this.SSGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SSGroupBox.Name = "SSGroupBox";
+            this.SSGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.SSGroupBox.Size = new System.Drawing.Size(323, 295);
+            this.SSGroupBox.TabIndex = 37;
+            this.SSGroupBox.TabStop = false;
+            this.SSGroupBox.Text = "Sprite Settings";
             // 
-            // label5
+            // labelTargetFunction
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label5.Location = new System.Drawing.Point(19, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 17);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Target Function:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.labelTargetFunction.AutoSize = true;
+            this.labelTargetFunction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelTargetFunction.Location = new System.Drawing.Point(19, 258);
+            this.labelTargetFunction.Name = "labelTargetFunction";
+            this.labelTargetFunction.Size = new System.Drawing.Size(112, 17);
+            this.labelTargetFunction.TabIndex = 13;
+            this.labelTargetFunction.Text = "Target Function:";
             // 
             // labelDDX1
             // 
@@ -132,7 +134,6 @@
             this.labelDDX1.Size = new System.Drawing.Size(124, 17);
             this.labelDDX1.TabIndex = 27;
             this.labelDDX1.Text = "Draw Distance X1:";
-            this.labelDDX1.Click += new System.EventHandler(this.labelDDX1_Click);
             // 
             // labelYPos
             // 
@@ -143,7 +144,6 @@
             this.labelYPos.Size = new System.Drawing.Size(75, 17);
             this.labelYPos.TabIndex = 25;
             this.labelYPos.Text = "Y Position:";
-            this.labelYPos.Click += new System.EventHandler(this.labelYPos_Click);
             // 
             // spritefileinfo
             // 
@@ -204,7 +204,6 @@
             this.labelDDY2.Size = new System.Drawing.Size(124, 17);
             this.labelDDY2.TabIndex = 33;
             this.labelDDY2.Text = "Draw Distance Y2:";
-            this.labelDDY2.Click += new System.EventHandler(this.labelDDY2_Click);
             // 
             // SSIDDX2
             // 
@@ -228,7 +227,6 @@
             this.labelXPos.Size = new System.Drawing.Size(75, 17);
             this.labelXPos.TabIndex = 23;
             this.labelXPos.Text = "X Position:";
-            this.labelXPos.Click += new System.EventHandler(this.labelXPos_Click);
             // 
             // SSIDDX1
             // 
@@ -252,7 +250,6 @@
             this.labelDDX2.Size = new System.Drawing.Size(124, 17);
             this.labelDDX2.TabIndex = 29;
             this.labelDDX2.Text = "Draw Distance X2:";
-            this.labelDDX2.Click += new System.EventHandler(this.labelDDX2_Click);
             // 
             // SSIYPos
             // 
@@ -276,7 +273,6 @@
             this.labelDDY1.Size = new System.Drawing.Size(124, 17);
             this.labelDDY1.TabIndex = 31;
             this.labelDDY1.Text = "Draw Distance Y1:";
-            this.labelDDY1.Click += new System.EventHandler(this.labelDDY1_Click);
             // 
             // SSIXPos
             // 
@@ -306,42 +302,45 @@
             // 
             // mainGroupBox
             // 
-            this.mainGroupBox.Controls.Add(this.mainSpriteSettingsGroupBox);
+            this.mainGroupBox.Controls.Add(this.isUniversalHook);
+            this.mainGroupBox.Controls.Add(this.logs);
+            this.mainGroupBox.Controls.Add(this.isNormalHook);
+            this.mainGroupBox.Controls.Add(this.Output);
+            this.mainGroupBox.Controls.Add(this.SIGroupBox);
             this.mainGroupBox.Controls.Add(this.Generate);
-            this.mainGroupBox.Controls.Add(this.SSIGroupBox);
+            this.mainGroupBox.Controls.Add(this.SSGroupBox);
             this.mainGroupBox.Font = new System.Drawing.Font("Segoe UI", 7.8F);
-            this.mainGroupBox.Location = new System.Drawing.Point(20, 32);
+            this.mainGroupBox.Location = new System.Drawing.Point(13, 32);
             this.mainGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.mainGroupBox.Name = "mainGroupBox";
             this.mainGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.mainGroupBox.Size = new System.Drawing.Size(795, 359);
+            this.mainGroupBox.Size = new System.Drawing.Size(793, 793);
             this.mainGroupBox.TabIndex = 39;
             this.mainGroupBox.TabStop = false;
-            this.mainGroupBox.Text = "Sprite Settings";
             // 
-            // mainSpriteSettingsGroupBox
+            // SIGroupBox
             // 
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.SpriteName);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelSpriteName);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.ActorNum);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelSpriteNumber);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.SpriteNum);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelActorNumber);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelActorIName);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.ActorIName);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.cppfilename);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelIGCustomSpriteName);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelCustomSpriteName);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.labelCPPFilename);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.ingamespritename);
-            this.mainSpriteSettingsGroupBox.Controls.Add(this.customspritename);
-            this.mainSpriteSettingsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.mainSpriteSettingsGroupBox.Location = new System.Drawing.Point(7, 57);
-            this.mainSpriteSettingsGroupBox.Name = "mainSpriteSettingsGroupBox";
-            this.mainSpriteSettingsGroupBox.Size = new System.Drawing.Size(447, 225);
-            this.mainSpriteSettingsGroupBox.TabIndex = 39;
-            this.mainSpriteSettingsGroupBox.TabStop = false;
-            this.mainSpriteSettingsGroupBox.Text = "Sprite Infos";
+            this.SIGroupBox.Controls.Add(this.SpriteName);
+            this.SIGroupBox.Controls.Add(this.labelSpriteName);
+            this.SIGroupBox.Controls.Add(this.ActorNum);
+            this.SIGroupBox.Controls.Add(this.labelSpriteNumber);
+            this.SIGroupBox.Controls.Add(this.SpriteNum);
+            this.SIGroupBox.Controls.Add(this.labelActorNumber);
+            this.SIGroupBox.Controls.Add(this.labelActorIName);
+            this.SIGroupBox.Controls.Add(this.ActorIName);
+            this.SIGroupBox.Controls.Add(this.cppfilename);
+            this.SIGroupBox.Controls.Add(this.labelIGCustomSpriteName);
+            this.SIGroupBox.Controls.Add(this.labelCustomSpriteName);
+            this.SIGroupBox.Controls.Add(this.labelCPPFilename);
+            this.SIGroupBox.Controls.Add(this.ingamespritename);
+            this.SIGroupBox.Controls.Add(this.customspritename);
+            this.SIGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SIGroupBox.Location = new System.Drawing.Point(7, 57);
+            this.SIGroupBox.Name = "SIGroupBox";
+            this.SIGroupBox.Size = new System.Drawing.Size(447, 225);
+            this.SIGroupBox.TabIndex = 39;
+            this.SIGroupBox.TabStop = false;
+            this.SIGroupBox.Text = "Sprite Infos";
             // 
             // SpriteName
             // 
@@ -2008,7 +2007,7 @@
             // 
             this.Generate.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Generate.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Generate.Location = new System.Drawing.Point(331, 315);
+            this.Generate.Location = new System.Drawing.Point(331, 318);
             this.Generate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Generate.Name = "Generate";
             this.Generate.Size = new System.Drawing.Size(151, 38);
@@ -2019,125 +2018,159 @@
             // 
             // Output
             // 
-            this.Output.Location = new System.Drawing.Point(20, 397);
+            this.Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Output.Location = new System.Drawing.Point(7, 361);
             this.Output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Output.Multiline = true;
             this.Output.Name = "Output";
             this.Output.ReadOnly = true;
-            this.Output.Size = new System.Drawing.Size(795, 405);
+            this.Output.Size = new System.Drawing.Size(777, 392);
             this.Output.TabIndex = 2;
             // 
             // logs
             // 
             this.logs.AutoSize = true;
-            this.logs.Location = new System.Drawing.Point(21, 810);
+            this.logs.Location = new System.Drawing.Point(4, 764);
             this.logs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.logs.Name = "logs";
-            this.logs.Size = new System.Drawing.Size(131, 17);
+            this.logs.Size = new System.Drawing.Size(128, 19);
             this.logs.TabIndex = 36;
             this.logs.Text = "Waiting for Action...";
             // 
-            // menuStrip1
+            // mainMenuStrip
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStrip,
-            this.toolsToolStripMenuItem,
+            this.toolsToolStrip,
             this.HelpToolstrip,
-            this.aboutToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(832, 28);
-            this.menuStrip1.TabIndex = 41;
-            this.menuStrip1.Text = "menuStrip1";
+            this.aboutToolStrip});
+            this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.mainMenuStrip.Name = "mainMenuStrip";
+            this.mainMenuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.mainMenuStrip.Size = new System.Drawing.Size(819, 28);
+            this.mainMenuStrip.TabIndex = 41;
+            this.mainMenuStrip.Text = "menuStrip1";
             // 
             // fileToolStrip
             // 
             this.fileToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
-            this.copyToolStripMenuItem,
-            this.saveAsToolStripMenuItem});
+            this.newToolStripItem,
+            this.copyToolStripItem,
+            this.saveAsToolStripItem});
             this.fileToolStrip.Name = "fileToolStrip";
             this.fileToolStrip.Size = new System.Drawing.Size(46, 24);
             this.fileToolStrip.Text = "File";
             // 
-            // newToolStripMenuItem
+            // newToolStripItem
             // 
-            this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.newToolStripMenuItem.Text = "New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            this.newToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripItem.Image")));
+            this.newToolStripItem.Name = "newToolStripItem";
+            this.newToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newToolStripItem.Size = new System.Drawing.Size(224, 26);
+            this.newToolStripItem.Text = "New";
+            this.newToolStripItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
-            // copyToolStripMenuItem
+            // copyToolStripItem
             // 
-            this.copyToolStripMenuItem.Enabled = false;
-            this.copyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripMenuItem.Image")));
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.copyToolStripMenuItem.Text = "Copy to Clipboard";
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToClipboardToolStripMenuItem_Click);
+            this.copyToolStripItem.Enabled = false;
+            this.copyToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripItem.Image")));
+            this.copyToolStripItem.Name = "copyToolStripItem";
+            this.copyToolStripItem.ShortcutKeyDisplayString = "";
+            this.copyToolStripItem.Size = new System.Drawing.Size(224, 26);
+            this.copyToolStripItem.Text = "Copy to Clipboard";
+            this.copyToolStripItem.Click += new System.EventHandler(this.copyToClipboardToolStripMenuItem_Click);
             // 
-            // saveAsToolStripMenuItem
+            // saveAsToolStripItem
             // 
-            this.saveAsToolStripMenuItem.Enabled = false;
-            this.saveAsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveAsToolStripMenuItem.Image")));
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.saveAsToolStripMenuItem.Text = "Save As...";
-            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            this.saveAsToolStripItem.Enabled = false;
+            this.saveAsToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("saveAsToolStripItem.Image")));
+            this.saveAsToolStripItem.Name = "saveAsToolStripItem";
+            this.saveAsToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveAsToolStripItem.Size = new System.Drawing.Size(224, 26);
+            this.saveAsToolStripItem.Text = "Save As...";
+            this.saveAsToolStripItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
-            // toolsToolStripMenuItem
+            // toolsToolStrip
             // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hexCalculatorToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.toolsToolStripMenuItem.Text = "Tools";
+            this.toolsToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hexCalculatorToolStripItem,
+            this.mapfileToolToolStripMenuItem});
+            this.toolsToolStrip.Name = "toolsToolStrip";
+            this.toolsToolStrip.Size = new System.Drawing.Size(58, 24);
+            this.toolsToolStrip.Text = "Tools";
             // 
-            // hexCalculatorToolStripMenuItem
+            // hexCalculatorToolStripItem
             // 
-            this.hexCalculatorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hexCalculatorToolStripMenuItem.Image")));
-            this.hexCalculatorToolStripMenuItem.Name = "hexCalculatorToolStripMenuItem";
-            this.hexCalculatorToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
-            this.hexCalculatorToolStripMenuItem.Text = "Hex Calculator";
-            this.hexCalculatorToolStripMenuItem.Click += new System.EventHandler(this.hexCalculatorToolStripMenuItem_Click);
+            this.hexCalculatorToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("hexCalculatorToolStripItem.Image")));
+            this.hexCalculatorToolStripItem.Name = "hexCalculatorToolStripItem";
+            this.hexCalculatorToolStripItem.Size = new System.Drawing.Size(224, 26);
+            this.hexCalculatorToolStripItem.Text = "Hex Calculator";
+            this.hexCalculatorToolStripItem.Click += new System.EventHandler(this.hexCalculatorToolStripMenuItem_Click);
             // 
             // HelpToolstrip
             // 
             this.HelpToolstrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.getAnExampleToolStripMenuItem});
+            this.getAnExampleToolStripItem});
             this.HelpToolstrip.Name = "HelpToolstrip";
             this.HelpToolstrip.Size = new System.Drawing.Size(55, 24);
             this.HelpToolstrip.Text = "Help";
             // 
-            // getAnExampleToolStripMenuItem
+            // getAnExampleToolStripItem
             // 
-            this.getAnExampleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("getAnExampleToolStripMenuItem.Image")));
-            this.getAnExampleToolStripMenuItem.Name = "getAnExampleToolStripMenuItem";
-            this.getAnExampleToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.getAnExampleToolStripMenuItem.Text = "Get an example";
-            this.getAnExampleToolStripMenuItem.Click += new System.EventHandler(this.getAnExampleToolStripMenuItem_Click);
+            this.getAnExampleToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("getAnExampleToolStripItem.Image")));
+            this.getAnExampleToolStripItem.Name = "getAnExampleToolStripItem";
+            this.getAnExampleToolStripItem.ShortcutKeyDisplayString = "Crtl+E";
+            this.getAnExampleToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.getAnExampleToolStripItem.Size = new System.Drawing.Size(246, 26);
+            this.getAnExampleToolStripItem.Text = "Get an example";
+            this.getAnExampleToolStripItem.Click += new System.EventHandler(this.getAnExampleToolStripMenuItem_Click);
             // 
-            // aboutToolStripMenuItem
+            // aboutToolStrip
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStrip.Name = "aboutToolStrip";
+            this.aboutToolStrip.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStrip.Text = "About";
+            this.aboutToolStrip.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // mapfileToolToolStripMenuItem
+            // 
+            this.mapfileToolToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mapfileToolToolStripMenuItem.Image")));
+            this.mapfileToolToolStripMenuItem.Name = "mapfileToolToolStripMenuItem";
+            this.mapfileToolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mapfileToolToolStripMenuItem.Text = "Mapfile Tool";
+            this.mapfileToolToolStripMenuItem.Click += new System.EventHandler(this.mapfileToolToolStripMenuItem_Click);
+            // 
+            // isNormalHook
+            // 
+            this.isNormalHook.AutoSize = true;
+            this.isNormalHook.Checked = true;
+            this.isNormalHook.Location = new System.Drawing.Point(192, 314);
+            this.isNormalHook.Name = "isNormalHook";
+            this.isNormalHook.Size = new System.Drawing.Size(112, 23);
+            this.isNormalHook.TabIndex = 40;
+            this.isNormalHook.TabStop = true;
+            this.isNormalHook.Text = "Normal Hook";
+            this.isNormalHook.UseVisualStyleBackColor = true;
+            this.isNormalHook.CheckedChanged += new System.EventHandler(this.isNormalHook_CheckedChanged);
+            // 
+            // isUniversalHook
+            // 
+            this.isUniversalHook.AutoSize = true;
+            this.isUniversalHook.Location = new System.Drawing.Point(192, 333);
+            this.isUniversalHook.Name = "isUniversalHook";
+            this.isUniversalHook.Size = new System.Drawing.Size(123, 23);
+            this.isUniversalHook.TabIndex = 41;
+            this.isUniversalHook.Text = "Universal Hook";
+            this.isUniversalHook.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(832, 834);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.logs);
-            this.Controls.Add(this.Output);
+            this.ClientSize = new System.Drawing.Size(819, 835);
+            this.Controls.Add(this.mainMenuStrip);
             this.Controls.Add(this.mainGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2145,15 +2178,16 @@
             this.Name = "Main";
             this.Text = "NewerSMBW Hook Generator";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.SSIGroupBox.ResumeLayout(false);
-            this.SSIGroupBox.PerformLayout();
+            this.SSGroupBox.ResumeLayout(false);
+            this.SSGroupBox.PerformLayout();
             this.mainGroupBox.ResumeLayout(false);
-            this.mainSpriteSettingsGroupBox.ResumeLayout(false);
-            this.mainSpriteSettingsGroupBox.PerformLayout();
+            this.mainGroupBox.PerformLayout();
+            this.SIGroupBox.ResumeLayout(false);
+            this.SIGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActorNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteNum)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mainMenuStrip.ResumeLayout(false);
+            this.mainMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2161,7 +2195,7 @@
 
         #endregion
         private System.Windows.Forms.GroupBox mainGroupBox;
-        private System.Windows.Forms.GroupBox SSIGroupBox;
+        private System.Windows.Forms.GroupBox SSGroupBox;
         private System.Windows.Forms.NumericUpDown ActorNum;
         private System.Windows.Forms.Button Generate;
         private System.Windows.Forms.TextBox Output;
@@ -2174,7 +2208,7 @@
         private System.Windows.Forms.Label labelIGCustomSpriteName;
         private System.Windows.Forms.CheckBox spritefileinfo;
         private System.Windows.Forms.TextBox spritefileinfotarget;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelTargetFunction;
         private System.Windows.Forms.ComboBox ActorIName;
         private System.Windows.Forms.ComboBox SpriteName;
         private System.Windows.Forms.Label labelActorIName;
@@ -2196,17 +2230,20 @@
         private System.Windows.Forms.TextBox SSIDDY1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label logs;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip mainMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripItem;
+        private System.Windows.Forms.ToolStripMenuItem copyToolStripItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripItem;
         private System.Windows.Forms.ToolStripMenuItem HelpToolstrip;
-        private System.Windows.Forms.ToolStripMenuItem getAnExampleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hexCalculatorToolStripMenuItem;
-        private System.Windows.Forms.GroupBox mainSpriteSettingsGroupBox;
+        private System.Windows.Forms.ToolStripMenuItem getAnExampleToolStripItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem hexCalculatorToolStripItem;
+        private System.Windows.Forms.GroupBox SIGroupBox;
+        private System.Windows.Forms.ToolStripMenuItem mapfileToolToolStripMenuItem;
+        private System.Windows.Forms.RadioButton isUniversalHook;
+        private System.Windows.Forms.RadioButton isNormalHook;
     }
 }
 
