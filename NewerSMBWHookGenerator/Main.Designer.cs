@@ -47,6 +47,10 @@
             this.SSIXPos = new System.Windows.Forms.TextBox();
             this.isSSI = new System.Windows.Forms.CheckBox();
             this.mainGroupBox = new System.Windows.Forms.GroupBox();
+            this.isUniversalHook = new System.Windows.Forms.RadioButton();
+            this.logs = new System.Windows.Forms.Label();
+            this.isNormalHook = new System.Windows.Forms.RadioButton();
+            this.Output = new System.Windows.Forms.TextBox();
             this.SIGroupBox = new System.Windows.Forms.GroupBox();
             this.SpriteName = new System.Windows.Forms.ComboBox();
             this.labelSpriteName = new System.Windows.Forms.Label();
@@ -63,22 +67,22 @@
             this.ingamespritename = new System.Windows.Forms.TextBox();
             this.customspritename = new System.Windows.Forms.TextBox();
             this.Generate = new System.Windows.Forms.Button();
-            this.Output = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.logs = new System.Windows.Forms.Label();
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileToolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.copyToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.hexCalculatorToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mapfileToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolstrip = new System.Windows.Forms.ToolStripMenuItem();
             this.getAnExampleToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.mapfileToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.isNormalHook = new System.Windows.Forms.RadioButton();
-            this.isUniversalHook = new System.Windows.Forms.RadioButton();
+            this.sub2AddressToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.multiKamekToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.SSGroupBox.SuspendLayout();
             this.mainGroupBox.SuspendLayout();
             this.SIGroupBox.SuspendLayout();
@@ -317,6 +321,50 @@
             this.mainGroupBox.Size = new System.Drawing.Size(793, 793);
             this.mainGroupBox.TabIndex = 39;
             this.mainGroupBox.TabStop = false;
+            // 
+            // isUniversalHook
+            // 
+            this.isUniversalHook.AutoSize = true;
+            this.isUniversalHook.Location = new System.Drawing.Point(192, 333);
+            this.isUniversalHook.Name = "isUniversalHook";
+            this.isUniversalHook.Size = new System.Drawing.Size(123, 23);
+            this.isUniversalHook.TabIndex = 41;
+            this.isUniversalHook.Text = "Universal Hook";
+            this.isUniversalHook.UseVisualStyleBackColor = true;
+            // 
+            // logs
+            // 
+            this.logs.AutoSize = true;
+            this.logs.Location = new System.Drawing.Point(4, 764);
+            this.logs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.logs.Name = "logs";
+            this.logs.Size = new System.Drawing.Size(128, 19);
+            this.logs.TabIndex = 36;
+            this.logs.Text = "Waiting for Action...";
+            // 
+            // isNormalHook
+            // 
+            this.isNormalHook.AutoSize = true;
+            this.isNormalHook.Checked = true;
+            this.isNormalHook.Location = new System.Drawing.Point(192, 314);
+            this.isNormalHook.Name = "isNormalHook";
+            this.isNormalHook.Size = new System.Drawing.Size(112, 23);
+            this.isNormalHook.TabIndex = 40;
+            this.isNormalHook.TabStop = true;
+            this.isNormalHook.Text = "Normal Hook";
+            this.isNormalHook.UseVisualStyleBackColor = true;
+            this.isNormalHook.CheckedChanged += new System.EventHandler(this.isNormalHook_CheckedChanged);
+            // 
+            // Output
+            // 
+            this.Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Output.Location = new System.Drawing.Point(7, 361);
+            this.Output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Output.Multiline = true;
+            this.Output.Name = "Output";
+            this.Output.ReadOnly = true;
+            this.Output.Size = new System.Drawing.Size(777, 392);
+            this.Output.TabIndex = 2;
             // 
             // SIGroupBox
             // 
@@ -2016,27 +2064,6 @@
             this.Generate.UseVisualStyleBackColor = true;
             this.Generate.Click += new System.EventHandler(this.Generate_Click);
             // 
-            // Output
-            // 
-            this.Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Output.Location = new System.Drawing.Point(7, 361);
-            this.Output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Output.Multiline = true;
-            this.Output.Name = "Output";
-            this.Output.ReadOnly = true;
-            this.Output.Size = new System.Drawing.Size(777, 392);
-            this.Output.TabIndex = 2;
-            // 
-            // logs
-            // 
-            this.logs.AutoSize = true;
-            this.logs.Location = new System.Drawing.Point(4, 764);
-            this.logs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.logs.Name = "logs";
-            this.logs.Size = new System.Drawing.Size(128, 19);
-            this.logs.TabIndex = 36;
-            this.logs.Text = "Waiting for Action...";
-            // 
             // mainMenuStrip
             // 
             this.mainMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -2056,8 +2083,9 @@
             // 
             this.fileToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripItem,
-            this.copyToolStripItem,
-            this.saveAsToolStripItem});
+            this.saveAsToolStripItem,
+            this.fileToolStripSeparator,
+            this.copyToolStripItem});
             this.fileToolStrip.Name = "fileToolStrip";
             this.fileToolStrip.Size = new System.Drawing.Size(46, 24);
             this.fileToolStrip.Text = "File";
@@ -2071,16 +2099,6 @@
             this.newToolStripItem.Text = "New";
             this.newToolStripItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
-            // copyToolStripItem
-            // 
-            this.copyToolStripItem.Enabled = false;
-            this.copyToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripItem.Image")));
-            this.copyToolStripItem.Name = "copyToolStripItem";
-            this.copyToolStripItem.ShortcutKeyDisplayString = "";
-            this.copyToolStripItem.Size = new System.Drawing.Size(224, 26);
-            this.copyToolStripItem.Text = "Copy to Clipboard";
-            this.copyToolStripItem.Click += new System.EventHandler(this.copyToClipboardToolStripMenuItem_Click);
-            // 
             // saveAsToolStripItem
             // 
             this.saveAsToolStripItem.Enabled = false;
@@ -2091,11 +2109,29 @@
             this.saveAsToolStripItem.Text = "Save As...";
             this.saveAsToolStripItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
+            // fileToolStripSeparator
+            // 
+            this.fileToolStripSeparator.Name = "fileToolStripSeparator";
+            this.fileToolStripSeparator.Size = new System.Drawing.Size(221, 6);
+            // 
+            // copyToolStripItem
+            // 
+            this.copyToolStripItem.Enabled = false;
+            this.copyToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripItem.Image")));
+            this.copyToolStripItem.Name = "copyToolStripItem";
+            this.copyToolStripItem.ShortcutKeyDisplayString = "";
+            this.copyToolStripItem.Size = new System.Drawing.Size(224, 26);
+            this.copyToolStripItem.Text = "Copy to Clipboard";
+            this.copyToolStripItem.Click += new System.EventHandler(this.copyToClipboardToolStripMenuItem_Click);
+            // 
             // toolsToolStrip
             // 
             this.toolsToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.multiKamekToolStripItem,
             this.hexCalculatorToolStripItem,
-            this.mapfileToolToolStripMenuItem});
+            this.toolsToolStripSeparator,
+            this.mapfileToolToolStripMenuItem,
+            this.sub2AddressToolStripItem});
             this.toolsToolStrip.Name = "toolsToolStrip";
             this.toolsToolStrip.Size = new System.Drawing.Size(58, 24);
             this.toolsToolStrip.Text = "Tools";
@@ -2104,9 +2140,20 @@
             // 
             this.hexCalculatorToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("hexCalculatorToolStripItem.Image")));
             this.hexCalculatorToolStripItem.Name = "hexCalculatorToolStripItem";
-            this.hexCalculatorToolStripItem.Size = new System.Drawing.Size(224, 26);
+            this.hexCalculatorToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.hexCalculatorToolStripItem.Size = new System.Drawing.Size(266, 26);
             this.hexCalculatorToolStripItem.Text = "Hex Calculator";
             this.hexCalculatorToolStripItem.Click += new System.EventHandler(this.hexCalculatorToolStripMenuItem_Click);
+            // 
+            // mapfileToolToolStripMenuItem
+            // 
+            this.mapfileToolToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mapfileToolToolStripMenuItem.Image")));
+            this.mapfileToolToolStripMenuItem.Name = "mapfileToolToolStripMenuItem";
+            this.mapfileToolToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.M)));
+            this.mapfileToolToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.mapfileToolToolStripMenuItem.Text = "Mapfile Tool";
+            this.mapfileToolToolStripMenuItem.Click += new System.EventHandler(this.mapfileToolToolStripMenuItem_Click);
             // 
             // HelpToolstrip
             // 
@@ -2133,36 +2180,27 @@
             this.aboutToolStrip.Text = "About";
             this.aboutToolStrip.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // mapfileToolToolStripMenuItem
+            // sub2AddressToolStripItem
             // 
-            this.mapfileToolToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mapfileToolToolStripMenuItem.Image")));
-            this.mapfileToolToolStripMenuItem.Name = "mapfileToolToolStripMenuItem";
-            this.mapfileToolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.mapfileToolToolStripMenuItem.Text = "Mapfile Tool";
-            this.mapfileToolToolStripMenuItem.Click += new System.EventHandler(this.mapfileToolToolStripMenuItem_Click);
+            this.sub2AddressToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("sub2AddressToolStripItem.Image")));
+            this.sub2AddressToolStripItem.Name = "sub2AddressToolStripItem";
+            this.sub2AddressToolStripItem.Size = new System.Drawing.Size(266, 26);
+            this.sub2AddressToolStripItem.Text = "Sub2Address";
+            this.sub2AddressToolStripItem.Click += new System.EventHandler(this.sub2AddressToolStripItem_Click);
             // 
-            // isNormalHook
+            // multiKamekToolStripItem
             // 
-            this.isNormalHook.AutoSize = true;
-            this.isNormalHook.Checked = true;
-            this.isNormalHook.Location = new System.Drawing.Point(192, 314);
-            this.isNormalHook.Name = "isNormalHook";
-            this.isNormalHook.Size = new System.Drawing.Size(112, 23);
-            this.isNormalHook.TabIndex = 40;
-            this.isNormalHook.TabStop = true;
-            this.isNormalHook.Text = "Normal Hook";
-            this.isNormalHook.UseVisualStyleBackColor = true;
-            this.isNormalHook.CheckedChanged += new System.EventHandler(this.isNormalHook_CheckedChanged);
+            this.multiKamekToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("multiKamekToolStripItem.Image")));
+            this.multiKamekToolStripItem.Name = "multiKamekToolStripItem";
+            this.multiKamekToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.multiKamekToolStripItem.Size = new System.Drawing.Size(266, 26);
+            this.multiKamekToolStripItem.Text = "MultiKamek";
+            this.multiKamekToolStripItem.Click += new System.EventHandler(this.multiKamekToolStripItem_Click);
             // 
-            // isUniversalHook
+            // toolsToolStripSeparator
             // 
-            this.isUniversalHook.AutoSize = true;
-            this.isUniversalHook.Location = new System.Drawing.Point(192, 333);
-            this.isUniversalHook.Name = "isUniversalHook";
-            this.isUniversalHook.Size = new System.Drawing.Size(123, 23);
-            this.isUniversalHook.TabIndex = 41;
-            this.isUniversalHook.Text = "Universal Hook";
-            this.isUniversalHook.UseVisualStyleBackColor = true;
+            this.toolsToolStripSeparator.Name = "toolsToolStripSeparator";
+            this.toolsToolStripSeparator.Size = new System.Drawing.Size(263, 6);
             // 
             // Main
             // 
@@ -2176,7 +2214,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
-            this.Text = "NewerSMBW Hook Generator";
+            this.Text = "NewerSMBW Hook Generator v1.8";
             this.Load += new System.EventHandler(this.Main_Load);
             this.SSGroupBox.ResumeLayout(false);
             this.SSGroupBox.PerformLayout();
@@ -2244,6 +2282,10 @@
         private System.Windows.Forms.ToolStripMenuItem mapfileToolToolStripMenuItem;
         private System.Windows.Forms.RadioButton isUniversalHook;
         private System.Windows.Forms.RadioButton isNormalHook;
+        private System.Windows.Forms.ToolStripSeparator fileToolStripSeparator;
+        private System.Windows.Forms.ToolStripMenuItem sub2AddressToolStripItem;
+        private System.Windows.Forms.ToolStripMenuItem multiKamekToolStripItem;
+        private System.Windows.Forms.ToolStripSeparator toolsToolStripSeparator;
     }
 }
 

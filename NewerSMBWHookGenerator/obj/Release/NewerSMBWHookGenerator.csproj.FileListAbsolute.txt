@@ -18,3 +18,13 @@ C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHo
 C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.csproj.GenerateResource.cache
 C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.exe
 C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.pdb
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.MapfileTool.resources
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.Sub2Address.resources
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\Newtonsoft.Json.dll
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\bin\Release\Newtonsoft.Json.xml
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.MultiKamek.resources
+C:\Users\Matthieu\Documents\#hook\NewerSMBWHookGenerator\obj\Release\NewerSMBWHookGenerator.csproj.CopyComplete

@@ -3107,5 +3107,21 @@ namespace NewerSMBWHookGenerator
                 Generate_Click(sender, e);
             }
         }
+
+        private void sub2AddressToolStripItem_Click(object sender, EventArgs e)
+        {
+            Sub2Address a = new Sub2Address();
+            DialogResult dialogresult = a.ShowDialog();
+            if (dialogresult == DialogResult.OK)
+            {
+                a.Close();
+            }
+        }
+
+        private void multiKamekToolStripItem_Click(object sender, EventArgs e)
+        {
+            MultiKamek a = new MultiKamek();
+            a.Show();
+        }
     }
 }

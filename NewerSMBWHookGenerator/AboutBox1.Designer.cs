@@ -155,7 +155,7 @@ namespace NewerSMBWHookGenerator
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(72, 16);
             this.labelVersion.TabIndex = 2;
-            this.labelVersion.Text = "version 1.7";
+            this.labelVersion.Text = "version 1.8";
             // 
             // labelDetails
             // 
