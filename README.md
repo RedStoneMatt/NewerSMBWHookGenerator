@@ -14,7 +14,7 @@ If you don't understand, you can click Help -> Get an example
 You can then copy the output from the output text box, or save it as a yaml file from the File Drop Down Menu
 
 # Other features
-In the "Tools" Drop Down Menu, there is some tools such as a useless Kamek-instances-switching tool, a broken decimal-to-hex calculator, a tool to convert addresses from regions of the game to other regions of the game based on [Treeki's mapfile_tool.py](https://github.com/Treeki/NewerSMBW/blob/no-translations/Kamek/tools/mapfile_tool.py), and a tool that i prefer not to document as i made just for me because i needed it but will be useless to anyone else.
+In the "Tools" Drop Down Menu, there is some tools such as a useless Kamek-instances-switching tool, a broken decimal-to-hex calculator, a tool to convert addresses from regions of the game to other regions of the game based on [Treeki's mapfile_tool.py](https://github.com/Treeki/NewerSMBW/blob/no-translations/Kamek/tools/mapfile_tool.py), and a tool that I prefer not to document as I made it just for me because I needed it but will be useless to anyone else.
 
 In short: do not use these :p
 
